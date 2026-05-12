@@ -99,14 +99,12 @@ exclude-from-graph-view:: true
 		  ```
 		- `in-review` is a **durable working state** — it persists across review passes (Claude addressing your comments) until you manually promote. Whose turn it is is derived from page content, not lifecycle (see [Review workflow](#Review-workflow)).
 	- ### States
-		- | State | Set by | Meaning |
-		  |---|---|---|
-		  | `draft` | any ingest skill (auto) | Default for new pages. Once a page enters `in-review`, it does NOT drop back to `draft`. |
-		  | `stub` | `/paper-ingest` when a paper has no abstract or can't be found | Pre-draft placeholder; lower trust than draft. |
-		  | `in-review` | **you** (or auto-detected: see "Review workflow") | "I've added comments — Claude please address" *or* "Claude has addressed; my turn to re-read." Durable until you promote. |
-		  | `reviewed` | **you** (manually) | "I read it and it looks accurate." |
-		  | `published` | **you** (manually) | "I trust this and it's public. Age never demotes it." |
-		  | `archived` | you, or auto when superseded | Terminal. Pair with `superseded-by:: [[wiki/namespace/new-page]]`. |
+		- `draft` (auto, any ingest skill) — Default for new pages. Once a page enters `in-review`, it does NOT drop back to `draft`.
+		- `stub` (auto, `/paper-ingest` when no abstract found) — Pre-draft placeholder; lower trust than draft.
+		- `in-review` (**you**, or auto-detected — see Review workflow) — "I've added comments — Claude please address" *or* "Claude has addressed; my turn to re-read." Durable until you promote.
+		- `reviewed` (**you**, manually) — "I read it and it looks accurate."
+		- `published` (**you**, manually) — "I trust this and it's public. Age never demotes it."
+		- `archived` (you, or auto when superseded) — Terminal. Pair with `superseded-by:: [[wiki/namespace/new-page]]`.
 	- `stale` is **not** a state — it's a computed overlay (`is_stale = (today − updated::) > 90 days`). `/wiki-lint` flags stale pages but never edits `lifecycle::`.
 	- ### Why "human only" for `reviewed` / `published`
 		- The whole point is to surface what *you* have actually engaged with vs. what's still raw machine output. If skills auto-promoted, the distinction collapses.
