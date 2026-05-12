@@ -7,4 +7,4 @@
  :ui/show-full-blocks? false
  :feature/enable-block-timestamps? false
  :publishing/all-pages-public? true
- :default-home {:page "wiki/meta/wiki-home"}}
+ :default-home {:page "Wiki Home"}}
