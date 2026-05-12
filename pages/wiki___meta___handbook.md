@@ -19,12 +19,16 @@ exclude-from-graph-view:: true
 	- Think of it as the difference between RAM (asking Claude each time) and a hard drive (writing it down once, reading it forever).
 - ## The Three-Tier File Model
 	- The vault is split into three tiers by audience, distinguished by location and an underscore-prefix rule:
-	- | Tier | Location | Convention | What lives here |
-	  |---|---|---|---|
-	  | **Machine state** | `wiki/_*` | underscore prefix | `_manifest.json`, `_log.md`, `_lint_report.md`, `_archives/`, `_tools/`, `_raw/`, `_meta/` — written and read by Claude/scripts only |
-	  | **Navigation** | `pages/Wiki.md` + `pages/wiki/<namespace>-hub.md` + `pages/wiki/hot.md` | no underscore; top hub titled `Wiki Index` (alias `wiki`); per-namespace hubs titled `Wiki <Ns> Hub` (alias `wiki/<ns>`); hub filename must not collide with the sibling `pages/wiki/<ns>/` subfolder | top-level hub, per-namespace hubs, hot cache — what you browse |
-	  | **Content** | `pages/wiki/<namespace>/<slug>.md` | namespaced title `wiki/<ns>/<slug>` | the actual pages |
-	- **The rule:** anything starting with `_` is for Claude. Anything else is for you. If something I use daily is under `wiki/_*`, that's a misplacement and it should move to `pages/`.
+	- | Tier | Location | What lives here |
+	  |---|---|---|
+	  | **Machine state** | `wiki/_*` | `_manifest.json`, `_log.md`, `_archives/`, `_tools/`, `_raw/` — Claude/scripts only |
+	  | **Navigation** | `pages/Wiki.md`, `pages/wiki/<ns>-hub.md`, `pages/wiki/hot.md` | top-level hub, per-namespace hubs, hot cache |
+	  | **Content** | `pages/wiki/<ns>/<slug>.md` | the actual wiki pages |
+	- Convention details:
+		- Machine state: underscore prefix. All `wiki/_*` paths are for Claude.
+		- Navigation: no underscore. Top hub titled `Wiki Index` (alias `wiki`). Per-namespace hubs titled `Wiki <Ns> Hub` (alias `wiki/<ns>`). Hub filename must not collide with the sibling `pages/wiki/<ns>/` subfolder.
+		- Content: namespaced title `wiki/<ns>/<slug>`.
+	- **The rule:** anything starting with `_` is for Claude. Anything else is for you. If something you use daily is under `wiki/_*`, that's a misplacement — move it to `pages/`.
 	- Personal/journal-like content (drafts, source PDFs, scratchpads) lives under `pages/` (no `wiki/` prefix) and `journals/`. These are *not* wiki pages — they're the raw inputs the wiki distills from.
 - ## The L1 / L2 Split
 	- Not everything belongs in the wiki. The knowledge system has two layers:
@@ -39,27 +43,21 @@ exclude-from-graph-view:: true
 - ## Skills Quick Reference
 	- Run any skill by typing `/skill-name` in Claude Code. All skills live in `.claude/skills/`.
 	- ### Routine
-		- | Skill | When to use |
-		  |---|---|
-		  | `/weekly` | **One-shot weekly orchestrator.** Detects new notes/journals, runs `/wiki-ingest`, auto-detects mentioned repos+papers, runs `/code-ingest`+`/paper-ingest`, weaves links, heals manifest drift, reports. Default Sunday command. |
-		  | `/wiki-status` | Dashboard: health, freshness, drift, lifecycle distribution, top hubs |
-		  | `/wiki-ingest` | Point at a specific source (page, journal, PDF) to distill it. Use directly only for one-offs; otherwise let `/weekly` drive it. |
-		  | `/wiki-query` | Ask a question against the wiki ("what do I know about X?") |
-		  | `/cross-linker` | Find unlinked mentions and weave them into `[[links]]` |
+		- `/weekly` — **One-shot weekly orchestrator.** Detects new notes/journals, runs `/wiki-ingest`, auto-detects mentioned repos+papers, runs `/code-ingest`+`/paper-ingest`, weaves links, heals manifest drift, reports. Default Sunday command.
+		- `/wiki-status` — Dashboard: health, freshness, drift, lifecycle distribution, top hubs.
+		- `/wiki-ingest` — Point at a specific source (page, journal, PDF) to distill it. Use directly only for one-offs; otherwise let `/weekly` drive it.
+		- `/wiki-query` — Ask a question against the wiki ("what do I know about X?")
+		- `/cross-linker` — Find unlinked mentions and weave them into `[[links]]`
 	- ### Targeted ingestion
-		- | Skill | When to use |
-		  |---|---|
-		  | `/paper-ingest <id>` | Pull a specific paper (arXiv/DOI) into `wiki/refs/`. Defaults to abstract mode (cheap); `full` reads the PDF. |
-		  | `/code-ingest <repo>` | Pull a GitHub repo into `wiki/code/`. Defaults to shallow (README + metadata); `structure` adds file tree; `deep` reads source files. |
+		- `/paper-ingest <id>` — Pull a specific paper (arXiv/DOI) into `wiki/refs/`. Defaults to abstract mode (cheap); `full` reads the PDF.
+		- `/code-ingest <repo>` — Pull a GitHub repo into `wiki/code/`. Defaults to shallow (README + metadata); `structure` adds file tree; `deep` reads source files.
 	- ### Maintenance
-		- | Skill | When to use |
-		  |---|---|
-		  | `/wiki-setup` | First-time bootstrap. Creates `wiki/` infrastructure, manifest, index. |
-		  | `/wiki-lint` | Audit: broken links, credentials, orphans, schema errors |
-		  | `/wiki-update` | Re-index changed pages and heal manifest drift (lighter than `/weekly`) |
-		  | `/wiki-rebuild` | Nuclear option: archive + full re-ingest from scratch |
-		  | `/tag-taxonomy` | Audit, normalize, add canonical tags |
-		  | `/llm-wiki` | Foundation reference (templates, schemas) — read by other skills, not invoked directly |
+		- `/wiki-setup` — First-time bootstrap. Creates `wiki/` infrastructure, manifest, index.
+		- `/wiki-lint` — Audit: broken links, credentials, orphans, schema errors.
+		- `/wiki-update` — Re-index changed pages and heal manifest drift (lighter than `/weekly`).
+		- `/wiki-rebuild` — Nuclear option: archive + full re-ingest from scratch.
+		- `/tag-taxonomy` — Audit, normalize, add canonical tags.
+		- `/llm-wiki` — Foundation reference (templates, schemas) — read by other skills, not invoked directly.
 - ## Everyday Workflow
 	- **Capture** — drop quick notes into the daily journal (or `wiki/_raw/` for things you want to formalize). Don't worry about structure. Paste GitHub URLs, arXiv IDs, paper DOIs freely — `/weekly` will pick them up.
 	- **Ingest** (weekly) — at the end of the week, run `/weekly`. It detects every new/modified note, distills them into wiki pages, auto-finds the GitHub repos and papers you cited, and pulls them in too. Single command.
