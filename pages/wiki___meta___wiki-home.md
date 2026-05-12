@@ -1,4 +1,4 @@
-title:: wiki/meta/wiki-home
+title:: Home
 category:: hub
 type:: hub
 tags:: meta, wiki, landing
