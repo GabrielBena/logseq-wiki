@@ -1,6 +1,6 @@
 # Research Wiki
 
-Personal knowledge base on neural cellular automata, self-organising boolean circuits, modularity, and brain networks. Maintained as part of my postdoctoral research at [Imperial College London](https://www.imperial.ac.uk/).
+Personal knowledge base on neural cellular automata, self-organising boolean circuits, modularity, and brain networks. Maintained as part of my postdoctoral research at the [Institute of Neuroinformatics (INI), University of Zurich / ETH Zurich](https://www.ini.uzh.ch/).
 
 **Browse the wiki →** https://gabrielbena.github.io/logseq-wiki
 
@@ -16,26 +16,28 @@ The idea (from Andrej Karpathy): instead of asking an LLM the same question repe
 
 | Namespace | Contents |
 |---|---|
-|  | Ideas and mental models — modularity, self-organisation, neural computation |
-|  | Finished papers and projects (my own and closely related work) |
-|  | Cited papers — abstract-level summaries with DOI / arXiv links |
-|  | Repos and tools relevant to the research |
+| `concepts/` | Ideas and mental models — modularity, self-organisation, neural computation |
+| `research/` | Finished papers and projects (my own and closely related work) |
+| `refs/` | Cited papers — abstract-level summaries with DOI / arXiv links |
+| `code/` | Repos and tools relevant to the research |
 
 ## Quality signals
 
 Every page carries two orthogonal quality signals:
 
-- **** (0–1) — how well-sourced the content is. Abstract-only paper ingests score ~0.5; full PDF reads ~0.8; hand-curated synthesis ~0.9.
-- **** — how much human attention the page has received. Only pages at  reach this repo; everything below that stays private.
+- **Confidence** (0–1) — how well-sourced the content is. Abstract-only paper ingests score ~0.5; full PDF reads ~0.8; hand-curated synthesis ~0.9.
+- **Lifecycle** — how much human attention the page has received. The states are `draft → in-review → reviewed → published`. Only pages at `published` reach this repo; everything below stays private.
 
-Provenance markers flag inference:  means the claim goes beyond the source;  means sources disagree.
+Provenance markers flag the nature of each claim: `^[inferred]` means the claim goes beyond what the source explicitly states; `^[ambiguous]` means sources disagree.
 
 ## How it is built
 
-The source of truth is a private Logseq vault. A GitHub Action in that vault fires on every push that touches , finds all pages with  plus all reference pages, assembles a minimal Logseq graph, and syncs it here. A second action in this repo then runs  and deploys to GitHub Pages.
+The source of truth is a private Logseq vault. A GitHub Action in that vault fires on every push that touches `pages/wiki/**`, finds all pages with `lifecycle: published` plus all reference pages, assembles a minimal Logseq graph, and syncs it here. A second action in this repo then runs `logseq/publish-spa` and deploys to GitHub Pages.
 
 No manual copying. Single source of truth.
 
-## Author
+## Authors
 
-[Gabriel Béna](https://gabrielbena.github.io/) — postdoc at Imperial College London, working on neural cellular automata and self-organising boolean circuits.
+[Gabriel Béna](https://gabrielbena.github.io/) — postdoc at INI (UZH/ETH Zurich), working on neural cellular automata and self-organising boolean circuits.
+
+[Claude](https://claude.ai/) — AI chad.
