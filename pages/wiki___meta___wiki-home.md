@@ -23,8 +23,9 @@ exclude-from-graph-view:: false
 - ## Browse
 	- [[Wiki Research Hub]] — finished papers and projects (my own and closely related work)
 	- [[Wiki Concepts Hub]] — ideas, theories, and mental models
-	- [[Wiki Refs Hub]] — cited papers with abstract-level summaries
+	- [[Wiki Refs Hub]] — 50+ cited papers with abstract-level summaries
 	- [[Wiki Code Hub]] — repos and tools
+	- [[Wiki Meta Hub]] — how this wiki works
 - ## Authors
 	- [Gabriel Béna](https://gabrielbena.github.io/) — the human behind the research.
 	- [Claude](https://claude.ai/) — AI chad, distillation engine, and co-author of this wiki.
