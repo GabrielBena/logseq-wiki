@@ -1,0 +1,9 @@
+{:meta/version 1
+ :preferred-format "Markdown"
+ :preferred-workflow :todo
+ :hidden []
+ :ui/enable-tooltip? true
+ :ui/show-brackets? true
+ :ui/show-full-blocks? false
+ :feature/enable-block-timestamps? false
+ :default-home {:page "wiki/meta/wiki-home"}}
