@@ -97,8 +97,8 @@ provenance-ambiguous:: 0.02
   - ### NCA as the canonical model
     - **[[wiki/concepts/neural-cellular-automata]]** — NCA is *exactly* the substrate Hiesinger uses to motivate his thesis. Mordvintsev's image NCA is a learnable Rule 110 + biology-style noise + slightly more complex rules. Every paper in the NCA Seven Angles inherits Hiesinger's algorithmic-information framing whether or not it cites him.
 
-  - ### The genomic bottleneck (Zador 2019, cited in NDP)
-    - Hiesinger doesn't cite Zador 2019 directly (the book is contemporary), but the genomic-bottleneck argument is the same shape as Hiesinger's central claim. The 100-trillion-synapse human brain encoded by ~30k active genes is an extreme case of "small algorithmic information, large logical depth".
+  - ### The [[wiki/concepts/genomic-bottleneck]] ([[wiki/refs/zador-2019-critique-pure-learning|Zador 2019]], cited in NDP)
+    - Hiesinger doesn't cite [[wiki/refs/zador-2019-critique-pure-learning|Zador 2019]] directly (the book is contemporary), but the genomic-bottleneck argument is the same shape as Hiesinger's central claim. The 100-trillion-synapse human brain encoded by ~30k active genes is an extreme case of "small algorithmic information, large logical depth".
 
 - ## Memorable Lines
 

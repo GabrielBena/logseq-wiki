@@ -120,7 +120,7 @@ provenance-ambiguous:: 0.02
   | Topic | Best chapter | Wiki page |
   |---|---|---|
   | Algorithmic vs endpoint information | Seminar 2 | [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]] |
-  | Genomic bottleneck argument | Seminar 2 | [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]] |
+  | [[wiki/concepts/genomic-bottleneck]] argument | Seminar 2 | [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]] |
   | Rule 110, Game of Life, Kolmogorov complexity | Seminar 2 | [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]] |
   | Spandrels, exaptation, retina inverted | Seminar 8 | [[wiki/refs/hiesinger-2021-seminar8-development-function]] |
   | Memory as algorithmic rules | Seminar 8 | [[wiki/refs/hiesinger-2021-seminar8-development-function]] |

@@ -88,7 +88,7 @@ provenance-ambiguous:: 0.02
   - ### Functionalism connection — narrow MR with developmental dynamics
     - **[[wiki/concepts/functionalism]]** — NDP exemplifies *narrow* multiple realizability with two layers: (a) the same NDP rule grows different networks across runs (stochastic narrow MR over phenotype), and (b) within a single grown network, the topology has degeneracy w.r.t. the task it solves.
     - **[[wiki/concepts/solution-degeneracy]]** — the small-world topology experiment is a clean narrow-MR demonstration: the NDP can grow many distinct graphs, all satisfying σ ≈ 1.27. The set of valid networks is the degenerate basin; the NDP is a sampler over that basin. ^[inferred]
-    - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — direct parallel: degenerate gene networks produce robust phenotypes; NDPs produce degenerate phenotype distributions from a compact genotype. The genomic-bottleneck framing in NDP is essentially Zador's restatement of why degeneracy is selected for.
+    - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — direct parallel: degenerate gene networks produce robust phenotypes; NDPs produce degenerate phenotype distributions from a compact genotype. The [[wiki/concepts/genomic-bottleneck]] framing in NDP is essentially [[wiki/refs/zador-2019-critique-pure-learning|Zador]]'s restatement of why degeneracy is selected for.
 
   - ### NCA Trilogy + 5th angle
     - **[[wiki/concepts/neural-cellular-automata]]** — the NCA Trilogy (Mordvintsev → UNCA → SODC → BraiNCA) gains a fifth angle here: **NCA-as-developer** (NDP). The trajectory is:
@@ -122,7 +122,7 @@ provenance-ambiguous:: 0.02
 
   - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — Lifelong NDP (LNDP, Plantec et al. ALIFE 2024, arXiv:2406.09787). The direct sequel from the same Risi lab. Adds structural plasticity (synaptogenesis + pruning), activity- and reward-dependent dynamics throughout the agent's lifetime, and spontaneous-activity pre-experience development. **Closes the activity-dependent gap explicitly flagged as a limitation in this paper.** Deep-ingested 2026-05-09.
   - **[[wiki/refs/hiesinger-2021-self-assembling-brain]]** *The Self-Assembling Brain* (Princeton UP 2021) — deep-ingested 2026-05-10 as 4 pages (parent + Seminars 2, 8, 9). The book-length treatment of biological self-assembly that grounds this whole research thread.
-  - **Zador 2019** "A critique of pure learning" (Nature Comms) — the genomic-bottleneck paper. Foundational for the developmental-encoding case. Potential ref stub if the bottleneck thread grows.
+  - [[wiki/refs/zador-2019-critique-pure-learning]] — *A critique of pure learning* (Nature Comms 2019). The foundational [[wiki/concepts/genomic-bottleneck]] paper. Ingested 2026-05-14 (abstract mode).
   - **HyperNCA** (Najarro et al. 2022) — direct precursor to NDP. Could be added as a stub.
   - **EDANN** (Zhang & Yoder 2024, arXiv:2407.10359) — adjacent literature from a different lineage (Miller's CGP-based developmental ANNs with extended activity dependence). Not a direct NDP follow-up, but cites NDP as closely related and addresses the same activity-dependent question via different machinery.
 
