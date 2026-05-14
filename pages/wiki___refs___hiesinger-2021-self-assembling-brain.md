@@ -128,9 +128,10 @@ provenance-ambiguous:: 0.02
   | Self-organisation and ANN function | Seminar 9 | [[wiki/refs/hiesinger-2021-seminar9-algorithmic-ai]] |
   | "When does a neural network need to grow?" | Seminar 9 | [[wiki/refs/hiesinger-2021-seminar9-algorithmic-ai]] |
   | Hinton on capsules / levels of structure | Seminar 9 | [[wiki/refs/hiesinger-2021-seminar9-algorithmic-ai]] |
-  | Sperry's chemoaffinity / instructive vs permissive | Seminar 6 | (parent only — not deep-ingested) |
+  | Sperry's chemoaffinity / instructive vs permissive | Seminar 6 | [[wiki/refs/hiesinger-2021-seminar6-chemoaffinity-permissiveness]] |
   | Benzer paradox / mutation interpretation | Seminar 5 | (parent only — not deep-ingested) |
-  | Local rules / autonomous agents (NCA-adjacent) | Seminar 4 | (parent only — would benefit from deep ingest if NCA thread expands) |
+  | Local rules / autonomous agents (NCA-adjacent) | Seminar 4 | [[wiki/refs/hiesinger-2021-seminar4-local-rules-robustness]] |
+  | Levels problem / polygenic-nonadditive traits | Seminar 7 | [[wiki/refs/hiesinger-2021-seminar7-genes-cells-circuits]] |
   | Noise as productive (Dscam, immune system) | Seminar 3 | (parent only — not deep-ingested) |
 
 - ## Cited By (in this wiki)
