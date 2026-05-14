@@ -44,12 +44,12 @@ provenance-ambiguous:: 0.02
   - **Session 1 — Algorithmic Growth (Part 1, pp 81-160)**:
     - **Seminar 2: From Algorithmic Growth to Endpoint Information** — *deep-ingested:* [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]]
     - **Seminar 3: From Randomness to Precision** — noise as productive ingredient (apple trees, immune system, Dscam self-avoidance, retinal activity waves). Random branching + self-avoidance > deterministic branching for spreading dendritic trees. The immune system as canonical "noise + selection" architecture.
-    - **Seminar 4: From Local Rules to Robustness** — autonomous agents (axonal growth cones, filopodia) following local rules without a master regulator. Self-organisation via local interaction is the architectural primitive of brain development; the analogy to NCA is direct.
+    - **Seminar 4: From Local Rules to Robustness** — *deep-ingested:* [[wiki/refs/hiesinger-2021-seminar4-local-rules-robustness]]
 
   - **Session 2 — Of Players and Rules (Part 2, pp 161-236)**:
     - **Seminar 5: From Molecular Mechanisms to Evolutionary Programming** — Seymour Benzer's mutational analysis of *Drosophila* behaviour: a single mutation in a metabolic enzyme can reprogram brain wiring through unfolding algorithmic effects. *The Benzer paradox* — molecular function tells you almost nothing about how a mutation reprograms behaviour, because the mutation acts at every iteration of the growth algorithm.
-    - **Seminar 6: From Chemoaffinity to the Virtues of Permissiveness** — Sperry's chemoaffinity hypothesis (key-and-lock molecular IDs for synapse partner selection) is *part* of the story, but pure target identification cannot account for the wiring. Permissive cues (NGF, growth factors that allow rather than instruct) are equally necessary. The instructive/permissive boundary is fuzzy when seen as algorithmic growth.
-    - **Seminar 7: From Genes to Cells to Circuits** — *the levels problem*. Genes don't contain information about higher-level structure; cells don't contain information about networks. Information at level N+1 only emerges from the iterative interaction of level-N components.
+    - **Seminar 6: From Chemoaffinity to the Virtues of Permissiveness** — *deep-ingested:* [[wiki/refs/hiesinger-2021-seminar6-chemoaffinity-permissiveness]]
+    - **Seminar 7: From Genes to Cells to Circuits** — *deep-ingested:* [[wiki/refs/hiesinger-2021-seminar7-genes-cells-circuits]]
 
   - **Session 3 — Brain Development and AI (Part 3, pp 237-311)**:
     - **Seminar 8: From Development to Function** — *deep-ingested:* [[wiki/refs/hiesinger-2021-seminar8-development-function]]
@@ -136,8 +136,14 @@ provenance-ambiguous:: 0.02
 
 - ## Cited By (in this wiki)
   - [[wiki/refs/hiesinger-2021-seminar2-algorithmic-growth]]
+  - [[wiki/refs/hiesinger-2021-seminar4-local-rules-robustness]]
+  - [[wiki/refs/hiesinger-2021-seminar6-chemoaffinity-permissiveness]]
+  - [[wiki/refs/hiesinger-2021-seminar7-genes-cells-circuits]]
   - [[wiki/refs/hiesinger-2021-seminar8-development-function]]
   - [[wiki/refs/hiesinger-2021-seminar9-algorithmic-ai]]
   - [[wiki/refs/najarro-2023-neural-developmental-programs]]
   - [[wiki/refs/plantec-2024-lifelong-ndp]]
   - [[wiki/refs/guichard-2025-engramnca]]
+  - [[wiki/refs/kerstjens-2026-lineage-positional]]
+  - [[wiki/refs/barabasi-2023-complex-computation-developmental-priors]]
+  - [[wiki/refs/stockl-2021-structure-induces-computational-function]]
