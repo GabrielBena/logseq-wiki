@@ -5,7 +5,7 @@ type:: hub
 wiki-generated:: true
 lifecycle:: published
 lifecycle-changed:: 2026-05-12
-updated:: 2026-05-11
+updated:: 2026-05-14
 exclude-from-graph-view:: true
 
 - Top-level hub for the wiki. New here? Read [[wiki/meta/handbook]] for philosophy, conventions, and workflow.
