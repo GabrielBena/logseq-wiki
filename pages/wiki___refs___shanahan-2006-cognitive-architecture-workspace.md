@@ -24,9 +24,9 @@ ingest-mode:: needs-fetch
 	- TODO: fetch abstract via CrossRef or full-text via `/paper-ingest full DOI:10.1016/j.concog.2005.11.005`.
 - ## Connections to Wiki
 	- [[wiki/concepts/global-workspace-theory]] — paired with [[wiki/refs/vanrullen-2020-deep-learning-global-workspace]] as the GWT-references cluster.
-	- [[wiki/research/growing-networks]] — cited explicitly in the brainstorm as relevant to the workspace thread.
+	- [[wiki/projects/growing-networks]] — cited explicitly in the brainstorm as relevant to the workspace thread.
 - ## Cited By (in this wiki)
-	- [[wiki/research/growing-networks]]
+	- [[wiki/projects/growing-networks]]
 	- [[wiki/concepts/global-workspace-theory]]
 - ## Open Questions
 	- What is the relationship between internal simulation (envisaged action sequences) and workspace broadcast in this paper? Needs full read.

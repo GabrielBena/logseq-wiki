@@ -31,7 +31,7 @@ ingest-mode:: abstract
 	- [[wiki/refs/zador-2019-critique-pure-learning]] — the framing paper; Barabási et al. provide the constructive answer.
 	- [[wiki/refs/najarro-2023-neural-developmental-programs]] — sister work from the Risi-lab cluster; both grow networks from developmental rules but via different mechanisms.
 	- [[wiki/refs/plantec-2024-lifelong-ndp]] — adjacent: LNDP adds lifelong plasticity to the NDP framework.
-	- [[wiki/research/growing-networks]] — postdoc proposal explicitly draws on the developmental-priors line.
+	- [[wiki/projects/growing-networks]] — postdoc proposal explicitly draws on the developmental-priors line.
 	- [[wiki/concepts/neural-cellular-automata]] — NCA-as-genomic-bottleneck framing in the wiki maps cleanly onto Barabási's "rules emit weights" pattern. ^[inferred]
 - ## Open Questions / To Read
 	- What *exactly* are the "neuronal compatibility rules" — chemo-affinity-style or more abstract? Needs full read.
@@ -39,5 +39,5 @@ ingest-mode:: abstract
 	- Relation to LNDP's activity-dependent dynamics — Barabási's rules look weight-static at deployment.
 - ## Cited By (in this wiki)
 	- [[wiki/concepts/genomic-bottleneck]]
-	- [[wiki/research/growing-networks]]
+	- [[wiki/projects/growing-networks]]
 	- [[wiki/refs/zador-2019-critique-pure-learning]]
