@@ -26,7 +26,7 @@ ingest-mode:: abstract
 	- **Genome-encoded code is low-dimensional but sufficient.** Connection probabilities indexed by neuron type and spatial distance are enough for innate computing capabilities — no per-synapse specification needed. ^[inferred]
 	- **Neuron-type diversity is load-bearing.** The method only works when a *substantial* number of neuron types are present. This is offered as an explanation for why brains have so many cell types — well beyond what classical neural-network models use. ^[inferred]
 	- **Structure-induced computation has dual benefits.** Networks whose function comes from connectivity (rather than plasticity) exhibit **short wire length** and **robustness to weight perturbations** — useful for neuromorphic hardware. ^[inferred]
-	- **No plasticity required.** Demonstrates that *structure alone*, set by a compact genomic code, produces functional networks — the strongest possible version of [[wiki/refs/zador-2019-critique-pure-learning|Zador's]] argument. ^[inferred]
+	- **No plasticity required.** Demonstrates that *structure alone*, set by a compact genomic code, produces functional networks — the strongest possible version of [[wiki/refs/zador-2019-critique-pure-learning]] argument. ^[inferred]
 - ## Connections to Wiki
 	- [[wiki/concepts/genomic-bottleneck]] — perhaps the most direct *operationalisation* of the bottleneck argument: a low-dim type-by-distance code that *demonstrably* produces innate function.
 	- [[wiki/refs/zador-2019-critique-pure-learning]] — Stöckl/Maass is what Zador's argument looks like when fully reduced to an implementation: structure-induced function via a compact genomic code.

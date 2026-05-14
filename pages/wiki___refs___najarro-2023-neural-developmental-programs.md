@@ -43,7 +43,7 @@ provenance-ambiguous:: 0.02
     - Differentiable version: first element = bias, second = activation, rest = hidden state for development. *Function-relevant fields are baked into the embedding.*
     - Evolutionary version: full embedding is treated as a black-box latent — more flexible, less interpretable.
 
-  - ### [[wiki/concepts/genomic-bottleneck]] framing ([[wiki/refs/zador-2019-critique-pure-learning|Zador 2019]])
+  - ### [[wiki/concepts/genomic-bottleneck]] framing ([[wiki/refs/zador-2019-critique-pure-learning]])
     - 100 trillion human cortical synapses encoded by ~30k active genes. NDP is the AI version of that compression.
     - A 14-parameter NDP grows a 4-node, 7-edge XOR solver. A 162-parameter NDP grows a 10-node, 33-edge CartPole solver (reward 500 ± 0). An 868-parameter NDP grows a 16-node LunarLander solver.
     - The NDP can be *larger* than the policy network it grows when the task is small. The bottleneck is meaningful only at scale.
@@ -88,7 +88,7 @@ provenance-ambiguous:: 0.02
   - ### Functionalism connection — narrow MR with developmental dynamics
     - **[[wiki/concepts/functionalism]]** — NDP exemplifies *narrow* multiple realizability with two layers: (a) the same NDP rule grows different networks across runs (stochastic narrow MR over phenotype), and (b) within a single grown network, the topology has degeneracy w.r.t. the task it solves.
     - **[[wiki/concepts/solution-degeneracy]]** — the small-world topology experiment is a clean narrow-MR demonstration: the NDP can grow many distinct graphs, all satisfying σ ≈ 1.27. The set of valid networks is the degenerate basin; the NDP is a sampler over that basin. ^[inferred]
-    - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — direct parallel: degenerate gene networks produce robust phenotypes; NDPs produce degenerate phenotype distributions from a compact genotype. The [[wiki/concepts/genomic-bottleneck]] framing in NDP is essentially [[wiki/refs/zador-2019-critique-pure-learning|Zador]]'s restatement of why degeneracy is selected for.
+    - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — direct parallel: degenerate gene networks produce robust phenotypes; NDPs produce degenerate phenotype distributions from a compact genotype. The [[wiki/concepts/genomic-bottleneck]] framing in NDP is essentially [[wiki/refs/zador-2019-critique-pure-learning]]'s restatement of why degeneracy is selected for.
 
   - ### NCA Trilogy + 5th angle
     - **[[wiki/concepts/neural-cellular-automata]]** — the NCA Trilogy (Mordvintsev → UNCA → SODC → BraiNCA) gains a fifth angle here: **NCA-as-developer** (NDP). The trajectory is:
