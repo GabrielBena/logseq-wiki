@@ -1,6 +1,7 @@
 title:: wiki/research/dynamics-specialization
 category:: reference
 type:: research-paper
+index-order:: 1
 tags:: modularity, functional-specialization, neuroscience, neural-networks, resource-constraints
 authors:: Béna, Gabriel; Goodman, Dan F. M.
 year:: 2024

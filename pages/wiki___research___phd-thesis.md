@@ -1,6 +1,7 @@
 title:: wiki/research/phd-thesis
 category:: research
 type:: research
+index-order:: 0
 tags:: thesis, modularity, self-organisation, nca, review, postdoc
 summary:: Gabriel Béna's PhD thesis — "Emergence, Modularity and Self-Organisation in Neural Systems" (Imperial College London, submitted ~Feb 2026). Unifying document spanning four papers across two themes: modularity (Ch1+Ch2) and self-organisation (Ch3+Ch4). Contains the definitive literature review, the 2×2 PP/UP/PS/US framework, and the grand vision of a self-organising neuromorphic brain.
 confidence:: 0.90
