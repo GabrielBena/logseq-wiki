@@ -43,7 +43,7 @@ provenance-ambiguous:: 0.02
     - Differentiable version: first element = bias, second = activation, rest = hidden state for development. *Function-relevant fields are baked into the embedding.*
     - Evolutionary version: full embedding is treated as a black-box latent — more flexible, less interpretable.
 
-  - ### Genomic bottleneck framing (Zador 2019)
+  - ### [[wiki/concepts/genomic-bottleneck]] framing ([[wiki/refs/zador-2019-critique-pure-learning|Zador 2019]])
     - 100 trillion human cortical synapses encoded by ~30k active genes. NDP is the AI version of that compression.
     - A 14-parameter NDP grows a 4-node, 7-edge XOR solver. A 162-parameter NDP grows a 10-node, 33-edge CartPole solver (reward 500 ± 0). An 868-parameter NDP grows a 16-node LunarLander solver.
     - The NDP can be *larger* than the policy network it grows when the task is small. The bottleneck is meaningful only at scale.
