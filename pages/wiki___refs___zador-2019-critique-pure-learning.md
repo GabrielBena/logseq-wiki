@@ -28,7 +28,7 @@ ingest-mode:: abstract
 	- The bottleneck is *productive*: it forces compositional, repeatable, locally-applicable encoding schemes. (Inferred — Zador frames the bottleneck as a feature, not a constraint.) ^[inferred]
 - ## Connections to Wiki
 	- [[wiki/concepts/genomic-bottleneck]] — this paper coined the framing; the concept page summary explicitly references it.
-	- [[wiki/research/growing-networks]] — Zador is the foundational reference for the genomic-bottleneck thread of the postdoc proposal.
+	- [[wiki/projects/growing-networks]] — Zador is the foundational reference for the genomic-bottleneck thread of the postdoc proposal.
 	- [[wiki/concepts/neural-cellular-automata]] — NCAs are arguably a computational realisation of the bottleneck idea: a small parameter set encodes the rule that grows the target structure. ^[inferred]
 	- [[wiki/refs/najarro-2023-neural-developmental-programs]] — NDP is an explicit operationalisation of Zador's bottleneck idea, with a per-cell NN that grows the topology from a developmental rule.
 	- [[wiki/refs/barabasi-2023-complex-computation-developmental-priors]] — complementary recent work that operationalises the "innateness" idea via developmental priors on weight matrices.
@@ -37,4 +37,4 @@ ingest-mode:: abstract
 	- How does Zador's bottleneck relate to the broader meta-learning literature (learn-to-learn)? Different framing but related compression argument. ^[inferred]
 - ## Cited By (in this wiki)
 	- [[wiki/concepts/genomic-bottleneck]]
-	- [[wiki/research/growing-networks]]
+	- [[wiki/projects/growing-networks]]
