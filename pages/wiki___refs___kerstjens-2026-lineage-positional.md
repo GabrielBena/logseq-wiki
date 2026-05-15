@@ -77,7 +77,8 @@ provenance-ambiguous:: 0.02
 		- In [[wiki/projects/growing-networks]] the architecture sketch has engrams updating slowly (structural backbone) and active layer updating fast (computation). Kerstjens et al. shows the biological slow timescale is *cell division* — the engram (eigengene) updates only when a cell divides, by adding a small Gaussian deviation. Between divisions, the engram is constant.
 		- This suggests a clean computational analogue: in an NCA, the engram-update operation should be **discretely triggered by cell division** (or replication event), not a continuous slow drift. Daughter inherits, parent persists, the manifold geometry is built once and only re-evaluated at births. ^[claude-synth]
 			- > Is there a link with the asynchrony of updates in the original NCA paper ?
-			- > This somehow co
+			- > This somehow contradicts the EngramNCA work where the Engram layer still "evolves" mimicking RNA mechanisms or something ?
+			-
 	- ### Implications for [[wiki/concepts/modularity]] structure-function gap
 		- The multi-scale nested-region hierarchy is the **deepest structural form of modularity** the wiki has seen described: a recursive binary partition where every level carries its own eigengene. Yet the paper makes no claim that these regions are *functionally* specialised — they are structurally distinct without (necessarily) being functionally distinct.
 		- This is the [[wiki/research/dynamics-specialization]] / [[wiki/research/spatial-neuromorphic-priors]] structure-function gap in vivo: modular hierarchy emerges from developmental lineage, but whether each region computes something distinct is a separate question. The gap holds biologically just as it does in artificial systems. ^[claude-synth]
