@@ -36,3 +36,4 @@ ingest-mode:: abstract
 	- Connection to spatial / neuromorphic priors ([[wiki/research/spatial-neuromorphic-priors]]) — NORACL's grown architectures could be analysed for spatial structure.
 - ## Cited By (in this wiki)
 	- [[wiki/projects/growing-networks]]
+	- [[wiki/projects/mosaic-compiler]] — closest mechanical neighbour to the Mosaic-compiler stage 3 (continual learning as progressive hardware recruitment): grow-on-demand under saturation signal, only-as-needed, from the same lab.
