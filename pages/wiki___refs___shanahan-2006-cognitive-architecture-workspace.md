@@ -22,6 +22,8 @@ ingest-mode:: needs-fetch
 - ## Status
 	- Stub. Abstract not available via Semantic Scholar (S2 returns title + metadata but no abstract).
 	- TODO: fetch abstract via CrossRef or full-text via `/paper-ingest full DOI:10.1016/j.concog.2005.11.005`.
+	- > Gab comment
+	-
 - ## Connections to Wiki
 	- [[wiki/concepts/global-workspace-theory]] — paired with [[wiki/refs/vanrullen-2020-deep-learning-global-workspace]] as the GWT-references cluster.
 	- [[wiki/projects/growing-networks]] — cited explicitly in the brainstorm as relevant to the workspace thread.
