@@ -30,7 +30,7 @@ ingest-mode:: abstract
 - ## Connections to Wiki
 	- [[wiki/projects/growing-networks]] — direct cite. Provides a concrete, evaluated trigger-based growth mechanism that the broader growing-networks proposal can incorporate.
 	- [[wiki/concepts/genomic-bottleneck]] — adjacent: NORACL grows only-as-needed, which is a form of *post-hoc compression* analogous to the genomic bottleneck's *prior* compression of developmental rules. ^[inferred]
-	- [[wiki/refs/najarro-2023-neural-developmental-programs]] — both grow networks, but [[NDP]] grows from a developmental rule while NORACL grows reactively from task signals. Different mechanisms, same goal.
+	- [[wiki/refs/najarro-2023-neural-developmental-programs]] — both grow networks, but NDP grows from a developmental rule while NORACL grows reactively from task signals. Different mechanisms, same goal.
 - ## Open Questions / To Read
 	- How does NORACL handle pruning / death — or is growth only ever additive? Upgrade with full-text read.
 	- Is the trigger mechanism *learnt* or hand-designed? Affects how generic the approach is.
