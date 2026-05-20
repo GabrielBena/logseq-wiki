@@ -30,7 +30,7 @@ ingest-mode:: abstract
 
 - ## Connections to Wiki
   - [[wiki/research/self-organising-digital-circuits]] — thematic connection: [[SODC]] circuits self-repair without external re-training.
-  - [[wiki/concepts/topology-masked-transformer]] — shared-weight NCA update rule is a self-referential modifier of circuit states.
+  - [[wiki/concepts/topology-masked-transformer]] — shared-weight [[NCA]] update rule is a self-referential modifier of circuit states.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]

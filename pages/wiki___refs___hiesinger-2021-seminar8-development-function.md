@@ -106,7 +106,7 @@ provenance-ambiguous:: 0.02
     - **[[wiki/concepts/modularity]]** — Hiesinger's spandrel/exaptation framing is the deep biological grounding for why structural modularity ≠ functional specialisation. The thesis Ch1 / Ch2 finding (modularity is elusive without resource constraints) maps onto: structural modularity may be a *spandrel of the developmental algorithm*; functional specialisation requires *exaptation under selection pressure*. ^[inferred]
     - The retina-the-wrong-way example is the canonical case: an apparent inefficiency that's locked in developmentally and works because the rest of the system *adapted around it* (the brain fills in the blind spot). The thesis Discussion's "modularity narrative got me one last time" worry is exactly this: structural patterns that look meaningful may be developmental side-effects that we then over-interpret functionally.
 
-  - ### Memory as algorithmic rules → connection to NCA-as-engram
+  - ### Memory as algorithmic rules → connection to [[NCA]]-as-engram
     - **[[wiki/refs/guichard-2025-engramnca]]** — [[EngramNCA]]'s public/private channel split, with private gene channels propagable via GenePropCA, is a *direct architectural instantiation* of "memory is rules sufficient to recreate a representation". The genes are the rule-substrate; the GeneCA is the rule-runner; the morphology is the recreated representation.
     - **[[wiki/concepts/solution-degeneracy]]** — Hiesinger's "single neuron in face-recognition area gets selected, doesn't encode the face" is degeneracy applied to memory: the memory is in the *network's response capability*, not in any specific cell. [[SODC]]'s basin-hopping recovery has the same structure — function is in the basin, not in any specific configuration.
 

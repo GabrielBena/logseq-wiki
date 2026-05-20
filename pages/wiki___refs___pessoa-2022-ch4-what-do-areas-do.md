@@ -123,7 +123,7 @@ provenance-ambiguous:: 0.02
   - ### Functional-repertoire framing for [[SODC]]
     - The [[SODC]] blog post could productively reframe its "what [[TMT]] does" section as a *functional repertoire across task families* rather than as a single mechanism. Pessoa's 20-dim profile is the inspiration: *what is the [[TMT]]'s functional repertoire across Boolean function families, perturbation regimes, and depth scales?*
 
-  - ### The double-dissociation logic and ablation experiments in NCA
+  - ### The double-dissociation logic and ablation experiments in [[NCA]]
     - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** + **[[wiki/refs/plantec-2024-lifelong-ndp]]** — both rely on ablation studies (turn off SP, turn off SA) that are essentially single dissociations. Pessoa's critique applies: results are *consistent with* the proposed mechanism but don't *establish* its modularity. Future work should aim for double dissociations between mechanisms.
     - **For the thesis itself**: when claiming that resource constraints drive specialisation, the cleanest case is a double dissociation — resource constraints alone vs. modular topology alone vs. both. ^[inferred]
 
