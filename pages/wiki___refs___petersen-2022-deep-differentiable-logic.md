@@ -29,8 +29,8 @@ ingest-mode:: abstract
   - Speed advantage: pure logic operations → bitwise CPU parallelism with no floating point. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/differentiable-logic-gates]] — this paper is the primary source for the differentiable LUT relaxation used in SODC.
-  - [[wiki/research/self-organising-digital-circuits]] — SODC adopts and extends the differentiable logic gate formulation.
+  - [[wiki/concepts/differentiable-logic-gates]] — this paper is the primary source for the differentiable LUT relaxation used in [[SODC]].
+  - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] adopts and extends the differentiable logic gate formulation.
   - [[wiki/code/gabrielbena-boolean-nca-cc]] — implemented in `boolean_nca_cc/circuits/model.py`.
 
 - ## Cited By (in this wiki)

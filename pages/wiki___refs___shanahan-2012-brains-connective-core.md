@@ -24,7 +24,7 @@ ingest-mode:: needs-fetch
 	- TODO: full-text read via the open preprint PDF — `/paper-ingest full <S2 CorpusId:1384379>` or fetch the PDF directly.
 - ## Connections to Wiki
 	- [[wiki/refs/shanahan-2006-cognitive-architecture-workspace]] — same author; the 2006 paper proposes the cognitive architecture, the 2012 paper grounds the workspace claim in connectome rich-club data.
-	- [[wiki/concepts/global-workspace-theory]] — together with the 2006 paper, Shanahan's two-step argument: GWT as cognitive-architecture (2006) + GWT as connectome-supported (2012).
+	- [[wiki/concepts/global-workspace-theory]] — together with the 2006 paper, Shanahan's two-step argument: [[GWT]] as cognitive-architecture (2006) + [[GWT]] as connectome-supported (2012).
 	- [[wiki/refs/pessoa-2022-entangled-brain]] — adjacent line on brain-as-distributed-network; Pessoa's many-to-many mapping cites the connective-core literature.
 - ## Cited By (in this wiki)
 	- [[wiki/concepts/global-workspace-theory]]

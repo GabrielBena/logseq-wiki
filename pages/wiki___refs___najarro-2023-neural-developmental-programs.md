@@ -74,16 +74,16 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research — this paper "links to all of it"
 
-  - ### Direct sibling to SODC (the structural half of the grand vision)
+  - ### Direct sibling to [[SODC]] (the structural half of the grand vision)
     - **[[wiki/research/self-organising-digital-circuits]]** is *NCA-as-optimizer* on a **fixed topology**: the cellular state IS the function being computed (LUT logits), and the topology-masked Transformer configures function while leaving structure alone.
     - **NDP** is *NCA-as-grower* with **mutable topology**: the cellular state encodes *whether to replicate* and *what edge weights to use*, and the topology itself is the output.
-    - **Together they cover both halves of the [[wiki/research/phd-thesis]] grand vision**: SODC supplies the local meta-optimization rule on a fixed substrate; NDP supplies the local growth rule that produces the substrate. The Discussion's proposed unification — "a single shared NCA rule governing both growth and learning" — is the operational synthesis of NDP + SODC. ^[inferred]
-    - Architectural compatibility: both use **graph message passing with a per-cell shared neural network**. NDP uses GraphConv + MLPs; SODC uses [[wiki/concepts/topology-masked-transformer]]. The TMT architecture is a richer instantiation of what NDP's GraphConv layer does — promoting NDP's growth rule to attention-based message passing is a natural next step. ^[inferred]
-    - **Open challenge SODC explicitly flags** ("structural plasticity: NCA currently steers functional states; making it also rewire topology remains the central open challenge") — NDP is the proof-of-concept that this is feasible.
+    - **Together they cover both halves of the [[wiki/research/phd-thesis]] grand vision**: [[SODC]] supplies the local meta-optimization rule on a fixed substrate; NDP supplies the local growth rule that produces the substrate. The Discussion's proposed unification — "a single shared NCA rule governing both growth and learning" — is the operational synthesis of NDP + [[SODC]]. ^[inferred]
+    - Architectural compatibility: both use **graph message passing with a per-cell shared neural network**. NDP uses GraphConv + MLPs; [[SODC]] uses [[wiki/concepts/topology-masked-transformer]]. The [[TMT]] architecture is a richer instantiation of what NDP's GraphConv layer does — promoting NDP's growth rule to attention-based message passing is a natural next step. ^[inferred]
+    - **Open challenge [[SODC]] explicitly flags** ("structural plasticity: NCA currently steers functional states; making it also rewire topology remains the central open challenge") — NDP is the proof-of-concept that this is feasible.
 
-  - ### Direct lineage from UNCA / graph-NCA
-    - **[[wiki/research/universal-nca]]** (Ch3) extends NCA to *graph* NCA over arbitrary topologies — both UNCA and NDP cite [[wiki/refs/grattarola-2021-learning-graph-ca]] as the precursor.
-    - UNCA introduces mutable/immutable state separation (immutable = "hardware", mutable = "computation"). NDP could be read as the *generative* version: there is no pre-specified hardware; the immutable substrate is *grown*, and what's mutable is the developmental decision history. ^[inferred]
+  - ### Direct lineage from [[UNCA]] / graph-NCA
+    - **[[wiki/research/universal-nca]]** (Ch3) extends NCA to *graph* NCA over arbitrary topologies — both [[UNCA]] and NDP cite [[wiki/refs/grattarola-2021-learning-graph-ca]] as the precursor.
+    - [[UNCA]] introduces mutable/immutable state separation (immutable = "hardware", mutable = "computation"). NDP could be read as the *generative* version: there is no pre-specified hardware; the immutable substrate is *grown*, and what's mutable is the developmental decision history. ^[inferred]
     - The Najarro et al. 2022 paper *HyperNCA* (cited here) is the immediate precursor — uses NCA to grow a 3D pattern then maps it to a policy weight matrix. NDP simplifies by having NCA operate directly on the policy graph itself.
 
   - ### Functionalism connection — narrow MR with developmental dynamics
@@ -92,11 +92,11 @@ provenance-ambiguous:: 0.02
     - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — direct parallel: degenerate gene networks produce robust phenotypes; NDPs produce degenerate phenotype distributions from a compact genotype. The [[wiki/concepts/genomic-bottleneck]] framing in NDP is essentially [[wiki/refs/zador-2019-critique-pure-learning]]'s restatement of why degeneracy is selected for.
 
   - ### NCA Trilogy + 5th angle
-    - **[[wiki/concepts/neural-cellular-automata]]** — the NCA Trilogy (Mordvintsev → UNCA → SODC → BraiNCA) gains a fifth angle here: **NCA-as-developer** (NDP). The trajectory is:
+    - **[[wiki/concepts/neural-cellular-automata]]** — the NCA Trilogy (Mordvintsev → [[UNCA]] → [[SODC]] → [[BraiNCA]]) gains a fifth angle here: **NCA-as-developer** (NDP). The trajectory is:
       - Mordvintsev (image NCA): NCA as pattern-former
-      - Ch3/UNCA: NCA as computer (mutable/immutable state)
-      - Ch4/SODC: NCA as optimizer (configures function on fixed topology)
-      - BraiNCA: NCA as brain-economy substrate (attention + scale-free wiring)
+      - Ch3/[[UNCA]]: NCA as computer (mutable/immutable state)
+      - Ch4/[[SODC]]: NCA as optimizer (configures function on fixed topology)
+      - [[BraiNCA]]: NCA as brain-economy substrate (attention + scale-free wiring)
       - **NDP: NCA as developer (grows the substrate itself)**
       - Each angle adds a new degree of freedom. The thesis grand vision = all five composed into a single rule. ^[inferred]
 
@@ -121,7 +121,7 @@ provenance-ambiguous:: 0.02
 
 - ## Successors and Adjacent Work
 
-  - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — Lifelong NDP (LNDP, Plantec et al. ALIFE 2024, arXiv:2406.09787). The direct sequel from the same Risi lab. Adds structural plasticity (synaptogenesis + pruning), activity- and reward-dependent dynamics throughout the agent's lifetime, and spontaneous-activity pre-experience development. **Closes the activity-dependent gap explicitly flagged as a limitation in this paper.** Deep-ingested 2026-05-09.
+  - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — Lifelong NDP ([[LNDP]], Plantec et al. ALIFE 2024, arXiv:2406.09787). The direct sequel from the same Risi lab. Adds structural plasticity (synaptogenesis + pruning), activity- and reward-dependent dynamics throughout the agent's lifetime, and spontaneous-activity pre-experience development. **Closes the activity-dependent gap explicitly flagged as a limitation in this paper.** Deep-ingested 2026-05-09.
   - **[[wiki/refs/hiesinger-2021-self-assembling-brain]]** *The Self-Assembling Brain* (Princeton UP 2021) — deep-ingested 2026-05-10 as 4 pages (parent + Seminars 2, 8, 9). The book-length treatment of biological self-assembly that grounds this whole research thread.
   - [[wiki/refs/zador-2019-critique-pure-learning]] — *A critique of pure learning* (Nature Comms 2019). The foundational [[wiki/concepts/genomic-bottleneck]] paper. Ingested 2026-05-14 (abstract mode).
   - **HyperNCA** (Najarro et al. 2022) — direct precursor to NDP. Could be added as a stub.

@@ -25,11 +25,11 @@ provenance-ambiguous:: 0.02
 - **Evolving Self-Assembling Neural Networks: From Spontaneous Activity to Experience-Dependent Learning** — Plantec, Pedersen, Montero, Nisioti & Risi (IT University of Copenhagen), ALIFE 2024, arXiv:2406.09787. Code: https://github.com/erwanplantec/LNDP. ERC "GROW-AI" funded.
 
 - ## TL;DR
-  - **Lifelong NDP (LNDP)** = Neural Developmental Program ([[wiki/refs/najarro-2023-neural-developmental-programs]]) extended along three axes: (1) **structural plasticity** — synaptogenesis (add edges) + pruning (remove edges) at every step; (2) **activity- and reward-dependent dynamics** — both edges and nodes update based on local activity *and* the global reward signal; (3) **spontaneous-activity (SA) pre-experience phase** — a learnable Ornstein-Uhlenbeck stochastic process drives input neurons before any environmental contact, enabling pre-environmental development.
+  - **Lifelong [[NDP]] (LNDP)** = Neural Developmental Program ([[wiki/refs/najarro-2023-neural-developmental-programs]]) extended along three axes: (1) **structural plasticity** — synaptogenesis (add edges) + pruning (remove edges) at every step; (2) **activity- and reward-dependent dynamics** — both edges and nodes update based on local activity *and* the global reward signal; (3) **spontaneous-activity (SA) pre-experience phase** — a learnable Ornstein-Uhlenbeck stochastic process drives input neurons before any environmental contact, enabling pre-environmental development.
   - Architecture: Graph Transformer (per-cell shared) updates node embeddings; GRUs update node states and edge states; MLPs handle synaptogenesis/pruning probabilities. The full model is optimised by CMA-ES on RL tasks.
   - Demonstrates that **structural plasticity is decisively useful** in (a) fast-adaptation regimes (CartPole, where models without SP fail completely) and (b) non-stationary environments (foraging task with switching reward).
   - **Spontaneous activity gives innate skills** — agents trained with SA can solve CartPole in the *first* episode without any environmental feedback. Synergies appear between SA-driven development and lifetime learning.
-  - **The activity-dependent piece NDP was missing** — exactly the future-work axis flagged in the 2023 NDP paper.
+  - **The activity-dependent piece [[NDP]] was missing** — exactly the future-work axis flagged in the 2023 [[NDP]] paper.
 
 - ## Architecture (LNDP components)
 
@@ -39,7 +39,7 @@ provenance-ambiguous:: 0.02
 
   - ### Node model (Graph Transformer + GRU)
     - GT layer takes node activations v^t, node states h^t, structural features (in/out/total degree, one-hot for input/hidden/output role), and edge features (forward/backward/self-loop bits).
-    - GT output feeds a per-cell GRU that produces h^{t+1}. **Importantly, GT was chosen over plain GraphConv because it prevents node-state collapse** — a recurrent NDP failure mode where all nodes drift to the same state (Pedersen et al. 2024 SFNN).
+    - GT output feeds a per-cell GRU that produces h^{t+1}. **Importantly, GT was chosen over plain GraphConv because it prevents node-state collapse** — a recurrent [[NDP]] failure mode where all nodes drift to the same state (Pedersen et al. 2024 SFNN).
 
   - ### Edge model (synapse GRU)
     - Per-edge state e_ij^{t+1} = GRU(e_ij^t, [h_i, h_j, r]) — concatenates pre/post-synaptic node states and the last reward.
@@ -93,14 +93,14 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
 
-  - ### Direct extension of NDP (closes the activity-dependent gap)
-    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** — LNDP is the direct sequel. NDP grew a network in a pre-environmental phase that was then frozen; LNDP keeps the developmental rule active throughout the agent's lifetime, adds reward-modulation, and adds SA-driven pre-experience development. **The "no activity-dependent growth" limitation explicitly flagged in the NDP page is what LNDP fixes.**
-    - The mechanism is now closer to the Discussion's grand vision in [[wiki/research/phd-thesis]]: a single local rule governs growth + learning + adaptation. NDP did growth-only; LNDP does growth + learning. The remaining gap is *integration with task-specific function configuration* — which is what SODC supplies on a fixed topology.
+  - ### Direct extension of [[NDP]] (closes the activity-dependent gap)
+    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** — LNDP is the direct sequel. [[NDP]] grew a network in a pre-environmental phase that was then frozen; LNDP keeps the developmental rule active throughout the agent's lifetime, adds reward-modulation, and adds SA-driven pre-experience development. **The "no activity-dependent growth" limitation explicitly flagged in the [[NDP]] page is what LNDP fixes.**
+    - The mechanism is now closer to the Discussion's grand vision in [[wiki/research/phd-thesis]]: a single local rule governs growth + learning + adaptation. [[NDP]] did growth-only; LNDP does growth + learning. The remaining gap is *integration with task-specific function configuration* — which is what [[SODC]] supplies on a fixed topology.
 
-  - ### NDP + LNDP + SODC = the unified rule (closer than ever)
-    - **[[wiki/research/self-organising-digital-circuits]]** configures function on a fixed topology via the [[wiki/concepts/topology-masked-transformer]]. LNDP grows topology with activity-dependent rewiring + lifetime weight updates. **The composition NDP/LNDP + SODC** is now an extremely close operationalisation of the [[wiki/research/phd-thesis]] grand vision — only the integration step remains, where the same shared rule produces both the wiring decisions of LNDP and the LUT-configuration decisions of SODC. ^[inferred]
-    - LNDP uses Graph Transformer over a graph representation; SODC uses topology-masked Transformer. **Both converge on attention-over-graph as the right per-cell primitive** — same finding as BraiNCA ([[wiki/refs/pio-lopez-2026-brainca]]). Three independent groups now arrive at this design choice. ^[inferred]
-    - LNDP's node-state-collapse problem (and the GT-vs-GraphConv fix) is a *direct architectural lesson* for any unified extension of SODC into the structural-plasticity regime — straight GraphConv on a learned-developmental task is fragile in this lineage. ^[inferred]
+  - ### [[NDP]] + LNDP + [[SODC]] = the unified rule (closer than ever)
+    - **[[wiki/research/self-organising-digital-circuits]]** configures function on a fixed topology via the [[wiki/concepts/topology-masked-transformer]]. LNDP grows topology with activity-dependent rewiring + lifetime weight updates. **The composition [[NDP]]/LNDP + [[SODC]]** is now an extremely close operationalisation of the [[wiki/research/phd-thesis]] grand vision — only the integration step remains, where the same shared rule produces both the wiring decisions of LNDP and the LUT-configuration decisions of [[SODC]]. ^[inferred]
+    - LNDP uses Graph Transformer over a graph representation; [[SODC]] uses topology-masked Transformer. **Both converge on attention-over-graph as the right per-cell primitive** — same finding as [[BraiNCA]] ([[wiki/refs/pio-lopez-2026-brainca]]). Three independent groups now arrive at this design choice. ^[inferred]
+    - LNDP's node-state-collapse problem (and the GT-vs-GraphConv fix) is a *direct architectural lesson* for any unified extension of [[SODC]] into the structural-plasticity regime — straight GraphConv on a learned-developmental task is fragile in this lineage. ^[inferred]
 
   - ### Achterberg connection — Ch2's spatial priors loop in
     - LNDP's Discussion flags [[wiki/refs/achterberg-2023-sernns]] as a target source of inductive bias on plasticity rules — the Risi group is reading the same wiring-cost / spatially-embedded literature that powers [[wiki/research/spatial-neuromorphic-priors]] (Ch2). Cross-pollination is plausible: a *spatially-embedded LNDP* with wiring-cost regularisation would unify three threads (developmental encoding, lifelong learning, brain-economy spatial priors). ^[inferred]
@@ -109,10 +109,10 @@ provenance-ambiguous:: 0.02
     - **[[wiki/concepts/functionalism]]** — LNDP exhibits *narrow MR* across multiple axes: (a) different initial topologies (μ_conn ∈ {0, 0.5, 1}) all reach functional networks; (b) reward switches in the foraging task can be implemented via *either* weight changes or *new structural connections* — same function, different implementation, within-substrate. The LNDP's policy genotype (CMA-ES vector) is a much smaller object than its many possible phenotypic graphs.
     - **[[wiki/concepts/solution-degeneracy]]** — the foraging-task adaptation strategy ("two routes to the same updated policy") is degeneracy in action.
 
-  - ### NDP follow-up axes worth tracking
+  - ### [[NDP]] follow-up axes worth tracking
     - **Pedersen et al. 2024 — Structurally Flexible Neural Networks (SFNN)** — same Risi group; another companion paper to LNDP. Cited as the source of the node-state-collapse problem fix. Could be a stub.
-    - **Najarro & Risi 2020 — Hebbian meta-learning** — earlier Risi-group work on evolved plasticity rules; predates NDP.
-    - **Najarro et al. 2022 — HyperNCA** — already cited from NDP; the immediate precursor that uses NCA to grow weight matrices via 3D pattern.
+    - **Najarro & Risi 2020 — Hebbian meta-learning** — earlier Risi-group work on evolved plasticity rules; predates [[NDP]].
+    - **Najarro et al. 2022 — HyperNCA** — already cited from [[NDP]]; the immediate precursor that uses NCA to grow weight matrices via 3D pattern.
     - **Sandler et al. 2021** — Meta-Learning Bidirectional Update Rules; notable because Aguera y Arcas is a co-author. Connects this thread to the [[wiki/refs/aguera-y-arcas-2025-functional-perspective]] / functionalism angle. ^[inferred]
 
 - ## Limitations the Authors Acknowledge

@@ -81,30 +81,30 @@ provenance-ambiguous:: 0.02
 	- **Engram** = the physical substrate of memory (neuropsychology). EngramNCA's private channels are the engram analogue — information stored *inside* cells, transferable cell-to-cell via the GenePropCA mechanism (analogous to RNA transfer via extracellular vesicles or tunneling nanotubes).
 	- **"Genome instantiates a generative model"** (Mitchell & Cheney 2024; Hartl & Levin 2024 — same Levin lab as [[wiki/refs/pio-lopez-2026-brainca]]): the gene encoding is a *compact generative latent* that the GeneCA decodes into morphology. EngramNCA operationalises this view in NCA form. ^[addressed]
 - ## Connections to Gabriel's Research
-	- ### Public/private channel split parallels mutable/immutable state in UNCA — but extended
+	- ### Public/private channel split parallels mutable/immutable state in [[UNCA]] — but extended
 		- **[[wiki/research/universal-nca]]** introduced the *mutable/immutable* state separation: immutable = "hardware" (spatially heterogeneous, fixed per task instance); mutable = "computation" (updated by the NCA rule). EngramNCA's public/private split is a closely related dichotomy: public channels are inter-cellular communication ("computation observable to neighbours"); private channels are intracellular memory ("immutable from neighbour perspective, mutable from the cell's own perspective").
-		- **Crucial difference**: EngramNCA's private channels are *propagable* — GenePropCA can transfer them across cells (the RNA-transfer analogue). UNCA's immutable hardware does not transfer. EngramNCA thus extends UNCA's separation into a *flexible, context-modulatable* memory layer that can be moved around. ^[inferred]
-		- Conceptually, EngramNCA's gene channels behave like *task descriptors* in UNCA's hardware-state — and *also* like SODC's LUT logits ([[wiki/research/self-organising-digital-circuits]]) in that they parameterise function while not being directly observable. Triangulates a third instantiation of "function-as-cell-internal-state" across this lab cluster. ^[inferred]
-	- ### Stability via private memory — connection to SODC's pool training
+		- **Crucial difference**: EngramNCA's private channels are *propagable* — GenePropCA can transfer them across cells (the RNA-transfer analogue). [[UNCA]]'s immutable hardware does not transfer. EngramNCA thus extends [[UNCA]]'s separation into a *flexible, context-modulatable* memory layer that can be moved around. ^[inferred]
+		- Conceptually, EngramNCA's gene channels behave like *task descriptors* in [[UNCA]]'s hardware-state — and *also* like [[SODC]]'s LUT logits ([[wiki/research/self-organising-digital-circuits]]) in that they parameterise function while not being directly observable. Triangulates a third instantiation of "function-as-cell-internal-state" across this lab cluster. ^[inferred]
+	- ### Stability via private memory — connection to [[SODC]]'s pool training
 		- Vanilla NCA Lenia replication failed at ~frame 300; EngramNCA was stable past 500. The paper credits the private memory channels for providing *stable function representation* over long horizons.
 		- **[[wiki/research/self-organising-digital-circuits]]** uses *pool-based meta-learning* to enforce long-horizon stability — circuits persist across task resets, reinforcing functional homeostasis. EngramNCA arrives at long-horizon stability via a different mechanism (architectural privacy of memory channels). Both target the same pathology: NCA dynamics drifting away from learned function over time.
-		- Possible cross-pollination: SODC's pool training + EngramNCA's private channels could give a more sample-efficient long-horizon training regime. The EngramNCA paper itself flags this: "One avenue for future work is to use EngramNCA cell memory mechanisms when pool-training is not applicable." ^[inferred]
+		- Possible cross-pollination: [[SODC]]'s pool training + EngramNCA's private channels could give a more sample-efficient long-horizon training regime. The EngramNCA paper itself flags this: "One avenue for future work is to use EngramNCA cell memory mechanisms when pool-training is not applicable." ^[inferred]
 	- ### NCA Five Angles — and now a 6th
 		- **[[wiki/concepts/neural-cellular-automata]]** — the existing Five Angles (pattern-former → computer → optimizer → brain-economy substrate → developer) gain a sixth: **NCA-as-engram-bearer**. The substrate is now augmented with cell-private memory that propagates separately from visible state.
 		- **Mapping onto the trilogy / quintet**:
 			- Mordvintsev: pure visible state (no private memory)
-			- UNCA Ch3: mutable/immutable separation (private "hardware" but immobile)
-			- SODC Ch4: function-as-state (LUTs configurable per cell)
-			- BraiNCA: attention over graph + long-range
-			- NDP/LNDP: substrate growth via per-cell rules
+			- [[UNCA]] Ch3: mutable/immutable separation (private "hardware" but immobile)
+			- [[SODC]] Ch4: function-as-state (LUTs configurable per cell)
+			- [[BraiNCA]]: attention over graph + long-range
+			- [[NDP]]/[[LNDP]]: substrate growth via per-cell rules
 			- **EngramNCA**: cell-private propagable memory (RNA-transfer analogue)
-		- The natural composition: a unified rule with growth (NDP/LNDP), function-config (SODC), and engram propagation (EngramNCA) all operating on the same cell-state architecture. Closer to the [[wiki/research/phd-thesis]] grand vision than any single paper. ^[inferred]
+		- The natural composition: a unified rule with growth ([[NDP]]/[[LNDP]]), function-config ([[SODC]]), and engram propagation (EngramNCA) all operating on the same cell-state architecture. Closer to the [[wiki/research/phd-thesis]] grand vision than any single paper. ^[inferred]
 	- ### Functionalism — narrow MR via *task-conditional substrate*
 		- **[[wiki/concepts/functionalism]]** — EngramNCA exhibits a particularly clean form of narrow MR: *the same network parameters realise different morphological functions* depending on the gene encoding in the seed cell. The gene channels are a *substrate for function specification*; they do not *change the implementation* (the NN weights are frozen) but *change which function is computed*.
 		- This is a much sharper version of multiple realizability than gradient-trained networks: same cell-rule realises {square, circle, triangle, lizard, fractal} purely by changing the private gene encoding. The genotype-phenotype map is *one-to-many in a controllable way*.
 		- **[[wiki/concepts/solution-degeneracy]]** — the OOD gene-mixing experiment is degeneracy made deliberate: untrained encodings still produce coherent (mixed) phenotypes, suggesting the gene-space is a *smooth* degenerate basin rather than discrete island-of-the-trained.
 	- ### Memory-engram + functional plasticity → bio-inspired AGI thread
-		- The connection to **planaria regeneration** ties this thread directly to Levin's work, which sits behind both BraiNCA ([[wiki/refs/pio-lopez-2026-brainca]]) and the Mitchell-Cheney 2024 / Hartl-Levin 2024 "genomic generative model" framing.
+		- The connection to **planaria regeneration** ties this thread directly to Levin's work, which sits behind both [[BraiNCA]] ([[wiki/refs/pio-lopez-2026-brainca]]) and the Mitchell-Cheney 2024 / Hartl-Levin 2024 "genomic generative model" framing.
 		- Combined with [[wiki/refs/aguera-y-arcas-2025-functional-perspective]]'s functionalist chain (Turing → Von Neumann → DNA-as-tape), EngramNCA is a particularly clean engineering instantiation of *life-as-embodied-computation*: cells carry their own private "DNA" and propagate it intercellularly.
 - ## Limitations / Where the Paper Stops
 	- Privatising channels carries a performance penalty (Appendix 1 — DummyVCA/MaskedCA/ReducedCA all degrade as more channels become private). There's a delicate balance in the n_g / n_h split.
@@ -116,7 +116,7 @@ provenance-ambiguous:: 0.02
 	- **Pande & Grattarola 2023 — Hierarchical NCA** — same Grattarola lineage as [[wiki/refs/grattarola-2021-learning-graph-ca]]; cited as an inspiration for the multi-scale / multi-level extension of NCA.
 	- **Sudhakaran, Najarro & Risi 2022 — Goal-guided NCA** — Risi lab; cited as a similar architectural idea (a goal-encoder vs GenePropCA's gene-prop).
 	- **Mitchell & Cheney 2024** "The genomic code: The genome instantiates a generative model of the organism" (arXiv:2407.15908) — the theoretical backbone for the engram framing. Worth a stub.
-	- **Hartl & Levin 2024** "What does evolution make? learning in living lineages and machines" — same Levin lab as BraiNCA.
+	- **Hartl & Levin 2024** "What does evolution make? learning in living lineages and machines" — same Levin lab as [[BraiNCA]].
 - ## Theoretical Anchor
 	- **[[wiki/refs/hiesinger-2021-self-assembling-brain]]** — Hiesinger Seminar 8 ([[wiki/refs/hiesinger-2021-seminar8-development-function]]) reformulates memory as *the algorithmic rules sufficient to recreate a representation given input + time + energy*. EngramNCA's private gene channels + GenePropCA implement exactly this: the genes ARE the rule-substrate; the GeneCA is the rule-runner; the morphology is the recreated representation. The "memory beyond synapses" framing in EngramNCA's Discussion is also the framing Hiesinger's continuum-of-development-and-function argument leads to.
 - ## Cited By (in this wiki)

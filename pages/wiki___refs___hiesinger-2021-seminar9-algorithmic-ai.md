@@ -62,7 +62,7 @@ provenance-ambiguous:: 0.02
   - ### Layer 3 — Generative: evolutionary programming
     - The brain isn't just developed; it's *developed-from-evolved-rules*. Evolutionary programming = selection over genomes that encode developmental algorithms. **A mutation does not change a synaptic weight; it changes the algorithm that produces the brain.**
     - **Pioneers cited**: Arend Hintze, Chris Adami — evolve ANNs by evolving genomes that encode them, often using "direct encoding" (one gene per weight) but increasingly *indirect encoding* + developmental encoding.
-    - Hiesinger's predictive flag (p. 285): "first experiments with indirect and developmental encoding already revealed remarkable effects on robustness and adaptability". *This is the literature NDP, LNDP, EngramNCA built on.*
+    - Hiesinger's predictive flag (p. 285): "first experiments with indirect and developmental encoding already revealed remarkable effects on robustness and adaptability". *This is the literature [[NDP]], [[LNDP]], [[EngramNCA]] built on.*
     - **Why it's still fringe**: "evolver of artificial intelligence" is not a job title most parents understand. The compute cost is enormous; the payoff is in capabilities current ANNs can't reach.
 
 - ## Hinton's 2014 Self-Critique (and Why It Matters)
@@ -84,7 +84,7 @@ provenance-ambiguous:: 0.02
 
   - **The build-then-train model** treats development and function as distinct: the architecture is engineered, then frozen, then training is run on top. This is the **car-then-driver model**: build the car, then drive it.
   - **The biological model** has no such cut: the brain keeps developing while it functions. Synaptic plasticity is just continued algorithmic growth at slower kinetics. Aging is continued algorithmic growth too.
-  - **For AI**: replacing build-then-train with grow-and-function-continuously is what NDP/LNDP attempt. EngramNCA's pool training is another instance — the network keeps reconfiguring during evaluation.
+  - **For AI**: replacing build-then-train with grow-and-function-continuously is what [[NDP]]/[[LNDP]] attempt. [[EngramNCA]]'s pool training is another instance — the network keeps reconfiguring during evaluation.
   - **The hard claim**: if function and development are continuous, then *the only way to specify a function is via the developmental rules that produce a network capable of it*. There is no way to short-cut from "I want capability X" to "trained network with capability X" without going through "developmental rule that grows a network with capability X".
 
 - ## What Cannot Be Cut Short
@@ -98,26 +98,26 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
 
-  - ### NDP / LNDP / EngramNCA — operationalising Hiesinger's prescription
-    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** — NDP is essentially "Hiesinger's algorithmic-growth argument operationalised in graph-NCA form". Per-cell shared NN, growth from a seed, no separate engineering phase. Cites Hiesinger 2018 + 2021 explicitly.
-    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — LNDP is the more ambitious operationalisation: spontaneous-activity pre-experience development + lifelong structural plasticity + activity/reward-dependent dynamics. **This is what Seminar 9 was prescribing four years before the paper appeared.**
-    - **[[wiki/refs/guichard-2025-engramnca]]** — EngramNCA's public/private channel split is closer to Hiesinger's "private memory is part of the rule, not the visible state" framing than any other architecture. The Lenia-glider stability over long horizons (where vanilla NCA fails) is direct evidence that *cell-internal information* can serve the role Hiesinger ascribes to genome-as-rule-substrate.
-    - **[[wiki/refs/guichard-2025-arc-nca]]** — ARC-NCA is the *empirical evidence* that grown-from-scratch developmental networks can be competitive with frontier LLMs at reasoning tasks. 17.6% solve rate vs ChatGPT 4.5's 10.3% at ~1000× lower cost is *exactly* the "narrow shortcut vs full algorithmic growth" tradeoff Hiesinger predicts.
+  - ### [[NDP]] / [[LNDP]] / [[EngramNCA]] — operationalising Hiesinger's prescription
+    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** — [[NDP]] is essentially "Hiesinger's algorithmic-growth argument operationalised in graph-NCA form". Per-cell shared NN, growth from a seed, no separate engineering phase. Cites Hiesinger 2018 + 2021 explicitly.
+    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — [[LNDP]] is the more ambitious operationalisation: spontaneous-activity pre-experience development + lifelong structural plasticity + activity/reward-dependent dynamics. **This is what Seminar 9 was prescribing four years before the paper appeared.**
+    - **[[wiki/refs/guichard-2025-engramnca]]** — [[EngramNCA]]'s public/private channel split is closer to Hiesinger's "private memory is part of the rule, not the visible state" framing than any other architecture. The Lenia-glider stability over long horizons (where vanilla NCA fails) is direct evidence that *cell-internal information* can serve the role Hiesinger ascribes to genome-as-rule-substrate.
+    - **[[wiki/refs/guichard-2025-arc-nca]]** — [[ARC-NCA]] is the *empirical evidence* that grown-from-scratch developmental networks can be competitive with frontier LLMs at reasoning tasks. 17.6% solve rate vs ChatGPT 4.5's 10.3% at ~1000× lower cost is *exactly* the "narrow shortcut vs full algorithmic growth" tradeoff Hiesinger predicts.
 
   - ### NCA as the candidate substrate for developmental AI
     - **[[wiki/concepts/neural-cellular-automata]]** — NCAs are explicitly the architecture that comes closest to Hiesinger's prescription. Local rules, autonomous agents, time + energy, no master regulator. The NCA Seven Angles can be re-read as "seven stages of approaching Hiesinger's full vision":
       - Mordvintsev (image NCA): pattern-former with local rules
-      - UNCA Ch3: substrate for computation
-      - SODC Ch4: rule-as-meta-optimiser (function emerges from algorithmic process)
-      - BraiNCA: brain-economy spatial priors
-      - NDP: substrate growth via per-cell NN
-      - LNDP: structural plasticity + lifelong development
-      - EngramNCA: cell-private propagable memory
+      - [[UNCA]] Ch3: substrate for computation
+      - [[SODC]] Ch4: rule-as-meta-optimiser (function emerges from algorithmic process)
+      - [[BraiNCA]]: brain-economy spatial priors
+      - [[NDP]]: substrate growth via per-cell NN
+      - [[LNDP]]: structural plasticity + lifelong development
+      - [[EngramNCA]]: cell-private propagable memory
     - The gap from current NCAs to Hiesinger's full vision: *evolutionary programming over the developmental rule*. None of the current NCA architectures use evolution to *select* the rule; they all train it via gradient descent on a fixed loss. Hiesinger suggests this may be the next frontier. ^[inferred]
 
-  - ### SODC and the "function is continued development" claim
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC's pool meta-learning is the cleanest existing instance of "function as continued development". The TMT keeps reconfiguring LUTs in response to perturbation; there's no point at which training is done and inference begins. The basin-hopping recovery story is *neural-Darwinist* in Edelman's sense and *algorithmic-growth* in Hiesinger's sense.
-    - The fact that SODC works at all on hard tasks (Boolean function recovery under permanent damage, scale-free generalisation) is *evidence* that algorithmic-growth-style training is competitive with build-then-train when tasks demand robustness and adaptation. ^[inferred]
+  - ### [[SODC]] and the "function is continued development" claim
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]]'s pool meta-learning is the cleanest existing instance of "function as continued development". The [[TMT]] keeps reconfiguring LUTs in response to perturbation; there's no point at which training is done and inference begins. The basin-hopping recovery story is *neural-Darwinist* in Edelman's sense and *algorithmic-growth* in Hiesinger's sense.
+    - The fact that [[SODC]] works at all on hard tasks (Boolean function recovery under permanent damage, scale-free generalisation) is *evidence* that algorithmic-growth-style training is competitive with build-then-train when tasks demand robustness and adaptation. ^[inferred]
 
   - ### The thesis grand vision — Hiesinger as the strongest external "why"
     - **[[wiki/research/phd-thesis]]** Discussion's grand vision is *the same vision Hiesinger argues for in this Seminar*. A single local rule governing growth + learning + repair = the developmental algorithm not artificially separated into phases. Reading this Seminar is reading the strongest external defence of why the grand vision is worth pursuing.

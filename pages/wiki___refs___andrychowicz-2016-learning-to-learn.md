@@ -28,8 +28,8 @@ ingest-mode:: abstract
   - Generalisation to new tasks with similar structure shows meta-learned optimisers transfer. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/research/self-organising-digital-circuits]] — SODC pool-based training loop is conceptually related to meta-learning over problem distributions.
-  - [[wiki/concepts/topology-masked-transformer]] — the TMT acts as a learned update rule across circuit instances; analogous framing.
+  - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] pool-based training loop is conceptually related to meta-learning over problem distributions.
+  - [[wiki/concepts/topology-masked-transformer]] — the [[TMT]] acts as a learned update rule across circuit instances; analogous framing.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]

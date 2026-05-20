@@ -72,12 +72,12 @@ provenance-ambiguous:: 0.02
     - **[[wiki/concepts/modularity]]** — Pessoa Ch1 supplies the *neuroscience-side* argument that structural modularity does not yield clean functional specialisation. The *brain itself* doesn't have separable functional modules; expecting *artificial structurally modular networks* (Ch1 of thesis) to develop them was already against the biological grain.
     - **[[wiki/research/dynamics-specialization]]** — the empirical finding that resource constraints can drive functional specialisation in *artificial* networks is consistent with what Pessoa argues for biological brains: functional specialisation is something selection has to *push for*, not a structural default.
 
-  - ### Filler verbs as a tool for SODC self-critique
-    - **[[wiki/research/self-organising-digital-circuits]]** — when describing what the [[wiki/concepts/topology-masked-transformer]] *does*, Pessoa's filler-verb list is a good check. "The TMT *configures* function" is borderline filler. Better: "the TMT applies attention-weighted aggregation over circuit edges to produce an updated LUT logit." The mechanism specifies inputs, computation, outputs.
+  - ### Filler verbs as a tool for [[SODC]] self-critique
+    - **[[wiki/research/self-organising-digital-circuits]]** — when describing what the [[wiki/concepts/topology-masked-transformer]] *does*, Pessoa's filler-verb list is a good check. "The [[TMT]] *configures* function" is borderline filler. Better: "the [[TMT]] applies attention-weighted aggregation over circuit edges to produce an updated LUT logit." The mechanism specifies inputs, computation, outputs.
     - **For the wiki generally**: when a wiki page describes a mechanism using a filler verb, that's often a signal it could be tightened.
 
   - ### Network science as theoretical foundation for graph-NCAs
-    - **[[wiki/concepts/neural-cellular-automata]]** — Pessoa Ch1's brief network-science overview explicitly mentions Watts-Strogatz small-world organisation, which is *also* the framing in [[wiki/refs/pio-lopez-2026-brainca]] (BraiNCA's scale-free hubs). Same theoretical cluster, applied at different levels: BraiNCA imposes the wiring as inductive bias, Pessoa argues the brain *has* this wiring as an empirical fact.
+    - **[[wiki/concepts/neural-cellular-automata]]** — Pessoa Ch1's brief network-science overview explicitly mentions Watts-Strogatz small-world organisation, which is *also* the framing in [[wiki/refs/pio-lopez-2026-brainca]] ([[BraiNCA]]'s scale-free hubs). Same theoretical cluster, applied at different levels: [[BraiNCA]] imposes the wiring as inductive bias, Pessoa argues the brain *has* this wiring as an empirical fact.
 
   - ### Phd thesis preface — "modularity got me one last time"
     - **[[wiki/research/phd-thesis]]** — the worry that the modularity narrative is seductive even when the evidence undermines it is *exactly Pessoa's thesis position*. Reading Ch1 in full reinforces why modularity is so hard to escape: every methodological tool, every default vocabulary ("function of region X"), every neuroscience training programme reinforces it.

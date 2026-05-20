@@ -106,10 +106,10 @@ provenance-ambiguous:: 0.02
   - ### NCA framing — the most direct connection in the entire book
     - **[[wiki/concepts/neural-cellular-automata]]** — Pessoa Ch8's pencil-and-paper introduction to cellular automata is essentially "what is an NCA, philosophically". Cellular automata as exemplars of *organisation emerging in the absence of a designer* is the framing every NCA paper relies on, often without articulating it.
     - **[[wiki/refs/hiesinger-2021-self-assembling-brain]]** — Hiesinger Seminar 2 also uses Rule 110 / Game of Life as the foundational example. **Pessoa Ch8 + Hiesinger Seminar 2 are the two complementary book-chapter introductions to "why cellular-automata-like thinking matters for biology"**. Read together they make the case for NCAs as the engineering primitive.
-    - **[[wiki/refs/pio-lopez-2026-brainca]]** — BraiNCA's emphasis on small-world / scale-free wiring + brain economy is consistent with Pessoa's heterarchy + multiple-levels framing. ^[inferred]
+    - **[[wiki/refs/pio-lopez-2026-brainca]]** — [[BraiNCA]]'s emphasis on small-world / scale-free wiring + brain economy is consistent with Pessoa's heterarchy + multiple-levels framing. ^[inferred]
 
   - ### Heterarchy and the topology-masked transformer
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC's [[wiki/concepts/topology-masked-transformer]] is *architecturally heterarchical*: every node runs the same shared rule, no master controller, multidirectional information flow on the masked attention graph. The TMT operationalises Pessoa's heterarchy.
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]]'s [[wiki/concepts/topology-masked-transformer]] is *architecturally heterarchical*: every node runs the same shared rule, no master controller, multidirectional information flow on the masked attention graph. The [[TMT]] operationalises Pessoa's heterarchy.
     - The pool-based meta-learning is also process-oriented (Pessoa's #3): function lives in the *temporal evolution* of LUT configurations, not in any single snapshot.
 
   - ### Higher-order interactions — a research opportunity
@@ -117,7 +117,7 @@ provenance-ambiguous:: 0.02
     - Pairwise connectivity analyses of large modular networks may be missing the higher-order coupling structure that drives specialisation. Worth a future study using higher-order graph analyses.
 
   - ### Solution degeneracy — emergence of degenerate basins
-    - **[[wiki/concepts/solution-degeneracy]]** — Pessoa Ch8's emergence concept gives a *named conceptual framework* for the basin-hopping recovery in SODC. The set of structurally distinct functionally equivalent configurations *is* an emergent property: it appears at the system level but isn't predicted from the per-cell rule alone. ^[inferred]
+    - **[[wiki/concepts/solution-degeneracy]]** — Pessoa Ch8's emergence concept gives a *named conceptual framework* for the basin-hopping recovery in [[SODC]]. The set of structurally distinct functionally equivalent configurations *is* an emergent property: it appears at the system level but isn't predicted from the per-cell rule alone. ^[inferred]
 
   - ### The thesis Discussion's "grand vision" gets vocabulary
     - **[[wiki/research/phd-thesis]]** — the grand vision of *single local rule governing growth + learning + repair* is heterarchy + emergence + process operationalised in NCA form. Pessoa's six-implication summary is essentially a *checklist* the grand vision aims to satisfy. ^[inferred]

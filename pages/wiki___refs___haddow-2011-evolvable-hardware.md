@@ -23,7 +23,7 @@ ingest-mode:: needs-fetch
 - TODO: fetch abstract once available (not in Semantic Scholar index).
 
 - ## Connections to Wiki
-  - [[wiki/research/self-organising-digital-circuits]] — cited as historical context for adaptive digital circuits; SODC offers a gradient-based alternative to evolutionary approaches.
+  - [[wiki/research/self-organising-digital-circuits]] — cited as historical context for adaptive digital circuits; [[SODC]] offers a gradient-based alternative to evolutionary approaches.
   - [[wiki/concepts/differentiable-logic-gates]] — differentiable training contrasts with evolvable hardware's fitness-based search.
 
 - ## Cited By (in this wiki)

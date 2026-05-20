@@ -25,10 +25,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Contrastive pretraining on circuits captures functional (not just topological) distance. ^[inferred]
   - Input-order invariance via the contrastive loss is key for circuit semantics. ^[inferred]
-  - Related to SODC in that both must learn representations that respect circuit logic, not just graph structure. ^[inferred]
+  - Related to [[SODC]] in that both must learn representations that respect circuit logic, not just graph structure. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/differentiable-logic-gates]] — complementary approach: FGNN2 learns circuit representations; SODC learns circuit configurations.
+  - [[wiki/concepts/differentiable-logic-gates]] — complementary approach: FGNN2 learns circuit representations; [[SODC]] learns circuit configurations.
   - [[wiki/research/self-organising-digital-circuits]] — cited as related EDA work on circuit ML.
 
 - ## Cited By (in this wiki)

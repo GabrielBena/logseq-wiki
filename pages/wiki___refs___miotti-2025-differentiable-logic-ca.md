@@ -24,8 +24,8 @@ provenance-ambiguous:: 0.00
 
 - **Differentiable Logic Cellular Automata: From Game of Life to Pattern Generation** — Miotti, Niklasson, Randazzo & Mordvintsev (2025), Google Paradigms of Intelligence Team. Published as a Distill-style interactive web article; the blog *is* the paper. arXiv mirror at 2506.04912.
 - ## What it does
-	- Combines Neural Cellular Automata (NCA) with Deep Differentiable Logic Gate Networks (DLGNs). Cells carry an n-dim **binary** state vector; the update rule is a *discrete logic circuit* applied identically at every cell. The circuit is trained end-to-end via gradient descent on continuous relaxations, then binarised for inference.
-	- **First demonstration of DLGNs in a recurrent setting.** Prior DLGN work (Petersen et al.) had only addressed feedforward classification. Recurrent-in-time + recurrent-in-space + discrete gates is the new combination.
+	- Combines Neural Cellular Automata (NCA) with Deep Differentiable Logic Gate Networks ([[DLGNs]]). Cells carry an n-dim **binary** state vector; the update rule is a *discrete logic circuit* applied identically at every cell. The circuit is trained end-to-end via gradient descent on continuous relaxations, then binarised for inference.
+	- **First demonstration of [[DLGNs]] in a recurrent setting.** Prior [[DLGN]] work (Petersen et al.) had only addressed feedforward classification. Recurrent-in-time + recurrent-in-space + discrete gates is the new combination.
 	- The architecture has two stages per cell per step, mirroring vanilla NCA:
 		- **Perception kernels** — small logic circuits that read the central cell + its Moore-neighbourhood and produce a per-channel summary. Replace Sobel filters.
 		- **Update network** — a deeper logic circuit that takes the perception output + the cell's current state, outputs the *new* binary state directly (no incremental ODE-style update — full replacement).
@@ -68,7 +68,7 @@ provenance-ambiguous:: 0.00
 	- [[wiki/concepts/substrate-rule-co-location]] — situates this paper at Level 0 of the optimiser-substrate merger ladder.
 	- [[wiki/research/self-organising-digital-circuits]] — the inverse setup (NCA optimises circuit vs circuit runs NCA); together they bracket the merger.
 	- [[wiki/projects/growing-computation]] — the project that takes this paper as its layer-2-compilation primitive.
-	- [[wiki/refs/petersen-2022-deep-differentiable-logic]] — original DLGN paper this builds on.
+	- [[wiki/refs/petersen-2022-deep-differentiable-logic]] — original [[DLGN]] paper this builds on.
 	- [[wiki/refs/mordvintsev-2020-growing-neural-ca]] — original NCA paper this discretises.
 - ## Cited By (in this wiki)
 	- [[wiki/research/self-organising-digital-circuits]]

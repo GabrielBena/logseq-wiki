@@ -25,10 +25,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Zero-init residual gate: output = x + α·F(x) where α=0 at init; network starts as identity, gradually learns residuals. ^[inferred]
   - Achieves dynamical isometry (near-unit singular values of Jacobian) at initialisation. ^[inferred]
-  - Used in SODC's TMT for stable training of the shared-weight update network across large circuit populations. ^[inferred]
+  - Used in [[SODC]]'s [[TMT]] for stable training of the shared-weight update network across large circuit populations. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — ReZero init is used in the TMT block.
+  - [[wiki/concepts/topology-masked-transformer]] — ReZero init is used in the [[TMT]] block.
   - [[wiki/research/self-organising-digital-circuits]] — cited as architectural detail for training stability.
 
 - ## Cited By (in this wiki)

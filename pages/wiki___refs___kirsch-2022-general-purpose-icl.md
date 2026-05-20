@@ -29,7 +29,7 @@ ingest-mode:: abstract
   - Capability bottlenecked by accessible state (context window), not parameter count. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — the TMT acts as a meta-learner operating on circuit states; related conceptual framing.
+  - [[wiki/concepts/topology-masked-transformer]] — the [[TMT]] acts as a meta-learner operating on circuit states; related conceptual framing.
   - [[wiki/research/self-organising-digital-circuits]] — cited as background on meta-learning Transformers.
 
 - ## Cited By (in this wiki)

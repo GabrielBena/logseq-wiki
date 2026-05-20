@@ -28,7 +28,7 @@ ingest-mode:: abstract
   - Standard component in virtually all modern Transformer architectures. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — layer norm is a standard ingredient in the TMT block used in SODC.
+  - [[wiki/concepts/topology-masked-transformer]] — layer norm is a standard ingredient in the [[TMT]] block used in [[SODC]].
   - [[wiki/research/self-organising-digital-circuits]] — cited as architectural component.
 
 - ## Cited By (in this wiki)

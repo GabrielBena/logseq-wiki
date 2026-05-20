@@ -117,11 +117,11 @@ provenance-ambiguous:: 0.02
     - **[[wiki/research/dynamics-specialization]]** — the resource-constraint result is exactly what Pessoa would predict needs to happen for *any* form of modularity to emerge: pressure on a structurally modular substrate is needed to drive functional separation. Without it, function distributes across the whole.
 
   - ### Many-to-many and the topology-masked transformer
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC is a *many-to-many architecture by design*: shared TMT weights operate on every node, every node implements multiple functions across tasks (LUT configurations are task-conditional), every function involves multiple nodes. This is closer to Pessoa's empirical-brain framing than to the M5-modular ANN tradition.
-    - The basin-hopping recovery story is *many-to-one mapping made explicit*: the same Boolean function is realised by many distinct LUT configurations. Pessoa Ch4's many-to-one is at the regional scale; SODC's many-to-one is at the LUT-configuration scale.
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]] is a *many-to-many architecture by design*: shared [[TMT]] weights operate on every node, every node implements multiple functions across tasks (LUT configurations are task-conditional), every function involves multiple nodes. This is closer to Pessoa's empirical-brain framing than to the M5-modular ANN tradition.
+    - The basin-hopping recovery story is *many-to-one mapping made explicit*: the same Boolean function is realised by many distinct LUT configurations. Pessoa Ch4's many-to-one is at the regional scale; [[SODC]]'s many-to-one is at the LUT-configuration scale.
 
-  - ### Functional-repertoire framing for SODC
-    - The SODC blog post could productively reframe its "what TMT does" section as a *functional repertoire across task families* rather than as a single mechanism. Pessoa's 20-dim profile is the inspiration: *what is the TMT's functional repertoire across Boolean function families, perturbation regimes, and depth scales?*
+  - ### Functional-repertoire framing for [[SODC]]
+    - The [[SODC]] blog post could productively reframe its "what [[TMT]] does" section as a *functional repertoire across task families* rather than as a single mechanism. Pessoa's 20-dim profile is the inspiration: *what is the [[TMT]]'s functional repertoire across Boolean function families, perturbation regimes, and depth scales?*
 
   - ### The double-dissociation logic and ablation experiments in NCA
     - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** + **[[wiki/refs/plantec-2024-lifelong-ndp]]** — both rely on ablation studies (turn off SP, turn off SA) that are essentially single dissociations. Pessoa's critique applies: results are *consistent with* the proposed mechanism but don't *establish* its modularity. Future work should aim for double dissociations between mechanisms.

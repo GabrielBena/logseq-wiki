@@ -26,10 +26,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Attention over neighbours: replace uniform aggregation with learned per-edge weights. ^[inferred]
   - No dependency on graph structure at training time — inductive; generalises to unseen graphs. ^[inferred]
-  - The GNN baseline in SODC uses attention-based aggregation in the spirit of GAT. ^[inferred]
+  - The GNN baseline in [[SODC]] uses attention-based aggregation in the spirit of GAT. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — TMT's topology mask is a hard version of GAT's soft attention mask.
+  - [[wiki/concepts/topology-masked-transformer]] — [[TMT]]'s topology mask is a hard version of GAT's soft attention mask.
   - [[wiki/research/self-organising-digital-circuits]] — GNN baseline draws on GAT-style attention aggregation.
   - [[wiki/code/gabrielbena-boolean-nca-cc]] — GNN model in `models/gnn/`.
 

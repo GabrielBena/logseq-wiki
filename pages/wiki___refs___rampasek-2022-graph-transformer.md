@@ -26,10 +26,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - GPS recipe: (1) positional/structural encoding, (2) local message-passing, (3) global attention — modular composition. ^[inferred]
   - Linear complexity by decoupling local aggregation from global Transformer. ^[inferred]
-  - Provides the graph Transformer framework context for TMT's topology-masked attention design. ^[inferred]
+  - Provides the graph Transformer framework context for [[TMT]]'s topology-masked attention design. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — TMT is a topology-constrained variant of the graph Transformer framework described here.
+  - [[wiki/concepts/topology-masked-transformer]] — [[TMT]] is a topology-constrained variant of the graph Transformer framework described here.
   - [[wiki/research/self-organising-digital-circuits]] — cited for graph Transformer background.
 
 - ## Cited By (in this wiki)

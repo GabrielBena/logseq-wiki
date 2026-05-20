@@ -28,7 +28,7 @@ ingest-mode:: abstract
   - Practical consequence: Pre-LN enables simpler training recipes with fewer hyperparameters. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — SODC likely uses Pre-LN for stable training; this paper motivates the choice.
+  - [[wiki/concepts/topology-masked-transformer]] — [[SODC]] likely uses Pre-LN for stable training; this paper motivates the choice.
   - [[wiki/research/self-organising-digital-circuits]] — cited as architectural justification.
 
 - ## Cited By (in this wiki)

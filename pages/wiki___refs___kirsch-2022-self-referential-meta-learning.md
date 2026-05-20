@@ -26,10 +26,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Self-referential learning: the network modifies its own weights without an outer meta-optimiser. ^[inferred]
   - Fitness-monotonic execution: resources assigned to better-performing modifications — a form of selection pressure. ^[inferred]
-  - Strong resonance with SODC: both are self-modifying systems that learn without a privileged external optimiser. ^[inferred]
+  - Strong resonance with [[SODC]]: both are self-modifying systems that learn without a privileged external optimiser. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/research/self-organising-digital-circuits]] — thematic connection: SODC circuits self-repair without external re-training.
+  - [[wiki/research/self-organising-digital-circuits]] — thematic connection: [[SODC]] circuits self-repair without external re-training.
   - [[wiki/concepts/topology-masked-transformer]] — shared-weight NCA update rule is a self-referential modifier of circuit states.
 
 - ## Cited By (in this wiki)

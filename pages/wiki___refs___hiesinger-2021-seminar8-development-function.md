@@ -95,20 +95,20 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
 
-  - ### Function as continuation of development → SODC's pool meta-learning
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC's pool training is *exactly* Hiesinger's "function = continued development" thesis. Circuits never finish being shaped; the [[wiki/concepts/topology-masked-transformer]] keeps reconfiguring LUTs in response to ongoing perturbation. The build-then-train boundary doesn't exist in SODC — there's no point at which "the meta-optimisation is done and now the circuits just run". ^[inferred]
-    - The basin-hopping recovery story ([[wiki/concepts/solution-degeneracy]]) is *neural Darwinism in an engineered substrate*: the TMT selects from a pool of structurally distinct functionally equivalent configurations, exactly as Edelman's neural-group-selection theory predicts for biological brains.
+  - ### Function as continuation of development → [[SODC]]'s pool meta-learning
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]]'s pool training is *exactly* Hiesinger's "function = continued development" thesis. Circuits never finish being shaped; the [[wiki/concepts/topology-masked-transformer]] keeps reconfiguring LUTs in response to ongoing perturbation. The build-then-train boundary doesn't exist in [[SODC]] — there's no point at which "the meta-optimisation is done and now the circuits just run". ^[inferred]
+    - The basin-hopping recovery story ([[wiki/concepts/solution-degeneracy]]) is *neural Darwinism in an engineered substrate*: the [[TMT]] selects from a pool of structurally distinct functionally equivalent configurations, exactly as Edelman's neural-group-selection theory predicts for biological brains.
 
-  - ### LNDP and continued algorithmic growth
-    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — LNDP's whole point is that the developmental rule keeps running throughout the agent's lifetime. *This Seminar is the theoretical justification for that design choice.* LNDP's spontaneous-activity pre-experience phase is also Hiesinger-aligned: pre-environmental development based on retinal-wave-style spontaneous activity is mentioned explicitly in this Seminar.
+  - ### [[LNDP]] and continued algorithmic growth
+    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** — [[LNDP]]'s whole point is that the developmental rule keeps running throughout the agent's lifetime. *This Seminar is the theoretical justification for that design choice.* [[LNDP]]'s spontaneous-activity pre-experience phase is also Hiesinger-aligned: pre-environmental development based on retinal-wave-style spontaneous activity is mentioned explicitly in this Seminar.
 
   - ### Spandrels and the modularity trap
     - **[[wiki/concepts/modularity]]** — Hiesinger's spandrel/exaptation framing is the deep biological grounding for why structural modularity ≠ functional specialisation. The thesis Ch1 / Ch2 finding (modularity is elusive without resource constraints) maps onto: structural modularity may be a *spandrel of the developmental algorithm*; functional specialisation requires *exaptation under selection pressure*. ^[inferred]
     - The retina-the-wrong-way example is the canonical case: an apparent inefficiency that's locked in developmentally and works because the rest of the system *adapted around it* (the brain fills in the blind spot). The thesis Discussion's "modularity narrative got me one last time" worry is exactly this: structural patterns that look meaningful may be developmental side-effects that we then over-interpret functionally.
 
   - ### Memory as algorithmic rules → connection to NCA-as-engram
-    - **[[wiki/refs/guichard-2025-engramnca]]** — EngramNCA's public/private channel split, with private gene channels propagable via GenePropCA, is a *direct architectural instantiation* of "memory is rules sufficient to recreate a representation". The genes are the rule-substrate; the GeneCA is the rule-runner; the morphology is the recreated representation.
-    - **[[wiki/concepts/solution-degeneracy]]** — Hiesinger's "single neuron in face-recognition area gets selected, doesn't encode the face" is degeneracy applied to memory: the memory is in the *network's response capability*, not in any specific cell. SODC's basin-hopping recovery has the same structure — function is in the basin, not in any specific configuration.
+    - **[[wiki/refs/guichard-2025-engramnca]]** — [[EngramNCA]]'s public/private channel split, with private gene channels propagable via GenePropCA, is a *direct architectural instantiation* of "memory is rules sufficient to recreate a representation". The genes are the rule-substrate; the GeneCA is the rule-runner; the morphology is the recreated representation.
+    - **[[wiki/concepts/solution-degeneracy]]** — Hiesinger's "single neuron in face-recognition area gets selected, doesn't encode the face" is degeneracy applied to memory: the memory is in the *network's response capability*, not in any specific cell. [[SODC]]'s basin-hopping recovery has the same structure — function is in the basin, not in any specific configuration.
 
   - ### Edelman's Neural Darwinism — already in the wiki
     - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — already deep-ingested. This Seminar is the biological-developmental complement to Edelman's degeneracy paper: Edelman explains *why* the brain is selectionally organised; Hiesinger explains *how* it gets that way through algorithmic growth.

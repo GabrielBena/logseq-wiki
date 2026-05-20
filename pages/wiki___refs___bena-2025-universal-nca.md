@@ -32,7 +32,7 @@ ingest-mode:: abstract
 - ## Connections to Wiki
   - [[wiki/research/universal-nca]] — this IS the paper.
   - [[wiki/concepts/neural-cellular-automata]] — extends NCA paradigm to universal computation.
-  - [[wiki/research/self-organising-digital-circuits]] — predecessor work; SODC extends the universal-computation theme to discrete Boolean circuits.
+  - [[wiki/research/self-organising-digital-circuits]] — predecessor work; [[SODC]] extends the universal-computation theme to discrete Boolean circuits.
   - [[wiki/code/maxencefaldor-universal-nca]] — the implementation.
 
 - ## Cited By (in this wiki)

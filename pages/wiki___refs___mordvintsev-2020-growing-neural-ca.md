@@ -31,8 +31,8 @@ ingest-mode:: abstract
 
 - ## Connections to Wiki
   - [[wiki/concepts/neural-cellular-automata]] — this paper defined the NCA paradigm.
-  - [[wiki/research/universal-nca]] — UNCA extends this toward universal computation.
-  - [[wiki/research/self-organising-digital-circuits]] — SODC applies the same NCA paradigm to Boolean circuits.
+  - [[wiki/research/universal-nca]] — [[UNCA]] extends this toward universal computation.
+  - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] applies the same NCA paradigm to Boolean circuits.
 
 - ## Open Questions / To Read
   - Full paper content at https://distill.pub/2020/growing-ca/ — worth reading for implementation details.

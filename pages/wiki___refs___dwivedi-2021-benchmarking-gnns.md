@@ -25,7 +25,7 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Reproducible GNN benchmark with standardised splits, metrics, and experimental settings. ^[inferred]
   - WL-GNNs vs GCNs systematically evaluated on tasks requiring graph-level and node-level predictions. ^[inferred]
-  - Standard reference for evaluating graph learning architectures (GNN baseline in SODC builds on this context). ^[inferred]
+  - Standard reference for evaluating graph learning architectures (GNN baseline in [[SODC]] builds on this context). ^[inferred]
 
 - ## Connections to Wiki
   - [[wiki/research/self-organising-digital-circuits]] — GNN baseline architecture is evaluated against this benchmarking context.

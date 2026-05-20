@@ -78,7 +78,7 @@ ingest-mode:: full
 - ## Connections
   - [[wiki/concepts/modularity]] — this paper is the primary source for structural vs functional modularity in the wiki.
   - [[wiki/concepts/solution-degeneracy]] — degeneracy and modularity are complementary frameworks for robustness; modules can display degeneracy internally.
-  - [[wiki/research/self-organising-digital-circuits]] — SODC also addresses modularity at the circuit level; the gate-network is a resource-constrained modular system.
+  - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] also addresses modularity at the circuit level; the gate-network is a resource-constrained modular system.
   - [[wiki/research/universal-nca]] — predecessor work; same lab (Imperial, Goodman group), different research thread.
   - [[wiki/refs/pessoa-2022-entangled-brain]] — Pessoa's neuroscience-side argument for *why* structural modularity does not yield clean functional specialisation in biological brains. The thesis Ch1 finding (resource constraints needed for functional separation) is exactly what Pessoa would predict: without selection pressure, function distributes across the structure. Ch4 ([[wiki/refs/pessoa-2022-ch4-what-do-areas-do]]) provides the M1-M5 vocabulary; the resource-constraint mechanism corresponds to pressure that drives the M2 (clean I/O) signature to emerge over M5-only (spatially separated) substrate. ^[inferred]
 

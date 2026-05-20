@@ -69,11 +69,11 @@ provenance-ambiguous:: 0.02
 - ## Connections to Gabriel's Research
 
   - ### Direct parallels
-    - **[[wiki/research/self-organising-digital-circuits]]** (SODC) — uses a *topology-masked Transformer* where attention is masked to wired neighbors. BraiNCA does the equivalent: attention-weighted aggregation over a graph neighborhood (local Moore + sparse long-range edges). **Both independently arrive at the conclusion that attention is the right message-passing primitive for graph-NCA**, replacing uniform aggregation.
-      - Difference: SODC's TMT operates on Boolean circuit graphs (`Mᵢⱼ = 1` iff wire); BraiNCA on spatially embedded graphs with explicit Moore + scale-free LR edges.
-      - Independent confirmation strengthens the SODC architecture choice.
+    - **[[wiki/research/self-organising-digital-circuits]]** ([[SODC]]) — uses a *topology-masked Transformer* where attention is masked to wired neighbors. BraiNCA does the equivalent: attention-weighted aggregation over a graph neighborhood (local Moore + sparse long-range edges). **Both independently arrive at the conclusion that attention is the right message-passing primitive for graph-NCA**, replacing uniform aggregation.
+      - Difference: [[SODC]]'s [[TMT]] operates on Boolean circuit graphs (`Mᵢⱼ = 1` iff wire); BraiNCA on spatially embedded graphs with explicit Moore + scale-free LR edges.
+      - Independent confirmation strengthens the [[SODC]] architecture choice.
     - **[[wiki/research/spatial-neuromorphic-priors]]** (Ch2) — same theoretical motivation (brain economy, wiring cost, small-world). BraiNCA imposes scale-free / patch-based LR edges directly; Gabriel's Spatial DEEP-R imposes distance-penalty regularisers and lets topology emerge under the constraint. Both find that **structured topology > unstructured topology** — Gabriel's structure-function gap result (spatial alone doesn't produce functional specialisation) is mirrored in BraiNCA's "long-range alone hurts on motor task" finding. ^[inferred]
-    - **[[wiki/research/universal-nca]]** (Ch3) — UNCA introduces mutable/immutable state separation; BraiNCA's T-shape topology is conceptually a fixed "hardware" substrate that shapes which mutable updates happen where. Both are NCAs where structural priors guide computation. ^[inferred]
+    - **[[wiki/research/universal-nca]]** (Ch3) — [[UNCA]] introduces mutable/immutable state separation; BraiNCA's T-shape topology is conceptually a fixed "hardware" substrate that shapes which mutable updates happen where. Both are NCAs where structural priors guide computation. ^[inferred]
 
   - ### Conceptual lineage
     - Fits naturally into the [[wiki/concepts/neural-cellular-automata]] trilogy as a **fourth angle**: NCA as *computer* (Ch3), as *optimizer* (Ch4), as *brain economy* substrate (BraiNCA + Ch2). ^[inferred]

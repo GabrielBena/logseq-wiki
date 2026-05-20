@@ -76,19 +76,19 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
   - ### Mesa-optimization → NCA-as-meta-optimizer
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC's [[wiki/concepts/topology-masked-transformer]] is structurally a sparse-attention Transformer. If trained Transformers implement gradient descent in their forward pass, the TMT *inherits this property for free*: the local rule isn't just "doing message passing" — it's plausibly running an implicit GD on the LUT configurations of its neighbours, with the meta-optimisation done at training time. ^[inferred]
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]]'s [[wiki/concepts/topology-masked-transformer]] is structurally a sparse-attention Transformer. If trained Transformers implement gradient descent in their forward pass, the [[TMT]] *inherits this property for free*: the local rule isn't just "doing message passing" — it's plausibly running an implicit GD on the LUT configurations of its neighbours, with the meta-optimisation done at training time. ^[inferred]
     - **[[wiki/concepts/neural-cellular-automata]]** — the NCA-as-optimizer angle (Ch4 of [[wiki/research/phd-thesis]]) is the *outer-loop trained, inner-loop optimises* pattern. Von Oswald formalises the inner-loop side mechanistically. The two views compose: outer training shapes a local rule that implements gradient-based learning in its forward pass — that *is* what an NCA-meta-optimizer-with-attention does. ^[inferred]
     - **[[wiki/projects/growing-networks]]** — the [[NCA as Gardener]] thesis explicitly relies on "Transformers are universal meta-learners" to argue the architecture scales beyond Boolean circuits. This paper supplies the mechanistic backbone for that claim.
   - ### Same group — through-line with NCA work
     - Mordvintsev co-authors both [[wiki/refs/mordvintsev-2020-growing-neural-ca]] (the foundational NCA paper) and this paper. The code lives in the same `google-research/self-organising-systems` repository as the NCA work.
     - The intellectual through-line: same Google group asking "how do simple local rules give rise to coordinated behaviour" — first via cells on a grid (NCA), then via tokens in a sequence (Transformers-as-mesa-optimizers). The architectural primitive (shared local rule + iterated updates) is the same; only the topology changes. ^[inferred]
-  - ### UNCA's mutable/immutable split rhymes with outer/inner loop
-    - **[[wiki/research/universal-nca]]** — UNCA splits cellular state into mutable (computational workspace) and immutable (task-specific hardware). Von Oswald's setup is structurally identical at the meta-learning level: meta-parameters `θ` (slow, task-shared, outer loop) configure the inner `W` (fast, task-specific, inner loop). Both architectures realise *two timescales of optimisation*. ^[inferred]
+  - ### [[UNCA]]'s mutable/immutable split rhymes with outer/inner loop
+    - **[[wiki/research/universal-nca]]** — [[UNCA]] splits cellular state into mutable (computational workspace) and immutable (task-specific hardware). Von Oswald's setup is structurally identical at the meta-learning level: meta-parameters `θ` (slow, task-shared, outer loop) configure the inner `W` (fast, task-specific, inner loop). Both architectures realise *two timescales of optimisation*. ^[inferred]
   - ### Sister citation — Kirsch GPICL
     - **[[wiki/refs/kirsch-2022-general-purpose-icl]]** — companion paper from the same arXiv batch (Dec 2022) showing Transformers can be meta-trained as *general-purpose* in-context learners. Von Oswald provides the *mechanism* (GD in the forward pass); Kirsch provides the *capability* (general-purpose ICL across diverse tasks). Together they justify the [[NCA as Gardener]] slide claim that "Transformers are universal meta-learners".
     - **[[wiki/refs/kirsch-2022-self-referential-meta-learning]]** — earlier Kirsch paper on self-referential meta-learning; theoretical ancestor of GPICL.
   - ### Functionalist reading
-    - **[[wiki/concepts/functionalism]]** — the mesa-optimization picture is *narrow* multiple realizability at the algorithm level: many different weight settings (the family of equivalent constructions) implement the *same* optimization algorithm. The function (GD on regression) is decoupled from the substrate (specific attention weights). Same logic as SODC's basin-hopping recovery. ^[inferred]
+    - **[[wiki/concepts/functionalism]]** — the mesa-optimization picture is *narrow* multiple realizability at the algorithm level: many different weight settings (the family of equivalent constructions) implement the *same* optimization algorithm. The function (GD on regression) is decoupled from the substrate (specific attention weights). Same logic as [[SODC]]'s basin-hopping recovery. ^[inferred]
 
 - ## Open Questions
   - **Does the result lift to large-scale Transformers?** Authors restrict to small models and simple regression problems. Whether GPT-3-style ICL on language is GD-based is empirically suggestive (Dai et al. 2023, "Why Can GPT Learn In-Context?") but not formally proven.
@@ -103,4 +103,4 @@ provenance-ambiguous:: 0.02
 
 - ## Cited By (in this wiki)
   - [[wiki/projects/growing-networks]] — Transformers-as-universal-meta-learners is load-bearing for the [[NCA as Gardener]] thesis.
-  - [[wiki/research/self-organising-digital-circuits]] (citation pending) — TMT inherits ICL-as-GD by being a Transformer.
+  - [[wiki/research/self-organising-digital-circuits]] (citation pending) — [[TMT]] inherits ICL-as-GD by being a Transformer.

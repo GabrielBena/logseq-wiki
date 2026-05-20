@@ -25,11 +25,11 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Maintains per-parameter adaptive learning rates using first and second moment estimates. ^[inferred]
   - Bias-correction in early training prevents underestimation of moment estimates. ^[inferred]
-  - Standard optimiser used in SODC and virtually all modern deep-learning training. ^[inferred]
+  - Standard optimiser used in [[SODC]] and virtually all modern deep-learning training. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/research/self-organising-digital-circuits]] — used to train the TMT update rule.
-  - [[wiki/research/universal-nca]] — used to train the UNCA model.
+  - [[wiki/research/self-organising-digital-circuits]] — used to train the [[TMT]] update rule.
+  - [[wiki/research/universal-nca]] — used to train the [[UNCA]] model.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]

@@ -25,10 +25,10 @@ ingest-mode:: abstract
 - ## Key Ideas
   - Cross-attention to a learnable latent array: separates input size from computational cost. ^[inferred]
   - A query array for each output type enables flexible output shapes without task-specific heads. ^[inferred]
-  - Directly inspires the Perceiver model in SODC, which uses cross-attention to input/output residuals as an alternative update mechanism. ^[inferred]
+  - Directly inspires the Perceiver model in [[SODC]], which uses cross-attention to input/output residuals as an alternative update mechanism. ^[inferred]
 
 - ## Connections to Wiki
-  - [[wiki/concepts/topology-masked-transformer]] — Perceiver is the alternative model to TMT in SODC.
+  - [[wiki/concepts/topology-masked-transformer]] — Perceiver is the alternative model to [[TMT]] in [[SODC]].
   - [[wiki/research/self-organising-digital-circuits]] — one of three model architectures evaluated.
   - [[wiki/code/gabrielbena-boolean-nca-cc]] — `model=perceiver_attention` is implemented in `models/attention/`.
 

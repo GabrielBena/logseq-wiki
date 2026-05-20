@@ -25,10 +25,10 @@ provenance-ambiguous:: 0.02
 - **ARC-NCA: Towards Developmental Solutions to the Abstraction and Reasoning Corpus** — Guichard, Reimers, Kvalsund, Lepperød & Nichele (Østfold UC + Oslo Met + Simula + U. Oslo), ALIFE 2025, arXiv:2505.08778. Code: https://github.com/etimush/ARC_NCA. Videos: https://etimush.github.io/ARC-NCA-Videos.
 
 - ## TL;DR
-  - First application of NCA / EngramNCA to the **2D ARC-AGI** benchmark (Chollet 2019) — a few-shot abstraction-and-reasoning challenge that's easy for humans (median 3 examples → solve) but extremely hard for AI.
+  - First application of NCA / [[EngramNCA]] to the **2D ARC-AGI** benchmark (Chollet 2019) — a few-shot abstraction-and-reasoning challenge that's easy for humans (median 3 examples → solve) but extremely hard for AI.
   - Approach: **test-time training (a.k.a. inference-time fine-tuning)** — train a fresh NCA per ARC task on the 2-3 provided examples, evaluate on the unseen test pair. The NCA is the "program" being synthesised.
-  - Compares vanilla NCA against four EngramNCA variants ([[wiki/refs/guichard-2025-engramnca]]) with augmentations: (v2) learnable sensing filters; (v3) +toroidal/non-toroidal split between GeneCA/GenePropCA; (v4) +patch-based local-info training.
-  - **Best single model**: EngramNCA v3 at 12.9% solve rate. **Best 4-model union**: 17.6% (each task gets two submission attempts; different models cover different tasks). With looser pixel-error threshold and grid padding: up to 27% partial-solution rate.
+  - Compares vanilla NCA against four [[EngramNCA]] variants ([[wiki/refs/guichard-2025-engramnca]]) with augmentations: (v2) learnable sensing filters; (v3) +toroidal/non-toroidal split between GeneCA/GenePropCA; (v4) +patch-based local-info training.
+  - **Best single model**: [[EngramNCA]] v3 at 12.9% solve rate. **Best 4-model union**: 17.6% (each task gets two submission attempts; different models cover different tasks). With looser pixel-error threshold and grid padding: up to 27% partial-solution rate.
   - **Comparable to ChatGPT 4.5 (10.3%) at ≈1000× lower cost** ($5e-4 vs $0.29 per task on consumer GPU).
   - Conceptual claim: *developmental computation* (local cell rules unfolding over time) is a structurally promising substrate for abstraction and reasoning — orthogonal to LLM-based program synthesis.
 
@@ -37,7 +37,7 @@ provenance-ambiguous:: 0.02
   - ### The hypothesis (Section: Introduction)
     - ARC tasks emphasise *few-shot generalisation* and *abstract pattern transformation*. Humans solve these via developmental cognitive mechanisms: iterative refinement of mental schemas, hierarchical decomposition into sub-tasks, predictive modelling.
     - NCAs are intrinsically iterative, hierarchical (via [[wiki/refs/guichard-2025-engramnca]]'s public/private channel split), and predictive (state at t+1 emerges from t). The hypothesis: this matches the structure of ARC reasoning.
-    - **EngramNCA in particular** is well-suited because it learns *primitives* (in GeneCA) and a *regulation mechanism* (in GenePropCA) that decides when and where primitives activate — analogous to ARC's "build the answer from a small library of grid transformations".
+    - **[[EngramNCA]] in particular** is well-suited because it learns *primitives* (in GeneCA) and a *regulation mechanism* (in GenePropCA) that decides when and where primitives activate — analogous to ARC's "build the answer from a small library of grid transformations".
 
   - ### Test-time training as program synthesis
     - Standard ARC-AGI approaches: discrete program search (brute force) or LLM-based program synthesis (GPT-4-class models writing Python).
@@ -55,7 +55,7 @@ provenance-ambiguous:: 0.02
 
   - ### Toroidal vs non-toroidal
     - Standard NCAs run on a torus (wrap-around). Good for morphology-growth (positional invariance), bad for ARC tasks that depend on absolute position or grid edges.
-    - **Solution in v3/v4**: split toroidality between EngramNCA's two networks. GeneCA acts non-toroidally (positional info preserved); GenePropCA acts toroidally (information can propagate around). The architecture *chooses* which mode to use via local self-attention. ^[inferred — paper says "imbuing it with attention, the EngramNCA might be able to choose"]
+    - **Solution in v3/v4**: split toroidality between [[EngramNCA]]'s two networks. GeneCA acts non-toroidally (positional info preserved); GenePropCA acts toroidally (information can propagate around). The architecture *chooses* which mode to use via local self-attention. ^[inferred — paper says "imbuing it with attention, the [[EngramNCA]] might be able to choose"]
 
   - ### Changing grid sizes
     - Some ARC tasks have output grids of different size than input. NCAs can't change lattice size mid-run.
@@ -73,10 +73,10 @@ provenance-ambiguous:: 0.02
 
   - ### Single-model performance (262-problem subset, log-loss threshold ≤ -7)
     - Vanilla NCA: 10.7% solve rate, mean log(loss) -4.31
-    - EngramNCA v1 (no augmentations): 6.5% — *worse* than vanilla on ARC, surprisingly
-    - EngramNCA v2 (learnable sensing): 9.2%
-    - **EngramNCA v3 (sensing + toroidal split): 12.9%** — best single model
-    - EngramNCA v4 (sensing + toroidal + patch): 10.3%
+    - [[EngramNCA]] v1 (no augmentations): 6.5% — *worse* than vanilla on ARC, surprisingly
+    - [[EngramNCA]] v2 (learnable sensing): 9.2%
+    - **[[EngramNCA]] v3 (sensing + toroidal split): 12.9%** — best single model
+    - [[EngramNCA]] v4 (sensing + toroidal + patch): 10.3%
     - **ChatGPT 4.5 baseline**: 10.3% (ARC-AGI leaderboard, private eval — not directly comparable but same order)
 
   - ### Union performance (best 4 models)
@@ -84,11 +84,11 @@ provenance-ambiguous:: 0.02
     - All-4 union: **17.6% solve rate** — every union outperforms its best constituent. Models are complementary, not redundant.
 
   - ### Looser threshold (almost-solved, log-loss ≤ -6)
-    - Single-model best: EngramNCA v4 at 16.8%; vanilla NCA 15.6%
+    - Single-model best: [[EngramNCA]] v4 at 16.8%; vanilla NCA 15.6%
     - All-4 union: **24%** — strong evidence that many failures are "off by 1-3 pixels" rather than fundamentally wrong reasoning.
 
   - ### Larger / padded variant (Further Experiments)
-    - EngramNCA v3 with hidden-size 132 instead of 32: 16.1% (strict) / 19.8% (loose)
+    - [[EngramNCA]] v3 with hidden-size 132 instead of 32: 16.1% (strict) / 19.8% (loose)
     - + maximal padding: 16% / **27%** (loose) — best result in the paper
     - Cost: still ~$5-7e-4 per task.
 
@@ -101,9 +101,9 @@ provenance-ambiguous:: 0.02
 - ## Solved-Problem Examples (qualitatively)
 
   - **NCA**: a "growing line of decreasing length" task — the NCA correctly extrapolates from training examples to unseen y-coordinates, growing structured patterns incrementally.
-  - **EngramNCA v1**: a "fill closed regions one colour, open another" task — fills the entire space with one colour first, then *changes* boundary cells to the right colour. Two-stage developmental solving.
-  - **EngramNCA v3**: "connect single pixels by lines" — grows lines outward, then *prunes* the parts that overshoot. Active retraction, not just construction.
-  - **EngramNCA v4**: a task involving toroidal-wrap reasoning — the v4 explicitly uses the toroidal mode to grow a diagonal across the grid via the wrap-around boundary.
+  - **[[EngramNCA]] v1**: a "fill closed regions one colour, open another" task — fills the entire space with one colour first, then *changes* boundary cells to the right colour. Two-stage developmental solving.
+  - **[[EngramNCA]] v3**: "connect single pixels by lines" — grows lines outward, then *prunes* the parts that overshoot. Active retraction, not just construction.
+  - **[[EngramNCA]] v4**: a task involving toroidal-wrap reasoning — the v4 explicitly uses the toroidal mode to grow a diagonal across the grid via the wrap-around boundary.
 
 - ## Reasoning Pitfalls
 
@@ -119,13 +119,13 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
 
-  - ### Direct successor to EngramNCA
-    - **[[wiki/refs/guichard-2025-engramnca]]** — ARC-NCA is the same group operationalising EngramNCA on a hard reasoning benchmark. The EngramNCA paper itself flagged ARC as future work; this paper delivers.
-    - Architectural lesson: vanilla EngramNCA (v1) underperforms vanilla NCA on ARC. The win comes from **adapting the inductive biases to the task domain** — learnable sensing filters, toroidal/non-toroidal split, patch training. Pure architectural substitution wasn't enough.
+  - ### Direct successor to [[EngramNCA]]
+    - **[[wiki/refs/guichard-2025-engramnca]]** — ARC-NCA is the same group operationalising [[EngramNCA]] on a hard reasoning benchmark. The [[EngramNCA]] paper itself flagged ARC as future work; this paper delivers.
+    - Architectural lesson: vanilla [[EngramNCA]] (v1) underperforms vanilla NCA on ARC. The win comes from **adapting the inductive biases to the task domain** — learnable sensing filters, toroidal/non-toroidal split, patch training. Pure architectural substitution wasn't enough.
 
   - ### NCAs as universal computation substrate — ARC is the abstraction-reasoning test
     - **[[wiki/research/universal-nca]]** (Ch3) argued NCAs are a universal computation substrate; ARC-NCA tests whether they're also a universal *reasoning* substrate. The answer here: surprisingly competitive, even at minimal scale.
-    - Test-time training in ARC-NCA echoes UNCA's two-level optimisation: a "training of training rules" applied per task. The structural similarity is striking — ARC-NCA trains a fresh NCA per task; UNCA uses task-specific immutable hardware with a globally trained rule. ^[inferred]
+    - Test-time training in ARC-NCA echoes [[UNCA]]'s two-level optimisation: a "training of training rules" applied per task. The structural similarity is striking — ARC-NCA trains a fresh NCA per task; [[UNCA]] uses task-specific immutable hardware with a globally trained rule. ^[inferred]
 
   - ### Test-time training as the natural NCA inference paradigm
     - **[[wiki/research/self-organising-digital-circuits]]** uses pool-based meta-learning where the meta-rule is global and the per-circuit configuration is fast. ARC-NCA inverts this: there's no shared meta-rule across tasks — each task gets its own NCA from scratch.
@@ -141,7 +141,7 @@ provenance-ambiguous:: 0.02
     - This connects to **[[wiki/refs/aguera-y-arcas-2025-functional-perspective]]**'s functionalist claim: intelligence is a *function*, multiply realisable across substrates. ARC-NCA is a candidate substrate that's structurally different from transformers. ^[inferred]
 
   - ### ARC-AGI as a north star for SODC-style work
-    - SODC currently solves Boolean function tasks. ARC-AGI tests *visual abstraction over Boolean-like primitives* (colours, shapes, positions). A natural extension of SODC — using TMT-style attention over the ARC grid — could be the bridge from "configuring Boolean functions" to "configuring visual reasoning programs". ^[inferred]
+    - [[SODC]] currently solves Boolean function tasks. ARC-AGI tests *visual abstraction over Boolean-like primitives* (colours, shapes, positions). A natural extension of [[SODC]] — using TMT-style attention over the ARC grid — could be the bridge from "configuring Boolean functions" to "configuring visual reasoning programs". ^[inferred]
 
 - ## Limitations / Where the Paper Stops
 

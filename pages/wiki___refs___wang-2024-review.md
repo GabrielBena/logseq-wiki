@@ -16,7 +16,7 @@ ingest-mode:: needs-fetch
 
 - Citation key: `wang_review_2024` from [[wiki/research/self-organising-digital-circuits]].
 
-- TODO: paper not identified. Locate via the SODC blog post bibliography and re-ingest with the correct arXiv/DOI.
+- TODO: paper not identified. Locate via the [[SODC]] blog post bibliography and re-ingest with the correct arXiv/DOI.
 
 - ## Connections to Wiki
   - [[wiki/research/self-organising-digital-circuits]] — cited here.

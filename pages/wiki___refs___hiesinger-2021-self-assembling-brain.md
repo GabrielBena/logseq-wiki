@@ -24,8 +24,8 @@ provenance-ambiguous:: 0.02
 - **The Self-Assembling Brain: How Neural Networks Grow Smarter** — Peter Robin Hiesinger (Free University of Berlin), Princeton University Press 2021. ISBN 9780691181226 (hardback) / 9780691215518 (ebook).
 
 - ## Why this book anchors the wiki's developmental-encoding thread
-  - Cited (often as the *theoretical motivation*) by [[wiki/refs/najarro-2023-neural-developmental-programs]] (NDP), [[wiki/refs/plantec-2024-lifelong-ndp]] (LNDP), and [[wiki/refs/guichard-2025-engramnca]] (EngramNCA). Without this book, the Risi-lab + Nichele-lab clusters are floating on borrowed framing.
-  - The central claim — *the genome encodes an algorithmic growth rule, not an endpoint blueprint* — is the philosophical foundation of every NDP-style architecture. NDP = engineering operationalisation; Hiesinger = scientific argument that this is how *biological* brains actually do it.
+  - Cited (often as the *theoretical motivation*) by [[wiki/refs/najarro-2023-neural-developmental-programs]] ([[NDP]]), [[wiki/refs/plantec-2024-lifelong-ndp]] ([[LNDP]]), and [[wiki/refs/guichard-2025-engramnca]] ([[EngramNCA]]). Without this book, the Risi-lab + Nichele-lab clusters are floating on borrowed framing.
+  - The central claim — *the genome encodes an algorithmic growth rule, not an endpoint blueprint* — is the philosophical foundation of every NDP-style architecture. [[NDP]] = engineering operationalisation; Hiesinger = scientific argument that this is how *biological* brains actually do it.
   - The book is also a careful 384-page demolition of the assumption that "we can shortcut development". Each shortcut taken in standard ANN design (random init + train) is mapped onto a corresponding piece of biological information that gets discarded.
 
 - ## Central Thesis (the algorithmic-information vs endpoint-information dichotomy)
@@ -79,26 +79,26 @@ provenance-ambiguous:: 0.02
   - ### 5. The continuum of development → function → aging
     - **Hiesinger's controversial position**: there is no clean break between development, function, and aging. They are all the *same algorithmic process* continuing under continuous time-and-energy supply. Aging is not deterioration; it's continued algorithmic progress.
     - "Babies are not born with an engineered, adult cortex that just needs to be fed information by training it. The network self-assembles through processes that have much in common with those that define its adult function."
-    - **Direct implication for AI**: the standard build-then-train architecture is a *category error* — it treats development and function as distinct phases when biology treats them as one continuous algorithm. NDP/LNDP/EngramNCA are early operationalisations of the unified view.
+    - **Direct implication for AI**: the standard build-then-train architecture is a *category error* — it treats development and function as distinct phases when biology treats them as one continuous algorithm. [[NDP]]/[[LNDP]]/[[EngramNCA]] are early operationalisations of the unified view.
 
 - ## Connections to Gabriel's Research
 
-  - ### NDP/LNDP/EngramNCA cluster — Hiesinger is the theoretical scaffold
-    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** explicitly cites Hiesinger 2018 + 2021 as motivation; NDP is the engineering implementation of "genome encodes algorithmic growth rule, not endpoint blueprint".
-    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** uses Hiesinger's development-function continuum directly: LNDP keeps the developmental rule active throughout the agent's lifetime, mirroring the biological reality that "algorithmic growth never stops".
+  - ### [[NDP]]/[[LNDP]]/[[EngramNCA]] cluster — Hiesinger is the theoretical scaffold
+    - **[[wiki/refs/najarro-2023-neural-developmental-programs]]** explicitly cites Hiesinger 2018 + 2021 as motivation; [[NDP]] is the engineering implementation of "genome encodes algorithmic growth rule, not endpoint blueprint".
+    - **[[wiki/refs/plantec-2024-lifelong-ndp]]** uses Hiesinger's development-function continuum directly: [[LNDP]] keeps the developmental rule active throughout the agent's lifetime, mirroring the biological reality that "algorithmic growth never stops".
     - **[[wiki/refs/guichard-2025-engramnca]]** uses Hiesinger-adjacent biology (planaria regeneration, RNA transfer) to motivate the public/private channel split.
-    - The book *anticipates* the architectures: pp. 286-287 discuss "indirect and developmental encoding" experiments by Hintze and others, which is the same lineage NDP/LNDP build on.
+    - The book *anticipates* the architectures: pp. 286-287 discuss "indirect and developmental encoding" experiments by Hintze and others, which is the same lineage [[NDP]]/[[LNDP]] build on.
 
-  - ### SODC and the function-as-continued-development view
-    - **[[wiki/research/self-organising-digital-circuits]]** — Hiesinger Seminar 8's central claim that "function is a continuation of development" maps directly onto SODC's pool-based meta-learning: circuits never stop being "shaped" — they keep getting reconfigured by the [[wiki/concepts/topology-masked-transformer]] under perturbation. SODC's self-repair is *algorithmic memory* in Hiesinger's sense — the system reconstructs function from a degenerate basin, not from a stored blueprint. ^[inferred]
-    - The "no shortcut" claim is critical: SODC's training pool can't be replaced by a one-shot training run; the structural-functional couplings only emerge through the iterative perturbation regime. This is consistent with Hiesinger's thesis that algorithmic growth cannot be cut short.
+  - ### [[SODC]] and the function-as-continued-development view
+    - **[[wiki/research/self-organising-digital-circuits]]** — Hiesinger Seminar 8's central claim that "function is a continuation of development" maps directly onto [[SODC]]'s pool-based meta-learning: circuits never stop being "shaped" — they keep getting reconfigured by the [[wiki/concepts/topology-masked-transformer]] under perturbation. [[SODC]]'s self-repair is *algorithmic memory* in Hiesinger's sense — the system reconstructs function from a degenerate basin, not from a stored blueprint. ^[inferred]
+    - The "no shortcut" claim is critical: [[SODC]]'s training pool can't be replaced by a one-shot training run; the structural-functional couplings only emerge through the iterative perturbation regime. This is consistent with Hiesinger's thesis that algorithmic growth cannot be cut short.
 
   - ### Phd thesis grand vision — Hiesinger is the "why" to your "how"
     - **[[wiki/research/phd-thesis]]** Discussion's grand vision (a single local rule governing growth + learning + repair) is Hiesinger's continuum of development → function → aging operationalised as an NCA.
     - The thesis Discussion explicitly worries about "the modularity narrative got me one last time"; Hiesinger Seminar 8 articulates exactly why modularity-as-endpoint can be misleading — anatomical structure is partly a developmental side-effect, and the *generative process* matters more than the static configuration.
 
   - ### Functionalism — a complement, not a contradiction
-    - **[[wiki/concepts/functionalism]]** — Hiesinger and Aguera y Arcas ([[wiki/refs/aguera-y-arcas-2025-functional-perspective]]) appear to be in tension: Aguera says function is decoupled from substrate (multiple realizability); Hiesinger says the developmental algorithm matters because there's no shortcut. **Resolution**: both can be right at different levels of abstraction. *Function is multiply realisable* (Turing); but *the algorithmic growth process that produces a particular instantiation* may itself be unique and irreducible. SODC's narrow MR (multiple structural configurations realising the same Boolean function) is the *post-development* phenomenon; Hiesinger's no-shortcut claim is about the *path to get to any one of those configurations*. ^[inferred]
+    - **[[wiki/concepts/functionalism]]** — Hiesinger and Aguera y Arcas ([[wiki/refs/aguera-y-arcas-2025-functional-perspective]]) appear to be in tension: Aguera says function is decoupled from substrate (multiple realizability); Hiesinger says the developmental algorithm matters because there's no shortcut. **Resolution**: both can be right at different levels of abstraction. *Function is multiply realisable* (Turing); but *the algorithmic growth process that produces a particular instantiation* may itself be unique and irreducible. [[SODC]]'s narrow MR (multiple structural configurations realising the same Boolean function) is the *post-development* phenomenon; Hiesinger's no-shortcut claim is about the *path to get to any one of those configurations*. ^[inferred]
 
   - ### Modularity and the structure-function gap
     - **[[wiki/concepts/modularity]]** — Hiesinger Seminar 8's spandrel/exaptation argument supplies the deep biological explanation for *why* structural modularity doesn't entail functional specialisation. Modularity is often a developmental side-effect that can be *exapted* but isn't *for* anything. This complements the thesis Ch1/Ch2 finding that structural modularity emerges without functional separation under most regimes.

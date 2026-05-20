@@ -102,26 +102,26 @@ provenance-ambiguous:: 0.02
 
 - ## Connections to Gabriel's Research
 
-  - ### Trajectory-based view + SODC's evolution-of-LUT-configurations
-    - **[[wiki/research/self-organising-digital-circuits]]** — SODC tracks LUT-logit evolution under perturbation; the basin structure observed in UMAP is essentially Pessoa's *spatiotemporal signature* applied to circuit-state evolution. Each Boolean function task → a characteristic trajectory family in LUT-config space.
-    - The SODC blog post could fruitfully add a "trajectory perspective" section: *the function isn't in the final config, it's in the dynamic process of configuration*. ^[inferred]
+  - ### Trajectory-based view + [[SODC]]'s evolution-of-LUT-configurations
+    - **[[wiki/research/self-organising-digital-circuits]]** — [[SODC]] tracks LUT-logit evolution under perturbation; the basin structure observed in UMAP is essentially Pessoa's *spatiotemporal signature* applied to circuit-state evolution. Each Boolean function task → a characteristic trajectory family in LUT-config space.
+    - The [[SODC]] blog post could fruitfully add a "trajectory perspective" section: *the function isn't in the final config, it's in the dynamic process of configuration*. ^[inferred]
 
   - ### The phd-thesis grand vision restated as Pessoa's prescription
     - **[[wiki/research/phd-thesis]]** — the grand vision of single-local-rule governing growth + learning + repair is *exactly* Pessoa's process-ontology view operationalised. Same rule, evolving over different timescales, producing different trajectories.
 
-  - ### Causation in NCA / SODC ablation studies
+  - ### Causation in NCA / [[SODC]] ablation studies
     - The ablation/manipulation methodology common in NCA papers (turn off SP, turn off SA, ...) inherits the billiard-ball assumption Pessoa critiques. *What the ablation tells you* is constrained by the very assumption that ablations have unitary effects — which mutual-causality systems may not.
     - Pessoa's critique is a *call for caution* when interpreting ablation results in highly recurrent NCAs. The "what does this rule do?" question may be ill-posed in the way Pessoa argues "what does this region do?" is ill-posed.
 
   - ### NCA Seven Angles + process ontology
     - **[[wiki/concepts/neural-cellular-automata]]** — the Seven Angles can be reread as *seven kinds of trajectory*:
       - Pattern-former: trajectory toward a stable morphological attractor
-      - Computer (UNCA): trajectory through computational state space
-      - Optimizer (SODC): trajectory through LUT-configuration space
-      - Brain-economy substrate (BraiNCA): trajectory shaped by brain-economy priors
-      - Developer (NDP): trajectory of substrate growth
-      - Lifelong learner (LNDP): trajectory of synaptic + structural plasticity
-      - Engram-bearer (EngramNCA): trajectory of public + private state.
+      - Computer ([[UNCA]]): trajectory through computational state space
+      - Optimizer ([[SODC]]): trajectory through LUT-configuration space
+      - Brain-economy substrate ([[BraiNCA]]): trajectory shaped by brain-economy priors
+      - Developer ([[NDP]]): trajectory of substrate growth
+      - Lifelong learner ([[LNDP]]): trajectory of synaptic + structural plasticity
+      - Engram-bearer ([[EngramNCA]]): trajectory of public + private state.
     - All seven are *process-ontology compatible*. Pessoa's framing makes the unification cleaner. ^[inferred]
 
   - ### Bridging to Hiesinger

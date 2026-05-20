@@ -22,7 +22,7 @@ ingest-mode:: needs-fetch
 - TODO: fetch abstract once available (not in Semantic Scholar index).
 
 - ## Connections to Wiki
-  - [[wiki/research/self-organising-digital-circuits]] — cited as a landmark in evolvable hardware; SODC's gradient-based approach contrasts with Thompson's fitness-based search.
+  - [[wiki/research/self-organising-digital-circuits]] — cited as a landmark in evolvable hardware; [[SODC]]'s gradient-based approach contrasts with Thompson's fitness-based search.
   - [[wiki/concepts/differentiable-logic-gates]] — Thompson's evolved circuit operated on physical silicon; differentiable logic gates operate on a differentiable simulation.
 
 - ## Cited By (in this wiki)

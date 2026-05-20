@@ -16,7 +16,7 @@ ingest-mode:: needs-fetch
 
 - Citation key: `sunada_blending_2025` from [[wiki/research/self-organising-digital-circuits]].
 
-- TODO: paper not found in Semantic Scholar. Fetch once indexed or locate manually via the SODC blog post bibliography.
+- TODO: paper not found in Semantic Scholar. Fetch once indexed or locate manually via the [[SODC]] blog post bibliography.
 
 - ## Connections to Wiki
   - [[wiki/research/self-organising-digital-circuits]] — cited here.

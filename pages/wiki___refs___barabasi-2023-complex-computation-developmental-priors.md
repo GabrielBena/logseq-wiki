@@ -75,11 +75,11 @@ provenance-ambiguous:: 0.02
 		- [[wiki/refs/hiesinger-2021-seminar7-genes-cells-circuits]]: the right level depends on the phenomenon. Barabási operates at the *gene/cell-identity* level for ANN training; the `W` matrix at the synaptic level emerges from this lower-level optimisation. This is the levels problem turned into engineering: optimise at the developmental level, get the synaptic level for free. ^[claude-synth]
 - ## Connections (substantive — replaces old abstract-only list)
 	- [[wiki/concepts/genomic-bottleneck]] — direct operationalisation; `(X, O)` is the compressed code, `W` is the brain. The bilinear-form `f_θ` is one specific implementation of "rule emits weights".
-	- [[wiki/refs/zador-2019-critique-pure-learning]] — framing paper. Barabási provides one of the constructive answers (alongside Kerstjens lineage and NDP per-cell-rule).
+	- [[wiki/refs/zador-2019-critique-pure-learning]] — framing paper. Barabási provides one of the constructive answers (alongside Kerstjens lineage and [[NDP]] per-cell-rule).
 	- [[wiki/refs/kerstjens-2026-lineage-positional]] — complementary operationalisation (state inheritance vs rule application). Both anchored on the `X` (gene expression) matrix but with different dynamics. Worth a side-by-side comparison in the developmental-latent-space concept page.
 	- [[wiki/refs/stockl-2021-structure-induces-computational-function]] — closely related: type×distance probabilities for connection. Barabási's S-GEM with distance penalty would essentially be Stöckl/Maass made differentiable. The conceptual lineage runs Sperry → Stöckl/Maass → GEM with relaxations.
 	- [[wiki/refs/najarro-2023-neural-developmental-programs]] — sister operationalisation (per-cell developmental NN runs at each step). Different mechanism (rules apply iteratively vs once); both compress to the developmental level.
-	- [[wiki/refs/plantec-2024-lifelong-ndp]] — LNDP adds activity-dependent plasticity throughout lifetime; Barabási's GEM is activity-independent at deployment (no plasticity beyond the rule update).
+	- [[wiki/refs/plantec-2024-lifelong-ndp]] — [[LNDP]] adds activity-dependent plasticity throughout lifetime; Barabási's GEM is activity-independent at deployment (no plasticity beyond the rule update).
 	- [[wiki/refs/hiesinger-2021-seminar6-chemoaffinity-permissiveness]] — composite molecular instructions ≅ `W_{ij} = Σ X O X` summation.
 	- [[wiki/refs/hiesinger-2021-seminar7-genes-cells-circuits]] — gene-level optimisation produces synaptic-level connectivity via algorithmic growth; the levels problem turned constructive.
 	- [[wiki/concepts/developmental-latent-space]] — Barabási's bilinear `f_θ` + S-GEM's Gaussian-on-grid `φ` are immediately-usable engineering instantiations of the concept.

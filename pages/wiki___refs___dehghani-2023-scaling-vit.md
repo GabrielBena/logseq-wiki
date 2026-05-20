@@ -26,7 +26,7 @@ ingest-mode:: abstract
 - ## Key Ideas
   - ViT scales like LLMs with the right training recipe (efficient attention, parallelism). ^[inferred]
   - Larger models show better fairness/performance tradeoffs and improved robustness. ^[inferred]
-  - Cited in SODC likely for architecture/scaling context of Transformer update rules. ^[inferred]
+  - Cited in [[SODC]] likely for architecture/scaling context of Transformer update rules. ^[inferred]
 
 - ## Connections to Wiki
   - [[wiki/concepts/topology-masked-transformer]] — cited as evidence that Transformer-style architectures scale reliably.

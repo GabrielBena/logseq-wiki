@@ -25,9 +25,9 @@ ingest-mode:: needs-fetch
 	- TODO: full-text read via `/paper-ingest full DOI:10.1016/j.amc.2009.04.058` — Gabriel notes "I remember something about 'interfacing' with continual systems that felt relevant for our 2 states separation framework". The SCA framework is reportedly UNCA-adjacent in flavour.
 - ## Connections to Wiki
 	- [[wiki/concepts/universal-computation]] — same family of substrate-independent computability questions; the SCA framework is one classical answer.
-	- [[wiki/research/universal-nca]] — Gabriel flagged this paper as "very relevant to UNCA even if slightly too in depths". The 2-states separation framework in UNCA may have a formal analogue in SCA terminology.
+	- [[wiki/research/universal-nca]] — Gabriel flagged this paper as "very relevant to [[UNCA]] even if slightly too in depths". The 2-states separation framework in [[UNCA]] may have a formal analogue in SCA terminology.
 - ## Cited By (in this wiki)
 	- *(none yet — relevance to be confirmed after full read)*
 - ## Open Questions
-	- Does the SCA framework formally clarify the *immutable hardware vs configurable function* split that UNCA introduces? Or is the analogy looser?
+	- Does the SCA framework formally clarify the *immutable hardware vs configurable function* split that [[UNCA]] introduces? Or is the analogy looser?
 	- What exactly are the "two states" Gabriel recalls? Likely a discrete/continuous interface argument in the paper — full read required to confirm.

@@ -25,12 +25,12 @@ ingest-mode:: abstract
 - ## Key Ideas
   - GNNs as learned transition rules for GCAs replace hand-designed cellular update rules. ^[inferred]
   - Arbitrary-topology CA — NCA generalised beyond regular grids to graph substrates. ^[inferred]
-  - Direct precursor to SODC's use of circuit topology as the CA "lattice". ^[inferred]
+  - Direct precursor to [[SODC]]'s use of circuit topology as the CA "lattice". ^[inferred]
 
 - ## Connections to Wiki
   - [[wiki/concepts/neural-cellular-automata]] — generalises NCA to graph-structured substrates.
-  - [[wiki/research/self-organising-digital-circuits]] — SODC treats Boolean circuit graphs as the substrate; direct conceptual extension of graph NCA.
-  - [[wiki/code/gabrielbena-boolean-nca-cc]] — GNN model in the codebase is the SODC analogue of this architecture.
+  - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] treats Boolean circuit graphs as the substrate; direct conceptual extension of graph NCA.
+  - [[wiki/code/gabrielbena-boolean-nca-cc]] — GNN model in the codebase is the [[SODC]] analogue of this architecture.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]

@@ -26,16 +26,16 @@ ingest-mode:: abstract
 - ## Why this matters here
 	- Directly addresses the open question flagged on [[wiki/concepts/neural-cellular-automata]] § Open Questions and on [[wiki/concepts/universal-computation]]: *what does it mean for an NCA (a continuous dynamical system) to be universal?* Hornischer offers a category-theoretic answer via Fraïssé limits and four formal senses of universality. ^[inferred]
 	- The negative result (no universal deterministic system exists in the full class) clarifies why claims that "continuous NCA are likely Turing-complete" need to specify *which* sense of universality is in scope. The "likely affirmative" framing previously on the NCA page was indeed pushing it. ^[inferred]
-	- Connects analog computation explicitly to neural networks, neuromorphic computing, and cellular automata — the exact substrate-family that UNCA and SODC live in.
+	- Connects analog computation explicitly to neural networks, neuromorphic computing, and cellular automata — the exact substrate-family that [[UNCA]] and [[SODC]] live in.
 
 - ## Open Questions / Next Steps
-	- Read the full PDF (not yet done) to map the four senses of universality onto UNCA / SODC and decide which sense is the right target for "continuous NCA universality" claims. Triggers a `/paper-ingest full` upgrade. ^[wiki-gap]
+	- Read the full PDF (not yet done) to map the four senses of universality onto [[UNCA]] / [[SODC]] and decide which sense is the right target for "continuous NCA universality" claims. Triggers a `/paper-ingest full` upgrade. ^[wiki-gap]
 	- Cross-reference with the other unread candidate [[What is a universal computing machine?]] (Computational Universality and Continuous Systems) — both flagged in NCA L86 by author 2026-05-11.
 
 - ## Connections
 	- [[wiki/concepts/universal-computation]] — primary conceptual page this paper extends.
 	- [[wiki/concepts/neural-cellular-automata]] — Open Questions § (Turing completeness of continuous NCA) directly addressed by this paper.
-	- [[wiki/research/universal-nca]] — UNCA's "universal" claim needs to be qualified by which sense from this paper.
+	- [[wiki/research/universal-nca]] — [[UNCA]]'s "universal" claim needs to be qualified by which sense from this paper.
 
 - ## Cited By (in this wiki)
 	- [[wiki/concepts/neural-cellular-automata]]

@@ -23,7 +23,7 @@ ingest-mode:: needs-fetch
 - ## Connections to Wiki
   - [[wiki/concepts/neural-cellular-automata]] — Von Neumann's automata are the conceptual ancestor of all CA work.
   - [[wiki/research/self-organising-digital-circuits]] — cited as foundational theory of universal computation via cellular automata.
-  - [[wiki/research/universal-nca]] — UNCA explicitly seeks a continuous analogue of Von Neumann's universal constructor.
+  - [[wiki/research/universal-nca]] — [[UNCA]] explicitly seeks a continuous analogue of Von Neumann's universal constructor.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]

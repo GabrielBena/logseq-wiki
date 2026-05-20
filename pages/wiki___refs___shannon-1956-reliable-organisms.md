@@ -23,7 +23,7 @@ ingest-mode:: needs-fetch
 
 - ## Connections to Wiki
   - [[wiki/concepts/solution-degeneracy]] — early theoretical framing of reliability via redundancy; degeneracy is a biological generalisation of this.
-  - [[wiki/research/self-organising-digital-circuits]] — cited as foundational work on fault-tolerant circuits that SODC addresses.
+  - [[wiki/research/self-organising-digital-circuits]] — cited as foundational work on fault-tolerant circuits that [[SODC]] addresses.
 
 - ## Cited By (in this wiki)
   - [[wiki/research/self-organising-digital-circuits]]
