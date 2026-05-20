@@ -1,4 +1,5 @@
 title:: wiki/refs/guichard-2025-engramnca
+alias:: EngramNCA
 category:: reference
 type:: external-ref
 tags:: nca, memory-engram, private-channels, morphogenesis, planaria

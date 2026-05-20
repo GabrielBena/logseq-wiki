@@ -1,4 +1,5 @@
 title:: wiki/refs/plantec-2024-lifelong-ndp
+alias:: LNDP
 category:: reference
 type:: external-ref
 tags:: nca, developmental-encoding, structural-plasticity, lifelong-learning, neuroevolution

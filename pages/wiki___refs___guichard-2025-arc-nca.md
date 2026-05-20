@@ -1,4 +1,5 @@
 title:: wiki/refs/guichard-2025-arc-nca
+alias:: ARC-NCA
 category:: reference
 type:: external-ref
 tags:: nca, arc-agi, abstraction-reasoning, test-time-training, developmental-encoding

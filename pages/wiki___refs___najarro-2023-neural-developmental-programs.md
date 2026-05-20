@@ -1,4 +1,5 @@
 title:: wiki/refs/najarro-2023-neural-developmental-programs
+alias:: NDP
 category:: reference
 type:: external-ref
 tags:: nca, self-organisation, developmental-encoding, neuroevolution, graph-neural-networks

@@ -1,4 +1,5 @@
 title:: wiki/refs/miotti-2025-differentiable-logic-ca
+alias:: DiffLogic CA, DiffLogic-CA, Differentiable Logic Cellular Automata
 category:: reference
 type:: external-ref
 tags:: nca, differentiable-logic-gates, boolean-circuits, programmable-matter

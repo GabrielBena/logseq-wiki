@@ -1,4 +1,5 @@
 title:: wiki/refs/raghunathan-2026-noracl-neurogenesis
+alias:: NORACL
 category:: reference
 type:: external-ref
 tags:: continual-learning, neurogenesis, growth, plasticity, postdoc-adjacent

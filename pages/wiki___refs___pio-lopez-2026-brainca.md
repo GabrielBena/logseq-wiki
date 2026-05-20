@@ -1,4 +1,5 @@
 title:: wiki/refs/pio-lopez-2026-brainca
+alias:: BraiNCA
 category:: reference
 type:: external-ref
 tags:: nca, brain-inspired, attention, graph-cellular-automata, morphogenesis
