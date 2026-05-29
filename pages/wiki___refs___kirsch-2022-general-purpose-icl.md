@@ -29,6 +29,7 @@ ingest-mode:: abstract
   - Capability bottlenecked by accessible state (context window), not parameter count. ^[inferred]
 
 - ## Connections to Wiki
+  - [[wiki/concepts/in-context-learning]] — a primary anchor for the concept: GPICL = meta-learning a general in-context learner from scratch.
   - [[wiki/concepts/topology-masked-transformer]] — the [[TMT]] acts as a meta-learner operating on circuit states; related conceptual framing.
   - [[wiki/research/self-organising-digital-circuits]] — cited as background on meta-learning Transformers.
 

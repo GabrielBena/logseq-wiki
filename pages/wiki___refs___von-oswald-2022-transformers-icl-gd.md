@@ -24,7 +24,7 @@ provenance-ambiguous:: 0.02
 - **Transformers Learn In-Context by Gradient Descent** — Johannes von Oswald (ETH Zürich), Eyvind Niklasson, Ettore Randazzo, João Sacramento, Alexander Mordvintsev, Andrey Zhmoginov, Max Vladymyrov (Google Research). ICML 2023 (PMLR 202). Code: github.com/google-research/self-organising-systems/tree/master/transformers_learn_icl_by_gd
 
 - ## TL;DR
-  - **Hypothesis 1 (the headline)**: training Transformers on auto-regressive tasks makes in-context learning emerge as gradient-based optimization of an *implicit* auto-regressive inner loss, run inside the forward pass.
+  - **Hypothesis 1 (the headline)**: training Transformers on auto-regressive tasks makes [[in-context learning]] emerge as gradient-based optimization of an *implicit* auto-regressive inner loss, run inside the forward pass.
   - **Proposition 1 (the proof of concept)**: a *single linear self-attention (LSA) layer* with explicit weight matrices is exactly equivalent to one step of gradient descent on a mean-squared-error regression loss. Stack K layers → K GD steps.
   - **Empirical match**: trained linear-self-attention-only Transformers on linear regression tasks actually converge to this construction (up to scaling) — verified by loss alignment, cosine similarity, weight inspection, and successful linear interpolation between trained and constructed weights.
   - **GD++ — Transformers surpass plain GD** by learning a curvature-correcting data transformation `x ← (I − γ X X^T) x`, a truncated Neumann series approximation of the inverse Hessian. Trained multi-layer Transformers match GD++, not vanilla GD.
