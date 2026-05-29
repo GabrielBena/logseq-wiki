@@ -10,10 +10,13 @@ doi:: 10.48550/arXiv.2602.18960
 citation-count:: 3
 summary:: Single-author review arguing modularity is a unifying computational principle across engineering, evolutionary biology, neuroscience, and AI. Proposes implicit/emergent/architectural taxonomy and a formal modular-model definition.
 confidence:: 0.70
-lifecycle:: draft
-lifecycle-changed:: 2026-05-12
+lifecycle:: in-review
+lifecycle-changed:: 2026-05-29
+review-pass:: 1
+review-pass-changed:: 2026-05-29
+review-pass-result:: pass-1-addressed (1 of 1)
 created:: 2026-05-12
-updated:: 2026-05-12
+updated:: 2026-05-29
 sources:: api:semanticscholar, pdf:arxiv
 wiki-generated:: true
 ingest-mode:: full
@@ -65,8 +68,7 @@ ingest-mode:: full
 	- §3.3.1 Compositional Generalization explicitly cites **Béna & Goodman 2021** (arXiv:2106.02626, the basis for [[wiki/research/dynamics-specialization]]):
 		- "(Béna & Goodman, 2021) showed that strong inter-module connection sparsity and resource constraints (measured by the number of units in a module) facilitate module specialization."
 	- This is a partial reading of Gabriel's thesis result — Salatiello takes the resource-constraint half but does not engage with the more nuanced negative finding that **structural modularity alone does not guarantee functional specialization** ([[wiki/concepts/modularity]]'s "Modularity Trap"). The paper sits squarely in the *pro-modularity* camp; it would benefit from engaging with the anti-localisation critique (e.g., Pessoa's *Entangled Brain* — not cited).
-	- > This is where the #position-paper is needed ! We can start to see the pieces falling into place hehe
-	-
+	- **This tension is exactly the [[wiki/projects/position-paper]]'s remit:** the pro-modularity (Salatiello) vs anti-localisation (Pessoa) split is the debate the position-paper sets out to navigate — Salatiello is a key "pro-modularity" data-point for it. ^[addressed]
 - ## Tension with the wiki's existing framing
 	- This paper is *the* contemporary pro-modularity review. It complements but **does not engage with** [[wiki/refs/pessoa-2022-entangled-brain]] — the canonical anti-localisation critique. The two should be read together.
 	- Salatiello accepts that "brains are modular" largely uncritically and pursues the engineering implications. Pessoa argues the structure-function mapping is many-to-many, M5 (spatial localisation) is overrated, and modularity claims often smuggle in unjustified assumptions.

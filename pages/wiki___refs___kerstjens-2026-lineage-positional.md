@@ -10,10 +10,13 @@ pubmed:: 41775258
 citation-count:: 2
 summary:: Positional information inherited via cell lineage as principal eigengenes — co-expression PCA modes that span scales, persist developmentally, are mouse↔zebrafish-conserved, decodable from sparse gene subsets.
 confidence:: 0.85
-lifecycle:: draft
-lifecycle-changed:: 2026-05-15
+lifecycle:: in-review
+lifecycle-changed:: 2026-05-29
+review-pass:: 1
+review-pass-changed:: 2026-05-29
+review-pass-result:: pass-1-addressed (2 of 2)
 created:: 2026-05-15
-updated:: 2026-05-15
+updated:: 2026-05-29
 sources:: assets/A-lineage-based-model-of-scalable-positional-information-in-vertebrate-brain-development.pdf (full PDF, 12 pages + references, ~8000 words)
 wiki-generated:: true
 ingest-mode:: full
@@ -76,9 +79,8 @@ provenance-ambiguous:: 0.02
 	- ### Lineage as the "slow timescale" in the engram/active split
 		- In [[wiki/projects/growing-networks]] the architecture sketch has engrams updating slowly (structural backbone) and active layer updating fast (computation). Kerstjens et al. shows the biological slow timescale is *cell division* — the engram (eigengene) updates only when a cell divides, by adding a small Gaussian deviation. Between divisions, the engram is constant.
 		- This suggests a clean computational analogue: in an NCA, the engram-update operation should be **discretely triggered by cell division** (or replication event), not a continuous slow drift. Daughter inherits, parent persists, the manifold geometry is built once and only re-evaluated at births. ^[claude-synth]
-			- > Is there a link with the asynchrony of updates in the original NCA paper ?
-			- > This somehow contradicts the [[EngramNCA]] work where the Engram layer still "evolves" mimicking RNA mechanisms or something ?
-			-
+			- *On async updates:* yes — Mordvintsev's original NCA uses **stochastic per-cell asynchronous** updates, but that is a different kind of discreteness: async is *which cells update this step* (timing jitter on the fast workload), whereas division-gating is *when the slow engram changes at all* (an event, not a rate). They compose — fast async workload + event-discrete engram updates. ^[addressed]
+			- *On the [[EngramNCA]] tension:* real, worth flagging. [[EngramNCA]] lets the engram channel *evolve continuously* (RNA-transfer analogue); the Kerstjens-inspired view makes it *constant between divisions*. Continuous-drift vs division-gated engram dynamics are competing modelling choices, not a settled point — tracked as an open design question for [[wiki/projects/growing-networks]]. ^[addressed]
 	- ### Implications for [[wiki/concepts/modularity]] structure-function gap
 		- The multi-scale nested-region hierarchy is the **deepest structural form of modularity** the wiki has seen described: a recursive binary partition where every level carries its own eigengene. Yet the paper makes no claim that these regions are *functionally* specialised — they are structurally distinct without (necessarily) being functionally distinct.
 		- This is the [[wiki/research/dynamics-specialization]] / [[wiki/research/spatial-neuromorphic-priors]] structure-function gap in vivo: modular hierarchy emerges from developmental lineage, but whether each region computes something distinct is a separate question. The gap holds biologically just as it does in artificial systems. ^[claude-synth]
