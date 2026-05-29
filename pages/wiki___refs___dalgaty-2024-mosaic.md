@@ -6,6 +6,7 @@ summary:: Mosaic neuromorphic chip architecture: memristor-based, comprising Neu
 confidence:: 0.40
 lifecycle:: stub
 ingest-mode:: abstract
+sources:: api:semanticscholar
 created:: 2026-05-08
 updated:: 2026-05-08
 wiki-generated:: true

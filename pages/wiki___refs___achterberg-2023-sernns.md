@@ -6,6 +6,7 @@ summary:: Spatially Embedded Recurrent Neural Networks (seRNNs): embed neurons i
 confidence:: 0.45
 lifecycle:: stub
 ingest-mode:: abstract
+sources:: api:semanticscholar
 created:: 2026-05-08
 updated:: 2026-05-08
 wiki-generated:: true

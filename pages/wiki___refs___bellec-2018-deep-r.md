@@ -6,6 +6,7 @@ summary:: Deep Rewiring (DEEP-R): trains sparse neural networks by treating conn
 confidence:: 0.55
 lifecycle:: stub
 ingest-mode:: abstract
+sources:: api:semanticscholar
 created:: 2026-05-08
 updated:: 2026-05-08
 wiki-generated:: true
