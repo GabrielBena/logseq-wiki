@@ -9,7 +9,7 @@ lifecycle:: draft
 lifecycle-changed:: 2026-06-02
 created:: 2026-06-02
 updated:: 2026-06-02
-sources:: Xilinx White Paper WP505 (v1.1.1), 29 Sept 2020; staged via wiki/_raw/wp505-versal-acap.pdf
+sources:: Xilinx White Paper WP505 (v1.1.1), 29 Sept 2020; PDF archived at wiki/_archives/_raw/wp505-versal-acap.pdf
 authors:: Xilinx, Inc.
 year:: 2020
 venue:: Xilinx White Paper (WP505 v1.1.1)
