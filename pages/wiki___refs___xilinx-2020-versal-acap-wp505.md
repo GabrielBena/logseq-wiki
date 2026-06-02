@@ -2,7 +2,7 @@ title:: wiki/refs/xilinx-2020-versal-acap-wp505
 alias:: Versal ACAP, Xilinx WP505
 category:: reference
 type:: external-ref
-tags:: hardware, fpga, acap, compute-substrate, versal
+tags:: hardware, fpga, acap, computing-substrate, versal
 summary:: Xilinx whitepaper on Versal ACAP — a heterogeneous platform fusing Scalar (CPU), Adaptable (FPGA), and Intelligent (AI/DSP) engines on a hardened NoC; source of the CPU/GPU/FPGA/ACAP taxonomy.
 confidence:: 0.55
 lifecycle:: draft
@@ -26,7 +26,7 @@ provenance-inferred:: 0.25
 	- **Vector processing (DSPs, GPUs)** — efficient at a narrower set of parallelizable compute functions; pays latency/efficiency penalties from an inflexible memory hierarchy.
 	- **Programmable logic (FPGAs)** — precisely customizable to a particular compute function; best at latency-critical real-time work (e.g. automotive driver-assist) and irregular data structures (e.g. genomic sequencing); the cost is a hard hardware-development flow.
 	- **ACAP (Versal)** — combines all three as *Scalar Engines + Adaptable Engines (FPGA fabric) + Intelligent Engines (AI/DSP)* on one die, with a tool flow spanning framework → C → RTL so users build a custom domain-specific architecture (DSA) from the three programmable elements.
-	- This four-way split is exactly the seed for a future wiki page on compute substrates / a hardware hub. ^[wiki-gap: candidate page wiki/concepts/computing-substrates (CPU vs GPU/DSP vs FPGA vs ACAP/heterogeneous) + a "hardware" hub gathering [[wiki/concepts/fpga]], [[wiki/concepts/memristor-crossbar]], [[wiki/concepts/programmable-matter]]]
+	- This four-way split seeds the substrate taxonomy in [[wiki/concepts/computing-substrates]] (created 2026-06-02), which gathers [[wiki/concepts/fpga]], [[wiki/concepts/memristor-crossbar]], and [[wiki/concepts/programmable-matter]] and extends the spine with analog (memristor) and neuromorphic axes.
 - ## Why it matters for growing-computation
 	- Versal is the closest single-chip "best of both" for the project: it offers **SpiNNaker2-like local cells** (the AI-Engine array of local-memory vector cores), **reconfigurable LUT fabric** (the workload substrate that actually gets grown), **and a hardened NoC** — all on one die. ^[inferred — synthesis from the [[wiki/projects/growing-computation]] 2026-06-01 design session, not the whitepaper]
 	- In the locality-spectrum framing (see [[wiki/concepts/fpga]]), Versal's heterogeneity is what lets the regulatory rule (a float MLP) live on DSP/Intelligent-Engine + BRAM islands *beside* the LUT workload it grows, rather than as off-chip "software in hardware". ^[inferred]
