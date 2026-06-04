@@ -175,6 +175,12 @@ exclude-from-graph-view:: true
 		- **Passive (only on explicit request):** generating new claims/theses, making editorial decisions, drafting the actual paper prose. New ideas come from you and the literature, not from Claude's prior.
 	- ### Tag convention recap
 		- Journal entries tagged with `[[wiki/projects/<name>]]` (full namespace wikilink) are picked up by `/project-update` and `/weekly`. This is the single signal — no parallel mirror, no `_todo.md`.
+- ## Deliverables — single outputs with a deadline
+	- A **deliverable** (`wiki/deliverables/`) is one tier below a project: a single output with one audience and one deadline — a talk, grant, poster, blog post, or rebuttal. Where a project is `living` (ongoing, never promotes), a deliverable is **terminal** — it exists in order to be **shipped**.
+	- **Lifecycle:** `active → shipped → archived`. Created `active` with a `due::` date, `kind::`, `venue::`, and (usually) `derives-from:: [[wiki/projects/<parent>]]`. Mark `shipped` (+ `shipped-as:: <url>`) when delivered, `archived` later. You promote it; skills only ever create it `active`.
+	- **Why its own tier:** the [[Wiki Deliverables Hub]] is a **deadlines view** — active deliverables sorted by `due::`, overdue flagged — which neither a project page nor a journal can surface. It also keeps grant/talk/poster framing out of the project page (which would otherwise accrete clutter).
+	- **Workflow:** `/deliverable <slug>` to create (≤3 quick questions) or refresh from journal bullets tagged `[[wiki/deliverables/<slug>]]` + the parent project; `/deliverable ship <slug>` when it goes out. Rich pages are fine — a deliverable carries its own audience-specific framing even if it repeats the project.
+	- **`DOING` → deliverable** when the task is *content-heavy* (a poster needs a workspace; "email Bob" does not). When a deliverable *sprawls* past one output, it has become a project.
 - ## What Not To Put Here
 	- **Credentials, tokens, passwords** — never. Use L1 memory for references; a password manager for the secrets themselves.
 	- **Ephemeral notes** — daily tasks, meeting agendas, fleeting thoughts go in journals, not wiki pages.
