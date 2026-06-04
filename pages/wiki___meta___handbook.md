@@ -97,9 +97,10 @@ exclude-from-graph-view:: true
 		                                      ↓
 		                                  archived
 		  ```
-		- `in-review` is a **durable working state** — it persists across review passes (Claude addressing your comments) until you manually promote. Whose turn it is is derived from page content, not lifecycle (see [Review workflow](#Review-workflow)).
+		- `in-review` is a **durable working state** — it persists across review passes (Claude addressing your comments) until you manually promote. Whose turn it is is derived from page content, not lifecycle (see [Review workflow](#Review-workflow)). **Project pages (`wiki/projects/`) are the exception — they use `living`,** off this linear track and never frozen for review (see [Projects](#Projects)).
 	- ### States
 		- `draft` (auto, any ingest skill) — Default for new pages. Once a page enters `in-review`, it does NOT drop back to `draft`.
+		- `living` (auto, `/project-update`) — Project-page steady state. Off the linear track; never auto-frozen for review; `/project-update` keeps integrating new input; review comments resolved in place. Ships via `living → archived`.
 		- `stub` (auto, `/paper-ingest` when no abstract found) — Pre-draft placeholder; lower trust than draft.
 		- `in-review` (**you**, or auto-detected — see Review workflow) — "I've added comments — Claude please address" *or* "Claude has addressed; my turn to re-read." Durable until you promote.
 		- `reviewed` (**you**, manually) — "I read it and it looks accurate."
@@ -116,11 +117,11 @@ exclude-from-graph-view:: true
 	- ### Optional metadata
 		- `lifecycle-changed:: 2026-05-08` — bump whenever you change state.
 		- `superseded-by:: [[wiki/namespace/new-page]]` — required when archiving a page that's been replaced.
-	- ### Per-pass tracking (in-review only — set by `/wiki-review`)
+	- ### Per-pass tracking (set by `/wiki-review` on `in-review` and `living` pages)
 		- `review-pass:: N` — counter, incremented per Claude pass.
 		- `review-pass-changed:: <ISO date>` — when the last pass occurred.
 		- `review-pass-result:: pass-N-addressed (M of M)` or `pass-N-partial (M of K)` — outcome of last pass.
-		- These properties exist *underneath* `lifecycle:: in-review` and never change the lifecycle. `/wiki-status` uses them to surface the *Awaiting re-read* backlog.
+		- These properties exist *underneath* `lifecycle:: in-review` (or `living` for projects) and never change the lifecycle. `/wiki-status` uses them to surface the *Awaiting re-read* backlog.
 - ## Review workflow
 	- **Annotation scheme.** Add comments inline using markdown blockquote:
 		- ```
@@ -158,9 +159,9 @@ exclude-from-graph-view:: true
 	- ### Workflow stages
 		- **Seed.** Drop a free-form note in `pages/<project-name>.md` or in a journal under a `[[wiki/projects/<project-name>]]` tag block. No structure required — just dump thoughts, references, framing.
 		- **Distill.** Run `/project-update <name>`. Claude reads the seed + any tagged journal entries since the last update, asks 2-3 clarifying questions, and writes/updates `pages/wiki/projects/<name>.md`. This is just `/wiki-ingest` tuned for the project tag + a fixed page template.
-		- **Iterate.** Add `> G:` review comments directly on the wiki project page. `/wiki-review` (or the next `/weekly`) addresses them in the ping-pong cycle you'd use for any other wiki page. Same mechanism, no new rules.
+		- **Iterate.** Add `> G:` review comments directly on the wiki project page. `/wiki-review` (or the next `/weekly`) addresses them in place. **Project pages are `living`, so review never freezes them** — comments get resolved while the page stays `living` and `/project-update` keeps integrating new journal input. No promotion gate; you never have to bump a project out of review to keep it growing.
 		- **Capture mid-week thoughts.** Drop bullets in any journal under `[[wiki/projects/<name>]]`. They'll be picked up on the next `/project-update` or `/weekly`.
-		- **Ship.** When the artifact is externally published (arxiv, journal, granted, presented), bump the project page to `lifecycle:: archived` with `superseded-by:: [[wiki/research/<name>]]` and create the research mirror as you would for any finished research output.
+		- **Ship.** When the artifact is externally published (arxiv, journal, granted, presented), bump the project page from `living` to `lifecycle:: archived` with `superseded-by:: [[wiki/research/<name>]]` and create the research mirror as you would for any finished research output.
 	- ### Author voice vs Claude distillation
 		- The project page has two distinct surfaces:
 			- **`## Argument`** (or **`## Aims`** for a grant, **`## Outline`** for a talk) — your voice. Claude reads, never edits without an explicit request. Claims you stand behind carry `^[author]`.
