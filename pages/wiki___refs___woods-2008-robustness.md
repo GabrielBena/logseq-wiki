@@ -12,7 +12,7 @@ lifecycle:: draft
 lifecycle-changed:: 2026-06-04
 created:: 2026-05-08
 updated:: 2026-06-04
-sources:: wiki/_raw/978-1-84800-261-6_1.pdf, pages 1-21 (self-healing section deep-read)
+sources:: wiki/_archives/_raw/978-1-84800-261-6_1.pdf, pp.1-21 (self-healing section deep-read)
 wiki-generated:: true
 ingest-mode:: full
 
