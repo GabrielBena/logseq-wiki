@@ -79,7 +79,7 @@ provenance-ambiguous:: 0.02
   - **[[wiki/concepts/solution-degeneracy]]** — Aguera's aerobic/anaerobic ATP example is exactly Edelman's degeneracy and exactly [[SODC]]'s basin-hopping recovery. The three sources triangulate the same idea from philosophy, biology, and engineering. ^[inferred]
   - **[[wiki/concepts/neural-cellular-automata]]** — the *substrate-independence* of NCA computation (any local rule can be wired into the same NCA scaffold) is the multiple-realizability story instantiated as a deep-learning architecture. The NCA Trilogy — Mordvintsev (pattern), Ch3 (computer), Ch4 (optimizer) — can be re-read as a progression of *functional generality*.
   - **[[wiki/refs/edelman-2001-degeneracy-complexity]]** — same thesis, opposite direction. Edelman starts from biology, Aguera from Turing. The two papers should be read in parallel; together they triangulate the strong functionalist position.
-  - **[[wiki/refs/von-neumann-1966-self-reproducing-automata]]** — Von Neumann's Universal Constructor is the load-bearing piece in Aguera's life-as-computation argument. Currently a stub in the wiki; this essay is good motivation to deepen it.
+  - **[[wiki/refs/von-neumann-1966-self-reproducing-automata]]** — Von Neumann's Universal Constructor is the central piece in Aguera's life-as-computation argument. Currently a stub in the wiki; this essay is good motivation to deepen it.
 
 - ## Notable Citations (worth flagging)
   - **Turing 1936** "On Computable Numbers" — the founding paper. Worth a stub for completeness.

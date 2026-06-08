@@ -28,7 +28,7 @@ ingest-mode:: abstract
 	- Argues this is now tractable specifically *because* of recent ML advances — a roadmap claim, not a complete architecture. ^[inferred]
 	- Frames [[GWT]] as a path to **brain-inspired cognitive architectures**, positioning the workspace as more than a consciousness theory — also a useful AI design pattern. ^[inferred]
 - ## Connections to Wiki
-	- [[wiki/concepts/global-workspace-theory]] — primary conceptual anchor; this paper is one of the load-bearing GWT-as-architecture references for that concept page.
+	- [[wiki/concepts/global-workspace-theory]] — primary conceptual anchor; this paper is one of the key GWT-as-architecture references for that concept page.
 	- [[wiki/projects/growing-networks]] — cited as inspiration for the Perceiver-as-workspace pattern in the postdoc brainstorm.
 	- [[wiki/concepts/modularity]] — [[GWT]]'s "specialised modules + shared workspace" is one answer to the modular-coordination problem.
 	- [[wiki/refs/jaegle-2021-perceiver-io]] — architectural neighbour; Perceiver IO's small latent + cross-attention is *structurally* a workspace implementation. ^[inferred]

@@ -102,5 +102,5 @@ provenance-ambiguous:: 0.02
   - "*Solely through the pressure to predict correctly Transformers discover learning algorithms inside their forward computations, effectively meta-learning a learning algorithm.*" — Section 1
 
 - ## Cited By (in this wiki)
-  - [[wiki/projects/growing-networks]] — Transformers-as-universal-meta-learners is load-bearing for the [[NCA as Gardener]] thesis.
+  - [[wiki/projects/growing-networks]] — Transformers-as-universal-meta-learners is an important input to the [[NCA as Gardener]] thesis.
   - [[wiki/research/self-organising-digital-circuits]] (citation pending) — [[TMT]] inherits ICL-as-GD by being a Transformer.

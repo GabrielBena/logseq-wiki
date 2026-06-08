@@ -72,7 +72,7 @@ ingest-mode:: full
 - ## Tension with the wiki's existing framing
 	- This paper is *the* contemporary pro-modularity review. It complements but **does not engage with** [[wiki/refs/pessoa-2022-entangled-brain]] — the canonical anti-localisation critique. The two should be read together.
 	- Salatiello accepts that "brains are modular" largely uncritically and pursues the engineering implications. Pessoa argues the structure-function mapping is many-to-many, M5 (spatial localisation) is overrated, and modularity claims often smuggle in unjustified assumptions.
-	- Gabriel's own thesis ([[wiki/research/dynamics-specialization]], [[wiki/research/spatial-neuromorphic-priors]]) sits between these poles: structural modularity is a real and measurable property, but it does not deterministically produce functional specialization — resource constraints and task separability are the load-bearing factors.
+	- Gabriel's own thesis ([[wiki/research/dynamics-specialization]], [[wiki/research/spatial-neuromorphic-priors]]) sits between these poles: structural modularity is a real and measurable property, but it does not deterministically produce functional specialization — resource constraints and task separability are the decisive factors.
 - ## Connections to Wiki
 	- [[wiki/concepts/modularity]] — direct conceptual overlap; this paper is the broadest synthesis of pro-modularity arguments currently in the wiki. The Salatiello taxonomy (implicit/emergent/architectural) is orthogonal to Gabriel's PP/PS/UP/US 2×2 — both could be combined.
 	- [[wiki/refs/pessoa-2022-entangled-brain]] — companion (and counterpoint) review. Salatiello = modularity-is-the-answer; Pessoa = modularity-claims-are-overstated.

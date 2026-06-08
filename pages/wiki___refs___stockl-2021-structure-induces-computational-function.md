@@ -50,7 +50,7 @@ provenance-ambiguous:: 0.05
 		- **Separable NES** (Wierstra et al. 2008, Schaul/Glasmachers/Schmidhuber 2011). Why evolution strategies and not gradient descent? *The skeleton-to-RSNN map involves Bernoulli sampling — the fitness function is non-differentiable w.r.t. skeleton parameters*. NES estimates gradients via sampled perturbations.
 		- The base-probability parameters are passed through a sigmoid (`p_{I→J} = σ(κ_{I→J})`) to stay in [0,1].
 		- Hyperparameters (number of types K, distance scale σ) optimised by separate search rather than gradient.
-- ## Why K (neuron-type count) is load-bearing
+- ## Why K (neuron-type count) matters
 	- The paper's central claim: **structure can induce function *only if K is large enough***. With K=1 or K=2 (typical of classical ANNs), the type-conditioned probability table collapses to near-uniform; with K=6 to dozens, the table can encode rich connectivity patterns.
 	- Quantitative answer to "how many types needed" is task-dependent; main illustrations use K=6 but the paper argues for "a fair number" (likely several to dozens). ^[partial — full quantitative answer is in the results sections not deeply read]
 	- This is the paper's strongest contribution to the neuroscience question of cell-type proliferation: *the brain has many cell types because the type-conditioned wiring rule needs them for innate function*. Classical ANN reductions to 1-2 types lose this capacity.

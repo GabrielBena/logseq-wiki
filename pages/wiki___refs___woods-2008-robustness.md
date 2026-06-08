@@ -30,7 +30,7 @@ ingest-mode:: full
 	- **1.5 Summary** — robustness as engineering "luxury" today, but process-variation unreliability may make self-healing a *required* step ("a horrendous nightmare… signalling an end to Moore's Law?").
 
 - ## §1.4 Robustness Approaches — key ideas (focus section)
-	- Robustness is decomposed into: **redundancy, diversity, granularity, recovery, self-healing, self-repair** (the authors' load-bearing set). ^[inferred]
+	- Robustness is decomposed into: **redundancy, diversity, granularity, recovery, self-healing, self-repair** (the authors' core set). ^[inferred]
 	- **Redundancy / TMR.** Triple-Mode Redundancy (logic tripled + majority vote) protects against SEUs in safety-critical use; design-for-test (scan path, BIST) costs ~10% silicon as a pure-test overhead. FPGAs supply redundancy "for free" from unused logic resources. ^[inferred]
 	- **Recovery, self-healing, self-repair (§1.4.4).** The *programmable* nature of FPGAs is a low-risk route to robustness: reconfigurability is an engineering safety net that allows change during *and after* the design cycle; taken to the extreme, circuits that **self-repair / self-heal** (Gokhale 2006; Andraka & Brady 2002; Samudrala 2004). ^[inferred]
 	- **The self-repair rationale (§1.4.4.2).** FCCMs (FPGA Custom Computing Machines) = FPGA + microprocessor holding reconfiguration data; reconfiguration is **full** (device offline for ms) or **partial** (rewire part while the rest runs — split the app into sequential stages, à la Sezer et al. 1998). The "real panacea" is a system where **the designer doesn't write the programming and the hardware reconfigures itself** — i.e. **evolvable systems** (Stoica et al. 2001), an active research area exploiting FPGA reconfigurability. ^[inferred]
