@@ -7,7 +7,7 @@ year:: 2017
 venue:: arXiv 1701.08734 (DeepMind)
 arxiv:: 1701.08734
 citation-count:: 958
-summary:: Agents are *paths* through a module net; freeze a task's learned path, then re-evolve later paths reusing it → transfer without forgetting. Path selection is a global tournament GA — a precedent and foil for recruit/freeze/reuse.
+summary:: Agents are *paths* through a module net; freeze a task's path, re-evolve later paths reusing it → transfer without forgetting. Selection is a global tournament GA — a precedent + foil for reuse.
 confidence:: 0.75
 lifecycle:: draft
 lifecycle-changed:: 2026-06-08

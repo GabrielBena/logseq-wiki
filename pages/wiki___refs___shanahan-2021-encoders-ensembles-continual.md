@@ -7,7 +7,7 @@ year:: 2021
 venue:: arXiv
 arxiv:: 2105.13327
 citation-count:: 26
-summary:: Task-free continual learning: a frozen pre-trained encoder + an ensemble of simple key-addressed classifiers; top-k key-matching + competitive specialisation beat any single member, with no catastrophic forgetting.
+summary:: Task-free continual learning: a frozen pre-trained encoder + an ensemble of simple key-addressed classifiers; top-k key-matching + specialisation beat any single member, no forgetting.
 confidence:: 0.75
 lifecycle:: draft
 lifecycle-changed:: 2026-06-08
@@ -25,7 +25,7 @@ ingest-mode:: full
 
 - ## Architecture — the Ensemble Memory
 	- A **frozen, pre-trained** general-purpose encoder `f` (self-supervised contrastive — ReLIC or BYOL, ResNet-50 on ImageNet; a VAE pre-trained on Omniglot for MNIST). Freezing `f` means the *representation never moves* → forgetting cannot enter through it. (The encoder must be pretrained on a *different* dataset than the CL benchmark.)
-	- A downstream **ensemble of very simple single-layer classifiers** ("t-classifiers"). **Each classifier carries a fixed key** drawn from the encoder's latent space — **the key space *is* the encoder's latent space**, so the ensemble is literally an addressable *memory*.
+	- A downstream **ensemble of very simple single-layer classifiers** ("t-classifiers"). **Each classifier carries a fixed key** drawn from the encoder's latent space — **the key space *is* the encoder's latent space**, so the ensemble functions as an addressable *memory*.
 	- **Inference = key-matching:** image → `z = f(x)` → retrieve the **top-`k` nearest keys** by cosine similarity → run `z` through those `k` classifiers → **weighted average** of their outputs, weight = cosine similarity to each key. `V_M(z) = Σ_i γ(key_i,z)·v_i(z) / Σ_i γ(key_i,z)`.
 	- **Three unconventional ingredients** that confine updates to the current sample's class (the per-classifier anti-forgetting mechanism): a **dot-product loss** `L = −(y·ŷ)` (no softmax), a **tanh activation** `φ(x)=τ·tanh(x/τ)` (saturates toward `τ`), and a **sign-only optimiser** (discard gradient magnitude, step each weight by ±lr).
 
