@@ -26,8 +26,8 @@ ingest-mode:: full
 	- **Directed-graph view**: among permanent community states, completely-invasion-resistant "absorbing" nodes exist — maximally robust *endpoints*. It is the *directionality* (you can reach them but not leave) that makes perfect robustness possible. ^[extracted]
 	- In living systems the same self-organisation operates, but selection can additionally *shape the landscape* (Fig 19.3) for fast, intermediate-free assembly. ^[extracted]
 
-- ## Why it matters for [[wiki/projects/growing-computation]]
-	- This is the mechanistic backbone of the **self-healing thesis**: a *self-organising* substrate under damage pressure will settle into damage-robust configurations on its own — robustness as an attractor, not a stored backup. ^[claude-synth]
+- ## Why it's relevant to [[wiki/projects/growing-computation]]
+	- A nice mechanistic story for the **self-healing idea**: a *self-organising* substrate under damage pressure might settle into damage-robust configurations on its own — robustness as an attractor rather than a stored backup. Suggestive, and worth testing — not established for this substrate. ^[claude-synth]
 	- "Develops robustness only to perturbations encountered" is a concrete training prescription: expose the NCA rule to the damage / power / routing pressures you expect at deployment (Stage 2 / 3-bis), and distributed robustness to *those* emerges. ^[claude-synth]
 	- Directly parallels [[SODC]]'s self-repair as **basin-hopping over solution-degeneracy** (already in the wiki) — same valley-landscape picture, now with Wagner's self-organisation argument behind it. ^[claude-synth]
 

@@ -15,7 +15,7 @@ sources:: wiki/_pdfs/wagner-2005-robustness-evolvability.pdf (Ch20, pp. 310–32
 wiki-generated:: true
 ingest-mode:: full
 
-- **Ch20 — Robustness in Man-made Systems** (parent: [[wiki/refs/wagner-2005-robustness-evolvability]]). The most directly load-bearing chapter for [[wiki/projects/growing-computation]].
+- **Ch20 — Robustness in Man-made Systems** (parent: [[wiki/refs/wagner-2005-robustness-evolvability]]). The most directly relevant chapter for [[wiki/projects/growing-computation]].
 
 - ## TL;DR
 	- Robustness principles cross the bio/engineering divide. Apparent differences (biological parts are *noisy*; biological architecture is *byzantine*) dissolve — robust engineered systems (a commercial airliner: 100k+ subsystems, 1000+ CPUs) are no simpler than organisms, and complexity itself may *be* the robustness. The two transferable principles: **distributed robustness** and **evolved robustness**. ^[extracted]
@@ -29,9 +29,9 @@ ingest-mode:: full
 	- Critically: this fault-tolerance "does **not** simply stem from redundancy of parts. Although the transistors are 'redundant' (many, identical), fault tolerance emerges from a **global configuration of switches**, not from duplication" — i.e. *distributed* robustness in silicon. Evolved circuits also resist clean decomposition into function-specific parts (cf. [[wiki/refs/thompson-1997-evolved-circuit]]). ^[extracted]
 	- **Engineering's advantage over biology:** you can inject faults at **high, targeted rates** during the search (biology's mutations are rare & random), so you can drive a device to be *maximally* robust to a chosen fault spectrum. ^[extracted]
 
-- ## Why it matters for [[wiki/projects/growing-computation]] (load-bearing)
-	- This is the **direct precedent and justification** for the whole project: on a reconfigurable [[wiki/concepts/fpga]]-style substrate, fault-tolerance is *distributed* (global config, not spare copies) and can be **learned/evolved by training under damage pressure** — exactly Stage-3-bis. The NCA regulatory rule plays the role of Keymeulen's GA (the search that finds distributed-robust configurations), but *local and learned* rather than global and evolutionary. ^[claude-synth]
-	- Lineage made explicit: [[wiki/refs/thompson-1997-evolved-circuit]] (1997) → Keymeulen (2000) → [[wiki/refs/whitley-2021-fpga-evolvable-hardware]] → growing-computation. The novelty growing-computation adds is **locality + a learned developmental rule**, not bitstream-global evolution. ^[claude-synth]
+- ## Why it's relevant to [[wiki/projects/growing-computation]]
+	- A concrete **precedent** worth knowing: on a reconfigurable [[wiki/concepts/fpga]]-style substrate, fault-tolerance can be *distributed* (global config, not spare copies) and *learned/evolved* by training under damage pressure — close in spirit to Stage-3-bis. Loosely, the NCA rule would play a role like Keymeulen's GA (a search for distributed-robust configurations), but *local and learned*. A precedent to build past, not a blueprint. ^[claude-synth]
+	- A rough lineage it sits near: [[wiki/refs/thompson-1997-evolved-circuit]] (1997) → Keymeulen (2000) → [[wiki/refs/whitley-2021-fpga-evolvable-hardware]] → (one direction) growing-computation, which would add *locality + a learned developmental rule*. ^[claude-synth]
 	- "Inject faults at high targeted rates" = the curriculum for the recover-from-damage objective; "robustness only to encountered faults" (Ch19) sets what to put in that curriculum. ^[claude-synth]
 
 - ## Connections to Wiki

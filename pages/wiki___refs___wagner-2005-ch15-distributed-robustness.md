@@ -15,7 +15,7 @@ sources:: wiki/_pdfs/wagner-2005-robustness-evolvability.pdf (Ch15, pp. 228–24
 wiki-generated:: true
 ingest-mode:: full
 
-- **Ch15 — Redundancy of Parts or Distributed Robustness?** (parent: [[wiki/refs/wagner-2005-robustness-evolvability]]). The load-bearing chapter for the lab talk's Biology II.
+- **Ch15 — Redundancy of Parts or Distributed Robustness?** (parent: [[wiki/refs/wagner-2005-robustness-evolvability]]). A key chapter for the lab talk's Biology II.
 
 - ## TL;DR
 	- Two mechanistic causes of robustness: **redundancy of parts** (≥2 parts doing the *same* task — e.g. duplicate genes) vs **distributed robustness** (many *different* parts compensate through their interactions, *not* by standing in for the failed part). Wagner's verdict: **distributed robustness dominates** in living systems. ^[extracted]
@@ -29,8 +29,8 @@ ingest-mode:: full
 - ## The subtle caveat (worth keeping honest)
 	- Redundancy and distributed robustness can be **mathematically indistinguishable** at the level of an aggregate observable: control theory guarantees that for any system with redundant parts there is a non-redundant system with the *same transfer function*. So "how much redundancy?" is partly perspective-dependent (count parts vs measure control coefficients). ^[extracted]
 
-- ## Why it matters for [[wiki/projects/growing-computation]]
-	- The project's recovery story — a damaged tile's function recovered by **recruiting and reconfiguring *neighbouring, different* tiles** (Stage 3-bis), not by holding spare copies — *is* distributed robustness. This names and grounds the deck claim "recovery by re-differentiation, not redundancy." ^[claude-synth]
+- ## Why it's relevant to [[wiki/projects/growing-computation]]
+	- The project's recovery story — recovering a damaged tile's function by **recruiting and reconfiguring *neighbouring, different* tiles** (Stage 3-bis), not by holding spare copies — fits the pattern Wagner calls *distributed robustness*. A useful name + some empirical grounding for the deck's "recovery by re-differentiation, not redundancy" — borrowed, not derived. ^[claude-synth]
 	- It also justifies the **DNA-framing** in [[wiki/concepts/substrate-rule-co-location]]: the substrate need not store every workload (redundancy); a small rule re-differentiates available tiles (distributed). ^[claude-synth]
 	- "Reroute flux through unaffected parts" is the metabolic-network analogue of the NCA rule re-routing computation around dead/over-pressured tiles (Stage 2). ^[claude-synth]
 

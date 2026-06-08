@@ -19,7 +19,7 @@ wiki-generated:: true
 ingest-mode:: full
 
 - **Robustness and Evolvability in Living Systems** — Andreas Wagner (2005), *Princeton University Press*, Princeton Studies in Complexity. Cloth ISBN 0-691-12240-7. DOI:10.1515/9781400849383. 952 citations.
-	- **Parent overview** (layered ingest). Deep-read: Introduction, Ch15, Ch19, Ch20, Epilogue → the three deep chapters have their own pages below; the rest is TOC-only (§Contents). The book-length anchor for the **robustness ↔ evolvability** theme on the [[wiki/projects/growing-computation]] lab talk (Biology II).
+	- **Parent overview** (layered ingest). Deep-read: Introduction, Ch15, Ch19, Ch20, Epilogue → the three deep chapters have their own pages below; the rest is TOC-only (§Contents). A book-length reference for the **robustness ↔ evolvability** theme on the [[wiki/projects/growing-computation]] lab talk (Biology II).
 
 - ## Wagner's argument (the "credo", from the Introduction)
 	- **Robustness** = a system continues to function under perturbation. The book's focus is *genetic/mutational* robustness, but the principles generalise. ^[extracted]
@@ -33,9 +33,9 @@ ingest-mode:: full
 	- (1) Which dominates — discovery of large-neutral-space solutions, or incremental evolution of robustness *within* a neutral space? (2) Can the global structure of a neutral space be inferred from a small sample? (3) Concrete once-neutral→innovation examples? (4) Is robustness *ever* an adaptation to mutations (vs to nongenetic noise)? (5) Is robustness always tied to evolvability-facilitating features (e.g. modularity)? (6) How is robustness constrained by trade-offs with other performance? (7) Where has selection favoured *fragility*? ^[extracted]
 	- Wagner stresses these are mostly *empirical* gaps — the theory is largely in place, the data are not.
 
-- ## Why it matters here (sharpened)
-	- The project's **"recovery by re-differentiation, not redundancy"** is *literally* Wagner's distributed robustness — now a named, empirically-grounded principle, not a slogan.
-	- [[SODC]]'s **solution degeneracy** = Wagner's **neutral space**; it is the single source of *both* self-healing (stay on the neutral space under damage) *and* trainability/evolvability (drift along it). See [[wiki/concepts/substrate-rule-co-location]] §Robustness.
+- ## Why it's relevant here
+	- The project's **"recovery by re-differentiation, not redundancy"** lines up well with Wagner's *distributed robustness* — a handy name and some empirical grounding for the idea (an influence, not a derivation). ^[claude-synth]
+	- [[SODC]]'s **solution degeneracy** maps naturally onto Wagner's **neutral space** — plausibly a shared root for both self-healing (stay on the space under damage) and trainability (drift along it). A suggestive parallel to explore, not a proven identity. See [[wiki/concepts/substrate-rule-co-location]] §Robustness. ^[claude-synth]
 	- Ch20's evolved-FPGA result is the **engineering precedent** for training an NCA rule to recover under damage pressure on a reconfigurable substrate.
 
 - ## Contents (full TOC — for any further chapter ingest)
