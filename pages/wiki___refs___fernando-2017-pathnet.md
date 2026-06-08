@@ -7,7 +7,7 @@ year:: 2017
 venue:: arXiv 1701.08734 (DeepMind)
 arxiv:: 1701.08734
 citation-count:: 958
-summary:: Agents are *pathways* through a giant network that discover which modules to reuse per task; a task's path is frozen and later paths re-evolve around it → transfer without catastrophic forgetting. The closest prior art to growing-computation's recruit/freeze/reuse.
+summary:: Agents are *paths* through a module net; freeze a task's learned path, then re-evolve later paths reusing it → transfer without forgetting. The closest prior art to recruit/freeze/reuse.
 confidence:: 0.47
 lifecycle:: draft
 lifecycle-changed:: 2026-06-08
