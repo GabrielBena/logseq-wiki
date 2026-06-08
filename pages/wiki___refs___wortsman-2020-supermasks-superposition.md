@@ -6,6 +6,7 @@ authors:: Wortsman, Mitchell; Ramanujan, Vivek; Liu, Rosanne; Kembhavi, Aniruddh
 year:: 2020
 venue:: NeurIPS 2020
 arxiv:: 2006.14769
+citation-count:: 347
 summary:: SupSup: fixed random net + per-task binary supermasks; task identity inferred by gradient-descending output entropy over a mask superposition (one step often suffices), up to 2500 tasks.
 confidence:: 0.78
 lifecycle:: draft
