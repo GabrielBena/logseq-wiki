@@ -10,11 +10,11 @@ arxiv:: 2506.04912
 doi:: 10.48550/arXiv.2506.04912
 citation-count:: 5
 summary:: DiffLogic CA — NCA whose update rule is a discrete logic-gate circuit, trained end-to-end via soft relaxation, deployed as native binary hardware. First successful application of differentiable logic to a recurrent setting; explicitly frames itself toward Computronium / CAM-8 programmable matter.
-confidence:: 0.75
+confidence:: 0.80
 lifecycle:: draft
 lifecycle-changed:: 2026-05-20
 created:: 2026-05-08
-updated:: 2026-05-20
+updated:: 2026-06-11
 sources:: blog:google-research.github.io/self-organising-systems/difflogic-ca, arxiv:2506.04912
 wiki-generated:: true
 ingest-mode:: full
@@ -30,6 +30,22 @@ provenance-ambiguous:: 0.00
 		- **Perception kernels** — small logic circuits that read the central cell + its Moore-neighbourhood and produce a per-channel summary. Replace Sobel filters.
 		- **Update network** — a deeper logic circuit that takes the perception output + the cell's current state, outputs the *new* binary state directly (no incremental ODE-style update — full replacement).
 	- Gates parameterised by a 16-dim probability vector over the 16 possible 2-input boolean operations; softmax during training, argmax at inference. Continuous relaxations listed for each op (e.g. soft-AND = `a*b`, soft-XOR = `a + b − 2ab`).
+- ## Methods — deep-read of the technical sections (2026-06-11) ^[claude-synth]
+	- *Full-text fetch of the Distill blog + arXiv 2506.04912, focused on architecture — the perception + hidden-state questions for [[wiki/projects/blastema]]'s Priority #0.*
+	- ### Cell state = the working-memory reservoir (dual register, CAM-8 style)
+		- A cell's state is an **n-dim binary vector** that *"acts as the cell's working memory, storing information from previous iterations"* — the **hidden channels ARE the computational reservoir**. State dimension is a per-task knob: **1 bit** for Game of Life (memoryless — GoL is state-independent), **8 bits** (checkerboard), **64 ch** (coloured G), **128 bits** (lizard). Only a few channels are *visible* (1st channel mono; channels 0–2 = binary RGB); the rest are hidden scratch.
+		- **Dual register (Toffoli–Margolus CAM-8):** a **gray** register = the persistent state, an **orange** register = the perception output. Perception reads neighbours' gray → writes orange; update reads gray+orange → writes new gray and **clears orange**. Two physical memories per cell — a clean hardware mapping (two FF/BRAM banks per tile).
+	- ### Perception = a fixed-wired, learned-gate logic circuit (replaces Sobel)
+		- Not a neural conv: each **perception kernel is a distinct logic circuit with FIXED topology but LEARNED gates**, applied **channel-wise**, emulating the Moore-neighbourhood interaction.
+		- Structure ≈ a 4-layer funnel, e.g. **[8, 4, 2, 1]** gates/layer. **Layer 1 has 8 gates — one per Moore neighbour — each taking `(central cell, one neighbour)` as its two inputs**, so the first layer computes pairwise *centre×neighbour* interactions (the logic analogue of a gradient filter). 4–16 kernels per model; **output dim = #kernels × #channels**. (Variant: multiple output bits per kernel/channel → better convergence.)
+	- ### Update = a deeper DLGN, full-replacement
+		- A much deeper logic-gate network (GoL **23 layers ~128 wide**; lizard **10×512**; G **11×512**) takes `concat(previous state [gray] + perception output [orange])` and **outputs the new state directly** — *no* incremental/ODE update.
+		- Gates: a 16-dim probability vector over the 16 two-input boolean ops (softmax in training → argmax at inference); init biased toward pass-through for stability.
+	- ### Numbers worth carrying
+		- The whole perceive+update **rule** is small-to-moderate: **5 active gates** (checkerboard, after pruning!), **336** (GoL), **577** (lizard), **927** (coloured G). The rule really can be tiny — reinforces the compactness argument for [[wiki/concepts/substrate-rule-co-location]] / [[wiki/projects/blastema]].
+		- Trained by pixel-wise MSE at the **final** timestep only (random init each step); robustness + self-healing **emerge unforced**; async training improves noise robustness.
+	- ### The limitation that bears directly on us — full-replacement vs a real memory
+		- Every step **overwrites** the whole state; the Discussion flags this as the weakness and proposes **LSTM-like gating for state-forgetting** to "enable a richer combination of past and newly computed candidate states." This is exactly Gabriel's *"hidden states of LUTs as a computational reservoir"* point — the reservoir is there but crude (overwrite); a **gated/persistent hidden channel** is the upgrade [[wiki/projects/blastema]] should bake in from the start. Also flagged: **hierarchical NCA** as future work (rhymes with the lineage/multi-scale thread). ^[claude-synth]
 - ## Key results
 	- **Game of Life learned perfectly** from all 512 3×3 ground-truth grids. Final circuit uses **336 active gates** (excluding pass-through). The most frequent gates after training are OR and AND.
 	- **Checkerboard pattern generation** in 20 steps on 16×16 grid. After pruning: **just 5 active gates** suffice — the entirety of the procedural checkerboard rule. Generalises to 4× larger grids (64×64) over 4× more time steps with no retraining.
