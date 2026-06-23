@@ -15,7 +15,7 @@ lifecycle:: published
 lifecycle-changed:: 2026-05-08
 lifecycle-reason:: User's own published Nature Comms paper, deep-ingested from full PDF
 created:: 2026-05-08
-updated:: 2026-05-08
+updated:: 2026-06-21
 sources:: arxiv:2106.02626 (full PDF), api:semanticscholar
 wiki-generated:: true
 ingest-mode:: full
@@ -81,6 +81,8 @@ ingest-mode:: full
   - [[wiki/research/self-organising-digital-circuits]] — [[SODC]] also addresses modularity at the circuit level; the gate-network is a resource-constrained modular system.
   - [[wiki/research/universal-nca]] — predecessor work; same lab (Imperial, Goodman group), different research thread.
   - [[wiki/refs/pessoa-2022-entangled-brain]] — Pessoa's neuroscience-side argument for *why* structural modularity does not yield clean functional specialisation in biological brains. The thesis Ch1 finding (resource constraints needed for functional separation) is exactly what Pessoa would predict: without selection pressure, function distributes across the structure. Ch4 ([[wiki/refs/pessoa-2022-ch4-what-do-areas-do]]) provides the M1-M5 vocabulary; the resource-constraint mechanism corresponds to pressure that drives the M2 (clean I/O) signature to emerge over M5-only (spatially separated) substrate. ^[inferred]
+  - [[wiki/refs/yang-2019-task-representations]] · [[wiki/refs/driscoll-2024-shared-dynamical-motifs]] — same modularity arc: Yang's emergent functional clusters and Driscoll's reusable *dynamical motifs* are the positive account of *what* functional modularity looks like. (These are the reference frames for the **Ch2** functional-analysis methodology — see [[wiki/research/spatial-neuromorphic-priors]] — rather than this Ch1 paper directly; kept here as arc context.) ^[inferred]
+  - [[wiki/refs/gutheil-2026-wta-bottlenecks]] — same arc, the strong-disentanglement limit: a WTA/softmax *bottleneck* (a capacity constraint) provably forces one-neuron-one-feature symbolic representations — echoing the resource-constraint → specialization mechanism this paper isolates. ^[inferred]
 
 - ## Code
   - Two codebases mentioned: original (messy) and a clean re-implementation — neither is in the wiki yet. TODO: `/code-ingest` once repo URL is confirmed.
