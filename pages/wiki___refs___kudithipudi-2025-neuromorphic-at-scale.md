@@ -1,41 +1,54 @@
 title:: wiki/refs/kudithipudi-2025-neuromorphic-at-scale
 category:: reference
 type:: external-ref
-tags:: neuromorphic, in-memory-computing, roadmap, on-chip-learning, scalability, hardware, spinnaker
-authors:: Kudithipudi, Dhireesha; Schuman, Catherine; Vineyard, Craig M.; Pandit, Tej; Merkel, Cory; Kubendran, Rajkumar; Aimone, James B.; Orchard, Garrick; Mayr, Christian; Benosman, Ryad; Hays, Joe; Young, Cameron; Bartolozzi, Chiara; Majumdar, Amitava; Cardwell, Suma G.; Payvand, Melika; Buckley, Sonia; Kulkarni, Shruti; Gonzalez, Hector A.; Cauwenberghs, Gert; Thakur, Chetan Singh; Subramoney, Anand; Furber, Steve
+tags:: neuromorphic, in-memory-computing, roadmap, on-chip-learning, scalability, hardware, spinnaker, self-organisation
+authors:: Kudithipudi, Dhireesha; Schuman, Catherine; Vineyard, Craig M.; Pandit, Tej; Merkel, Cory; Kubendran, Rajkumar; Aimone, James B.; Orchard, Garrick; Mayr, Christian; Benosman, Ryad; Hays, Joe; Young, Cliff; Bartolozzi, Chiara; Majumdar, Amitava; Cardwell, Suma George; Payvand, Melika; Buckley, Sonia; Kulkarni, Shruti; Gonzalez, Hector A.; Cauwenberghs, Gert; Thakur, Chetan Singh; Subramoney, Anand; Furber, Steve
 year:: 2025
 venue:: Nature
 doi:: 10.1038/s41586-024-08253-8
 pmid:: 39843589
 citation-count:: 294
-summary:: 23-author community roadmap (incl. Payvand & Furber) charting scalable neuromorphic computing — architectures, key features, applications, the main open challenges, and the ecosystem needed to scale. The field's own "what's next".
-confidence:: 0.50
+summary:: 23-author Nature roadmap for scaling neuromorphic computing. Names the open challenges (co-design, a compilation scheme, on-chip learning, reliability, device non-idealities) AND the biological principles to use (self-organization, dynamic rewiring, growth, variability-as-feature) — the field's own case for our approach.
+confidence:: 0.80
 lifecycle:: draft
 lifecycle-changed:: 2026-07-01
 created:: 2026-07-01
 updated:: 2026-07-01
-sources:: api:semanticscholar, api:pubmed
+sources:: api:semanticscholar, api:pubmed, pdf:wiki/_pdfs/kudithipudi-2025-neuromorphic-at-scale.pdf
 wiki-generated:: true
-ingest-mode:: abstract
+ingest-mode:: full
 
-- **Neuromorphic computing at scale** — Kudithipudi et al. (2025), *Nature* 637:801–812. A **23-author community roadmap** including **M. Payvand** (INI Zürich — the ETH / [[wiki/deliverables/eth-fellowship-2026]] host) and **S. Furber** (SpiNNaker) + H. Gonzalez (SpiNNcloud). The **#1 rationale anchor** for the bid: the field's own statement of where neuromorphic computing is and what is missing to scale it. ^[author]
-- ## Abstract (PubMed, verbatim)
-	- Neuromorphic computing is a brain-inspired approach to hardware and algorithm design that efficiently realizes artificial neural networks. Neuromorphic designers apply the principles of biointelligence discovered by neuroscientists to design efficient computational systems, often for applications with size, weight and power constraints. With this research field at a critical juncture, it is crucial to chart the course for the development of future large-scale neuromorphic systems. We describe approaches for creating scalable neuromorphic architectures and identify key features. We discuss potential applications that can benefit from scaling and the main challenges that need to be addressed. Furthermore, we examine a comprehensive ecosystem necessary to sustain growth and the new opportunities that lie ahead when scaling neuromorphic systems. Our work distils ideas from several computing sub-fields, providing guidance to researchers and practitioners of neuromorphic computing who aim to push the frontier forward.
-- ## Key Ideas (from abstract only — ^[inferred])
-	- The field is at "a critical juncture"; the paper charts the course toward **large-scale** neuromorphic systems. ^[inferred]
-	- Contributes four things: (1) approaches + **key features** for scalable neuromorphic architectures; (2) applications that benefit from scaling; (3) **the main challenges to address**; (4) the **ecosystem** needed to sustain growth. ^[inferred]
-	- Explicitly a **cross-sub-field distillation** — guidance for researchers/practitioners pushing the frontier. ^[inferred]
-- ## ⚠ Full-text status — paywalled (ABSTRACT-mode only)
-	- No open-access PDF (S2 `openAccessPdf` empty), not free in PMC, no preprint. The abstract only says "**the main challenges that need to be addressed**" — it does **not** enumerate them. Those specifics live in the paywalled body.
-	- **Anti-mis-claim note for the bid:** §1.1 ① of [[wiki/deliverables/eth-fellowship-2026]] asserts the roadmap "names **on-chip learning** + **scalable/adaptive mapping**" as the missing pieces. That specificity currently rests on the literature-verification pass, **not** on this abstract. To quote it verbatim (and bulletproof the anchor), drop the Nature PDF into `wiki/_pdfs/` → `/paper-ingest full` for a true deep read.
+- **Neuromorphic computing at scale** — Kudithipudi et al. (2025), *Nature* 637:801–812 (Review). A **23-author community roadmap** incl. **M. Payvand** (INI Zürich — the ETH / EIS host), **S. Furber** (SpiNNaker), **H. Gonzalez** (SpiNNcloud), **C. Mayr** (SpiNNaker2). The **#1 rationale anchor** for [[wiki/deliverables/eth-fellowship-2026]]: the field's own statement of where neuromorphic computing is, what's missing to scale it, and which biological principles to draw on. **Full-ingested 2026-07-01 from the PDF** (`wiki/_pdfs/`). ^[author]
+- ## What it is
+	- Defines **"scaling neuromorphic"** = the capacity of a system (algorithms + hardware + architecture + infrastructure) to operate at the size, speed and energy needed for complex real-world tasks — via large virtual data-centre systems, large edge-device networks, or both. The field is at "a critical juncture" nearing its **"AlexNet moment"** (Box 1). ^[extracted]
+	- **5 distinct neuromorphic advantages:** (1) memory + compute **tightly coupled** (no data-transfer cost); (2) **sparse** distributed spike/event encoding with temporal info; (3) **dynamic and local learning** (avoids the power of backprop across layers); (4) stable perception via predictions about sensory signals; (5) **multi-timescale dynamics** for real-time learning. ^[extracted]
+- ## The 7 key features for scale (Fig 3, early→late maturation)
+	- **Distributed & hierarchical** · **Sparsity** (structural or ephemeral; "can make the slope of model scaling steeper" via unconventional spatial layouts) · **Neuronal scalability** · **Asynchronous communication** (event / AER) · **Dynamic reconfigurability** (*"the brain is an inherently dynamic system… reconfiguring networks"*) · **Redundancy & correlation** (neural redundancy → stable computation, noise filtering) · **Sensor/compute interfaces**. ^[extracted]
+	- **+ Resource awareness** — *"the system should be capable of dynamically assigning resources on the basis of changing goals and functionalities"*, tracking energy/compute/memory over its lifetime; drawn from **self-aware architectures + continual-learning accelerators**. ^[extracted]
+- ## The open challenges (the field's own list — verbatim-ish)
+	- **Hardware/software co-design** (Box 2) — top-down (cortex→models→HW) vs bottom-up (device→architecture); both inefficient alone; *"innovations in in-memory computing, emerging device technologies and low-precision arithmetic are necessary."* ^[extracted]
+	- **A compilation scheme / hardware abstraction** — *"algorithms are hardware dependent"*; the field needs *"a compilation scheme for porting arbitrary spiking neural network models to any hardware architecture."* ^[extracted]
+	- **On-chip / local learning + lifelong learning** — Box 5 (medium-term): *"how can event-driven local learning and plasticity support machines that are capable of lifelong learning? What unified architecture can be used?"* ^[extracted]
+	- **Reliability** — scaling introduces challenges in *"manufacturing, testing and reliability, particularly … performance under uncontrolled conditions."* ^[extracted]
+	- **Emerging-memory device non-idealities** (Box 3) — RRAM/PCM/etc.: *"device non-idealities, challenges in integration with CMOS, and leakage"* limit large-scale use; viable emerging memory needs ≈fJ/bit, <1 V, >10¹⁷ cycles, <10 nm, CMOS integration. ^[extracted]
+	- Also named: **benchmarks / metrics / standards**, **field-crossing interface losses**, **proofs-of-concept**, **cross-platform software**. Explicit short/medium/long-term question lists in Boxes 4 / 5 / 6. ^[extracted]
+- ## Direct alignment with our bid (the gold)
+	- **The roadmap names our *approach*, not just our problem.** *"This field is close to neuroscience and biology, which have found ways to solve these problems through **self-organization, dynamic rewiring, 3D growth, modularity, efficient signal encoding, sparsity, event-based computation** and so on. The promise is that these biological principles can inspire the design of large-scale systems."* → the flagship roadmap explicitly points to self-organization + dynamic rewiring + growth = [[wiki/projects/self-organising-mosaic-compiler]] / [[wiki/projects/growing-computation]]. ^[extracted]
+	- **Variability-as-feature + self-organized networks** (Box 3): *"non-idealities … have also been exploited as 'features', for example, the cycle-to-cycle and device-to-device variability can … provide a parameter space for learning in **self-organized dynamical networks** [ref 145]. However, the scalability of these approaches to large models and practical use cases is an active area of research."* → **exactly** our thesis + Payvand's MEMSORN line, with the roadmap naming its **scalability as the open problem** we target. ^[extracted]
+	- **Resource awareness** = our **energy-as-developmental-drive** + self-compilation under resource pressure (Melika's Stage-2 power/thermal remap). ^[inferred]
+	- **The unification, requested:** Box 5 asks for a *"unified architecture"* for event-driven local learning + lifelong learning — our compile + remap + continual-as-one-process. ^[inferred]
+	- **The honesty hook matches ours:** *"these features do not offer a magical solution. We can also achieve these optimizations through a fully top-down engineering approach, but we believe that a quicker route is possible by looking at the solutions that evolution has produced."* → mirrors §1.1's "software magic trick" + "biology = the hinge" (the shortcut, not the motivation). ^[extracted]
+	- **The "two threads" (Summary):** (1) *robust, distributed + asynchronous models/algorithms*; (2) *scaling learning models to larger networks* — our self-organising rule is both. ^[extracted]
+- ## Anti-mis-claim check → §1.1 ① is accurate, and can be sharpened
+	- Our §1.1 ① ("the roadmap names **on-chip learning** + **scalable/adaptive mapping**") is **confirmed** — both are named (dynamic + local learning = advantage #3, lifelong learning = Box 5; a "compilation scheme for porting … to any hardware" = the mapping need). But it *undersells*: the roadmap also names **co-design, reliability, resource-awareness, device non-idealities** — and, crucially, it **names our approach** (self-organization / dynamic rewiring / growth / variability-as-feature). **Recommend sharpening §1.1** to cite the *compilation-scheme* need + the *self-organization / variability-as-feature* framing (quotable, un-mis-claimable). ^[author]
 - ## Connections to Wiki
-	- [[wiki/deliverables/eth-fellowship-2026]] — the #1 rationale anchor (§1.1 ①): "the field's own roadmap names the missing pieces."
-	- [[wiki/projects/self-organising-mosaic-compiler]] — the bid's subject; the roadmap frames the on-chip-learning + mapping gap this project targets.
-	- [[wiki/concepts/online-meta-learning]] — on-chip learning as a named open challenge.
-	- [[wiki/concepts/substrate-rule-co-location]] — scalable / adaptive mapping of computation onto substrates.
-	- [[wiki/projects/growing-computation]] — the broader arc the bid serves.
-	- *Co-authors in Gabriel's orbit:* **M. Payvand** (the host); **S. Furber** + **H. Gonzalez** (SpiNNaker / SpiNNcloud — where Gabriel worked on Spinnaker2); **C. Mayr** (TU Dresden, SpiNNaker2).
-- ## Open Questions / To Read
-	- **Upgrade to full mode** once the PDF is available — capture the *enumerated* open challenges + the "key features" of scalable architectures verbatim (this is what bulletproofs the §1.1 anchor and mines "what's hot").
+	- [[wiki/deliverables/eth-fellowship-2026]] — the #1 rationale anchor (§1.1 ①).
+	- [[wiki/projects/self-organising-mosaic-compiler]] — the roadmap names the compilation/mapping gap + the self-organization/rewiring approach this project *is*.
+	- [[wiki/projects/growing-computation]] · [[wiki/projects/blastema]] — self-organization + growth as named biological principles.
+	- [[wiki/concepts/online-meta-learning]] — on-chip/local learning + the "unified architecture for lifelong learning" question.
+	- [[wiki/concepts/substrate-rule-co-location]] — hardware/software co-design; in-memory computing; resource-awareness.
+	- [[wiki/refs/raghunathan-2026-noracl-neurogenesis]] — [[NORACL]] (Payvand lab); the "continual-learning accelerators" that resource-awareness draws on.
+	- [[wiki/refs/dalgaty-2024-mosaic]] — Payvand's Mosaic memristive substrate.
+	- *Authors in Gabriel's orbit:* **Payvand** (the host); **Furber + Gonzalez + Mayr** (SpiNNaker / SpiNNaker2 / SpiNNcloud — where Gabriel worked).
 - ## Cited By (in this wiki)
 	- [[wiki/deliverables/eth-fellowship-2026]]
