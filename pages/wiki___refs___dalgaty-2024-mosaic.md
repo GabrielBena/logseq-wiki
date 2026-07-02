@@ -14,7 +14,7 @@ lifecycle:: draft
 lifecycle-changed:: 2026-07-02
 created:: 2026-05-08
 updated:: 2026-07-02
-sources:: api:semanticscholar, wiki/_pdfs/eth-litreview-2026-06-26
+sources:: api:semanticscholar
 wiki-generated:: true
 ingest-mode:: abstract
 
