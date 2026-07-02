@@ -1,5 +1,5 @@
 title:: wiki/meta/wiki-home
-alias:: Wiki Home, wiki home
+alias:: Wiki Home
 category:: hub
 type:: hub
 tags:: meta, wiki, landing
