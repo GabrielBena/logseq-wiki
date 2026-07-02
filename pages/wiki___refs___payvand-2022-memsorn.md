@@ -2,7 +2,7 @@ title:: wiki/refs/payvand-2022-memsorn
 alias:: MEMSORN
 category:: reference
 type:: external-ref
-tags:: neuromorphic, memristor, rram, self-organisation, plasticity, in-memory-computing, variability-as-feature, host-lab
+tags:: neuromorphic, memristor, rram, self-organisation, plasticity, in-memory-computing, variability-as-feature
 authors:: Payvand, Melika; Moro, Filippo; Nomura, K.; Dalgaty, Thomas; Vianello, Elisa; Nishi, Y.; Indiveri, Giacomo
 year:: 2022
 venue:: Nature Communications
@@ -18,7 +18,7 @@ sources:: api:semanticscholar, api:pubmed, pdf:wiki/_pdfs/payvand-2022-memsorn.p
 wiki-generated:: true
 ingest-mode:: full
 
-- **Self-organization of an inhomogeneous memristive hardware for sequence learning** — Payvand, Moro, Nomura, Dalgaty, Vianello, Nishi, Indiveri (2022), *Nature Communications* 13:5793 (DOI 10.1038/s41467-022-33476-6). **Melika Payvand is first author — the ETH / EIS host.** The #1 host-fit anchor for [[wiki/deliverables/eth-fellowship-2026]]: the host's own proof that self-organisation *exploiting* device variability works on real memristive silicon. **Full-ingested 2026-07-02** from the OA PDF (`wiki/_pdfs/payvand-2022-memsorn.pdf`). ^[author]
+- **Self-organization of an inhomogeneous memristive hardware for sequence learning** — Payvand, Moro, Nomura, Dalgaty, Vianello, Nishi, Indiveri (2022), *Nature Communications* 13:5793 (DOI 10.1038/s41467-022-33476-6). **Melika Payvand is first author.** A demonstration that self-organisation *exploiting* device variability works on real memristive silicon. **Full-ingested 2026-07-02** from the OA PDF. ^[author]
 - ## What it is
 	- **MEMSORN** (Memristive Self-organizing Spiking Recurrent Neural Network) — a hardware architecture inspired by the SORN model: a recurrent pool of Leaky-Integrate-and-Fire neurons, **80% excitatory (160) / 20% inhibitory (40)**, where excitatory synapses *and* neuron state are held by **HfO₂ 1T-1R RRAM** devices. ^[extracted]
 	- **Core idea:** rather than fighting the intrinsic cycle-to-cycle + device-to-device variability of the memristors, the network **self-organizes** via two on-chip plasticity rules — **Hebbian** synaptic + **Homeostatic** neuronal — **derived to match the devices' measured stochastic switching**. ^[extracted]
@@ -35,17 +35,16 @@ ingest-mode:: full
 	- **~4× more "good" networks** (accuracy > 0.8) than static. ^[extracted]
 	- **Ablating device variability:** introducing RRAM variability improves sequence-learning accuracy by **~30%** across lengths (best = variability in *both* SDSP and IP); variability also **de-sensitizes** the net to hyper-parameters (esp. learning rate). ^[extracted]
 	- **Structure emerges:** better-separated, more cyclic cell-assemblies, ~11% more explained variance in the top PCs. Cost: converges in ~1000 samples ≈ **13 min, ~936 µJ**. ^[extracted]
-- ## Why it matters / scope (for the bid)
+- ## Why it matters / scope
 	- **Variability-as-feature + co-design, proven on silicon:** rules "derived directly from the statistical measurements" of real RRAM turn a manufacturing nuisance (stochastic switching, log-normal spread) into the *search noise* that drives self-organization + hyper-parameter robustness — an existence proof that intrinsic device physics can *be* the learning substrate. **This is the bid's ② "self-org exists, in the small" + ⑥ lab-fit anchor.** ^[extracted]
 	- **Materially narrower than compile / remap / grow:** it *tunes a fixed network* (topology + neuron count fixed a priori; never grows/recruits) on one sequence-learning family; it does not compile/map a specified computation, and the readout is a separate supervised regression. ^[inferred]
-	- **Device-derived, not meta-learned:** SDSP + IP are hand-designed to match device statistics + a single target rate; self-organization is one-shot unsupervised tuning — no continual/online task adaptation, no *learned* learning rule. **The contrast that defines our niche** — we *meta-learn* a rule that compiles + remaps + continually-learns. ^[inferred]
+	- **Device-derived, not meta-learned:** SDSP + IP are hand-designed to match device statistics + a single target rate; self-organization is one-shot unsupervised tuning — no continual/online task adaptation, no *learned* learning rule — the key contrast with a *meta-learned* rule that compiles, remaps, and continually-learns (cf. [[wiki/projects/self-organising-mosaic-compiler]]). ^[inferred]
 - ## Connections to Wiki
-	- [[wiki/deliverables/eth-fellowship-2026]] — the #1 host anchor (② self-org-in-the-small; ⑥ lab-fit; the variability-as-feature line).
-	- [[wiki/projects/self-organising-mosaic-compiler]] — the host's self-organisation line this project extends *toward a compiler*.
+	- [[wiki/projects/self-organising-mosaic-compiler]] — extends this self-organisation-on-hardware line *toward a compiler*.
 	- [[wiki/refs/dalgaty-2024-mosaic]] — same lab / substrate family (Dalgaty, Vianello, Indiveri, Payvand co-authors).
 	- [[wiki/refs/maryada-2025-cross-homeostatic]] — sibling host-institute self-org-on-hardware (that one tunes *dynamics*; this one tunes *weights*).
 	- [[wiki/concepts/substrate-rule-co-location]] — device–circuit–algorithm co-design; variability-as-feature.
 	- [[wiki/concepts/solution-degeneracy]] — variability-as-a-resource rhymes with degeneracy, but MEMSORN uses it as *search noise*, not functional-config basin-hopping.
 	- [[wiki/refs/kudithipudi-2025-neuromorphic-at-scale]] — the roadmap's "variability exploited as features … in self-organized dynamical networks" = this line (scalability = open).
 - ## Cited By (in this wiki)
-	- [[wiki/deliverables/eth-fellowship-2026]] · [[wiki/projects/self-organising-mosaic-compiler]]
+	- [[wiki/projects/self-organising-mosaic-compiler]]
